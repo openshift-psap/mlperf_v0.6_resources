@@ -1,8 +1,8 @@
 This repository contains the scripts and source code for running the MLPerf v0.6 training benchmarks written by NVIDIA in RHEL7.6 and UBI8 containers. The Dockerfiles for creating the containers are in the top level directory. 
 
-These 4 benchmarks are implemented in PyTorch, and the necessary PyTorch source code to be built and installed in the containers is in the ./pytorch directory. 
+The 4 directories, gnmt, maskrcnn, ssd, and transformer contain the source code and scripts for running each of these benchmarks. The resnet directory is for a benchmark using the ImageNet dataset on mxnet, which we haven't yet run. These 4 benchmarks are implemented in PyTorch, and the necessary PyTorch source code to be built and installed in the containers is in the ./pytorch directory. 
 
-The 4 directories, gnmt, maskrcnn, ssd, and transformer contain the source code and scripts for running each of the benchmarks. The resnet directory is for a benchmark using the ImageNet dataset on mxnet, which we haven't yet run.
+For more detailed information about the benchmarks, read the original documentation at [ssd](https://github.com/mlperf/training_results_v0.6/tree/master/NVIDIA/benchmarks/ssd/implementations/pytorch), [maskrcnn](https://github.com/mlperf/training_results_v0.6/tree/master/NVIDIA/benchmarks/maskrcnn/implementations/pytorch), [gnmt](https://github.com/mlperf/training_results_v0.6/tree/master/NVIDIA/benchmarks/gnmt/implementations/pytorch), [transformer](https://github.com/mlperf/training_results_v0.6/tree/master/NVIDIA/benchmarks/transformer/implementations/pytorch).
 
 # Per-benchmark instructions
 ## Prerequisites
