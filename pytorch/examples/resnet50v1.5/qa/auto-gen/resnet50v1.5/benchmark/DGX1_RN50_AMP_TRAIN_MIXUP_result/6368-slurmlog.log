@@ -1,0 +1,1260 @@
+resnet50v1.5: Pulling from asulecki/pytorch-off/conv_tests
+Digest: sha256:99b133e1db076d9d1ae08196e1c6d1e0018144fa5d46f853acf7d79b3607f5f4
+Status: Image is up to date for gitlab-master.nvidia.com:5005/asulecki/pytorch-off/conv_tests:resnet50v1.5
+
+=============
+== PyTorch ==
+=============
+
+NVIDIA Release 19.04 (build 6012988)
+PyTorch Version 1.1.0a0+9eb0f43
+
+Container image Copyright (c) 2019, NVIDIA CORPORATION.  All rights reserved.
+
+Copyright (c) 2014-2019 Facebook Inc.
+Copyright (c) 2011-2014 Idiap Research Institute (Ronan Collobert)
+Copyright (c) 2012-2014 Deepmind Technologies    (Koray Kavukcuoglu)
+Copyright (c) 2011-2012 NEC Laboratories America (Koray Kavukcuoglu)
+Copyright (c) 2011-2013 NYU                      (Clement Farabet)
+Copyright (c) 2006-2010 NEC Laboratories America (Ronan Collobert, Leon Bottou, Iain Melvin, Jason Weston)
+Copyright (c) 2006      Idiap Research Institute (Samy Bengio)
+Copyright (c) 2001-2004 Idiap Research Institute (Ronan Collobert, Samy Bengio, Johnny Mariethoz)
+Copyright (c) 2015      Google Inc.
+Copyright (c) 2015      Yangqing Jia
+Copyright (c) 2013-2016 The Caffe contributors
+All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION.  All rights reserved.
+NVIDIA modifications are covered by the license terms that apply to the underlying project or file.
+
+NOTE: Legacy NVIDIA Driver detected.  Compatibility mode ENABLED.
+
+NOTE: Detected MOFED driver 4.0-1.0.1; version automatically upgraded.
+
+Warning:  if --fp16 is not used, static_loss_scale will be ignored.
+=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7fa82a3178c8>}
+data : /data/imagenet
+data_backend : pytorch
+arch : resnet50
+model_config : fanin
+workers : 5
+epochs : 2
+start_epoch : 0
+batch_size : 128
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.1
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 128.0
+dynamic_loss_scale : False
+prof : 100
+amp : True
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_8GPU_128BS_pytorch_trainingbench.json
+final_weights : model.pth.tar
+evaluate : False
+training_only : True
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 8
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Selected optimization level O2:  FP16 training with FP32 batchnorm and FP32 master weights.
+
+Defaults for this optimization level are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : dynamic
+Processing user overrides (additional kwargs that are not None)...
+After processing overrides, optimization options are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : 128.0
+Epoch: 0/2  Iteration: 1/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.079
+Epoch: 0/2  Iteration: 2/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.091
+Epoch: 0/2  Iteration: 3/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.036
+Epoch: 0/2  Iteration: 4/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.037
+Epoch: 0/2  Iteration: 5/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.144
+Epoch: 0/2  Iteration: 6/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.214
+Epoch: 0/2  Iteration: 7/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.165
+Epoch: 0/2  Iteration: 8/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.270
+Epoch: 0/2  Iteration: 9/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.281
+Epoch: 0/2  Iteration: 10/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.299
+Epoch: 0/2  Iteration: 11/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.321
+Epoch: 0/2  Iteration: 12/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.238
+Epoch: 0/2  Iteration: 13/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.279
+Epoch: 0/2  Iteration: 14/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.288
+Epoch: 0/2  Iteration: 15/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.311
+Epoch: 0/2  Iteration: 16/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.271
+Epoch: 0/2  Iteration: 17/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.274
+Epoch: 0/2  Iteration: 18/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.290
+Epoch: 0/2  Iteration: 19/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.361
+Epoch: 0/2  Iteration: 20/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.288
+Epoch: 0/2  Iteration: 21/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.320
+Epoch: 0/2  Iteration: 22/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.272
+Epoch: 0/2  Iteration: 23/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.241
+Epoch: 0/2  Iteration: 24/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.214
+Epoch: 0/2  Iteration: 25/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.297
+Epoch: 0/2  Iteration: 26/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.207
+Epoch: 0/2  Iteration: 27/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.324
+Epoch: 0/2  Iteration: 28/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.378
+Epoch: 0/2  Iteration: 29/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.290
+Epoch: 0/2  Iteration: 30/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.381
+Epoch: 0/2  Iteration: 31/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.122
+Epoch: 0/2  Iteration: 32/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.204
+Epoch: 0/2  Iteration: 33/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.138
+Epoch: 0/2  Iteration: 34/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.180
+Epoch: 0/2  Iteration: 35/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.296
+Epoch: 0/2  Iteration: 36/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.106
+Epoch: 0/2  Iteration: 37/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.135
+Epoch: 0/2  Iteration: 38/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.406
+Epoch: 0/2  Iteration: 39/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.139
+Epoch: 0/2  Iteration: 40/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.071
+Epoch: 0/2  Iteration: 41/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.045
+Epoch: 0/2  Iteration: 42/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.169
+Epoch: 0/2  Iteration: 43/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.090
+Epoch: 0/2  Iteration: 44/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.055
+Epoch: 0/2  Iteration: 45/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.171
+Epoch: 0/2  Iteration: 46/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.022
+Epoch: 0/2  Iteration: 47/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.092
+Epoch: 0/2  Iteration: 48/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.020
+Epoch: 0/2  Iteration: 49/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.034
+Epoch: 0/2  Iteration: 50/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.045
+Epoch: 0/2  Iteration: 51/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.001
+Epoch: 0/2  Iteration: 52/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.031
+Epoch: 0/2  Iteration: 53/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.975
+Epoch: 0/2  Iteration: 54/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.999
+Epoch: 0/2  Iteration: 55/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.998
+Epoch: 0/2  Iteration: 56/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.981
+Epoch: 0/2  Iteration: 57/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.014
+Epoch: 0/2  Iteration: 58/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.080
+Epoch: 0/2  Iteration: 59/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.982
+Epoch: 0/2  Iteration: 60/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.011
+Epoch: 0/2  Iteration: 61/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.033
+Epoch: 0/2  Iteration: 62/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.988
+Epoch: 0/2  Iteration: 63/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.977
+Epoch: 0/2  Iteration: 64/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.954
+Epoch: 0/2  Iteration: 65/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.965
+Epoch: 0/2  Iteration: 66/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.032
+Epoch: 0/2  Iteration: 67/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.978
+Epoch: 0/2  Iteration: 68/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.985
+Epoch: 0/2  Iteration: 69/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.112
+Epoch: 0/2  Iteration: 70/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.968
+Epoch: 0/2  Iteration: 71/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.945
+Epoch: 0/2  Iteration: 72/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.051
+Epoch: 0/2  Iteration: 73/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.961
+Epoch: 0/2  Iteration: 74/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.035
+Epoch: 0/2  Iteration: 75/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.974
+Epoch: 0/2  Iteration: 76/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.950
+Epoch: 0/2  Iteration: 77/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.057
+Epoch: 0/2  Iteration: 78/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.935
+Epoch: 0/2  Iteration: 79/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.953
+Epoch: 0/2  Iteration: 80/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.969
+Epoch: 0/2  Iteration: 81/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.932
+Epoch: 0/2  Iteration: 82/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.986
+Epoch: 0/2  Iteration: 83/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.908
+Epoch: 0/2  Iteration: 84/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.995
+Epoch: 0/2  Iteration: 85/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.935
+Epoch: 0/2  Iteration: 86/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.958
+Epoch: 0/2  Iteration: 87/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.919
+Epoch: 0/2  Iteration: 88/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.937
+Epoch: 0/2  Iteration: 89/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.937
+Epoch: 0/2  Iteration: 90/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.949
+Epoch: 0/2  Iteration: 91/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.948
+Epoch: 0/2  Iteration: 92/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.935
+Epoch: 0/2  Iteration: 93/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.925
+Epoch: 0/2  Iteration: 94/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.934
+Epoch: 0/2  Iteration: 95/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.921
+Epoch: 0/2  Iteration: 96/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.927
+Epoch: 0/2  Iteration: 97/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.942
+Epoch: 0/2  Iteration: 98/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.921
+Epoch: 0/2  Iteration: 99/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.926
+Epoch: 0/2  Iteration: 100/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.939
+/opt/conda/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+Summary Epoch: 0/2;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.087
+Epoch: 1/2  Iteration: 1/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.922
+Epoch: 1/2  Iteration: 2/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.931
+Epoch: 1/2  Iteration: 3/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.919
+Epoch: 1/2  Iteration: 4/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.918
+Epoch: 1/2  Iteration: 5/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.929
+Epoch: 1/2  Iteration: 6/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.925
+Epoch: 1/2  Iteration: 7/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.977
+Epoch: 1/2  Iteration: 8/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.916
+Epoch: 1/2  Iteration: 9/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.917
+Epoch: 1/2  Iteration: 10/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.935
+Epoch: 1/2  Iteration: 11/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.928
+Epoch: 1/2  Iteration: 12/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.932
+Epoch: 1/2  Iteration: 13/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.944
+Epoch: 1/2  Iteration: 14/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.925
+Epoch: 1/2  Iteration: 15/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.925
+Epoch: 1/2  Iteration: 16/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.925
+Epoch: 1/2  Iteration: 17/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.922
+Epoch: 1/2  Iteration: 18/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.928
+Epoch: 1/2  Iteration: 19/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.928
+Epoch: 1/2  Iteration: 20/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.919
+Epoch: 1/2  Iteration: 21/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.912
+Epoch: 1/2  Iteration: 22/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.969
+Epoch: 1/2  Iteration: 23/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.936
+Epoch: 1/2  Iteration: 24/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.927
+Epoch: 1/2  Iteration: 25/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.930
+Epoch: 1/2  Iteration: 26/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.923
+Epoch: 1/2  Iteration: 27/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.044
+Epoch: 1/2  Iteration: 28/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.916
+Epoch: 1/2  Iteration: 29/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.920
+Epoch: 1/2  Iteration: 30/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.911
+Epoch: 1/2  Iteration: 31/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.918
+Epoch: 1/2  Iteration: 32/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.910
+Epoch: 1/2  Iteration: 33/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.907
+Epoch: 1/2  Iteration: 34/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.913
+Epoch: 1/2  Iteration: 35/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.915
+Epoch: 1/2  Iteration: 36/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.942
+Epoch: 1/2  Iteration: 37/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.913
+/opt/conda/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 19660800 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/opt/conda/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 18481152 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/opt/conda/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 37093376 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/opt/conda/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 39976960 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/opt/conda/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 34865152 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/opt/conda/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:771: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 10. 
+  warnings.warn(str(msg))
+Epoch: 1/2  Iteration: 38/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.904
+Epoch: 1/2  Iteration: 39/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.907
+Epoch: 1/2  Iteration: 40/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.905
+Epoch: 1/2  Iteration: 41/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.903
+Epoch: 1/2  Iteration: 42/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.915
+Epoch: 1/2  Iteration: 43/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.895
+Epoch: 1/2  Iteration: 44/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.906
+Epoch: 1/2  Iteration: 45/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.897
+Epoch: 1/2  Iteration: 46/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.891
+Epoch: 1/2  Iteration: 47/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.899
+Epoch: 1/2  Iteration: 48/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.940
+Epoch: 1/2  Iteration: 49/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.889
+Epoch: 1/2  Iteration: 50/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.900
+Epoch: 1/2  Iteration: 51/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.890
+Epoch: 1/2  Iteration: 52/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.890
+Epoch: 1/2  Iteration: 53/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.900
+Epoch: 1/2  Iteration: 54/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.884
+Epoch: 1/2  Iteration: 55/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.885
+Epoch: 1/2  Iteration: 56/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.887
+Epoch: 1/2  Iteration: 57/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.891
+Epoch: 1/2  Iteration: 58/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.873
+Epoch: 1/2  Iteration: 59/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.882
+Epoch: 1/2  Iteration: 60/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.880
+Epoch: 1/2  Iteration: 61/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.864
+Epoch: 1/2  Iteration: 62/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.873
+Epoch: 1/2  Iteration: 63/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.874
+Epoch: 1/2  Iteration: 64/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.870
+Epoch: 1/2  Iteration: 65/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.862
+Epoch: 1/2  Iteration: 66/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.866
+Epoch: 1/2  Iteration: 67/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.872
+Epoch: 1/2  Iteration: 68/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.855
+Epoch: 1/2  Iteration: 69/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.849
+Epoch: 1/2  Iteration: 70/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.862
+Epoch: 1/2  Iteration: 71/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.854
+Epoch: 1/2  Iteration: 72/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.867
+Epoch: 1/2  Iteration: 73/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.876
+Epoch: 1/2  Iteration: 74/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.853
+Epoch: 1/2  Iteration: 75/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.859
+Epoch: 1/2  Iteration: 76/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.850
+Epoch: 1/2  Iteration: 77/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.847
+Epoch: 1/2  Iteration: 78/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.853
+Epoch: 1/2  Iteration: 79/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.842
+Epoch: 1/2  Iteration: 80/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.822
+Epoch: 1/2  Iteration: 81/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.834
+Epoch: 1/2  Iteration: 82/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.839
+Epoch: 1/2  Iteration: 83/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.846
+Epoch: 1/2  Iteration: 84/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.854
+Epoch: 1/2  Iteration: 85/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.834
+Epoch: 1/2  Iteration: 86/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.823
+Epoch: 1/2  Iteration: 87/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.833
+Epoch: 1/2  Iteration: 88/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.811
+Epoch: 1/2  Iteration: 89/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.811
+Epoch: 1/2  Iteration: 90/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.792
+Epoch: 1/2  Iteration: 91/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.830
+Epoch: 1/2  Iteration: 92/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.825
+Epoch: 1/2  Iteration: 93/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.810
+Epoch: 1/2  Iteration: 94/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.825
+Epoch: 1/2  Iteration: 95/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.773
+Epoch: 1/2  Iteration: 96/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.794
+Epoch: 1/2  Iteration: 97/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.829
+Epoch: 1/2  Iteration: 98/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.808
+Epoch: 1/2  Iteration: 99/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.820
+Epoch: 1/2  Iteration: 100/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.798
+Summary Epoch: 1/2;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.885
+None
+Experiment ended
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+Warning:  if --fp16 is not used, static_loss_scale will be ignored.
+=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7fb9cf03d8c8>}
+read 1281167 files from 1000 directories
+read 50000 files from 1000 directories
+data : /data/imagenet
+data_backend : dali-gpu
+arch : resnet50
+model_config : fanin
+workers : 5
+epochs : 2
+start_epoch : 0
+batch_size : 128
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.1
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 128.0
+dynamic_loss_scale : False
+prof : 100
+amp : True
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_8GPU_128BS_dali-gpu_trainingbench.json
+final_weights : model.pth.tar
+evaluate : False
+training_only : True
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 8
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Selected optimization level O2:  FP16 training with FP32 batchnorm and FP32 master weights.
+
+Defaults for this optimization level are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : dynamic
+Processing user overrides (additional kwargs that are not None)...
+After processing overrides, optimization options are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : 128.0
+Epoch: 0/2  Iteration: 1/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.111
+Epoch: 0/2  Iteration: 2/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.032
+Epoch: 0/2  Iteration: 3/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.042
+Epoch: 0/2  Iteration: 4/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.069
+Epoch: 0/2  Iteration: 5/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.121
+Epoch: 0/2  Iteration: 6/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.286
+Epoch: 0/2  Iteration: 7/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.406
+Epoch: 0/2  Iteration: 8/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.318
+Epoch: 0/2  Iteration: 9/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.397
+Epoch: 0/2  Iteration: 10/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.214
+Epoch: 0/2  Iteration: 11/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.602
+Epoch: 0/2  Iteration: 12/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.389
+Epoch: 0/2  Iteration: 13/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.415
+Epoch: 0/2  Iteration: 14/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.452
+Epoch: 0/2  Iteration: 15/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.327
+Epoch: 0/2  Iteration: 16/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.354
+Epoch: 0/2  Iteration: 17/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.342
+Epoch: 0/2  Iteration: 18/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.457
+Epoch: 0/2  Iteration: 19/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.588
+Epoch: 0/2  Iteration: 20/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.646
+Epoch: 0/2  Iteration: 21/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.480
+Epoch: 0/2  Iteration: 22/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.513
+Epoch: 0/2  Iteration: 23/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.585
+Epoch: 0/2  Iteration: 24/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.341
+Epoch: 0/2  Iteration: 25/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.577
+Epoch: 0/2  Iteration: 26/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.421
+Epoch: 0/2  Iteration: 27/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.419
+Epoch: 0/2  Iteration: 28/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.236
+Epoch: 0/2  Iteration: 29/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.381
+Epoch: 0/2  Iteration: 30/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.460
+Epoch: 0/2  Iteration: 31/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 8.030
+Epoch: 0/2  Iteration: 32/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.625
+Epoch: 0/2  Iteration: 33/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.339
+Epoch: 0/2  Iteration: 34/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.363
+Epoch: 0/2  Iteration: 35/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.600
+Epoch: 0/2  Iteration: 36/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.235
+Epoch: 0/2  Iteration: 37/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.788
+Epoch: 0/2  Iteration: 38/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.195
+Epoch: 0/2  Iteration: 39/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.589
+Epoch: 0/2  Iteration: 40/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.680
+Epoch: 0/2  Iteration: 41/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.071
+Epoch: 0/2  Iteration: 42/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.431
+Epoch: 0/2  Iteration: 43/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.269
+Epoch: 0/2  Iteration: 44/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.218
+Epoch: 0/2  Iteration: 45/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.120
+Epoch: 0/2  Iteration: 46/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.102
+Epoch: 0/2  Iteration: 47/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.092
+Epoch: 0/2  Iteration: 48/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.075
+Epoch: 0/2  Iteration: 49/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.007
+Epoch: 0/2  Iteration: 50/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.017
+Epoch: 0/2  Iteration: 51/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.048
+Epoch: 0/2  Iteration: 52/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.081
+Epoch: 0/2  Iteration: 53/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.131
+Epoch: 0/2  Iteration: 54/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.081
+Epoch: 0/2  Iteration: 55/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.246
+Epoch: 0/2  Iteration: 56/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.097
+Epoch: 0/2  Iteration: 57/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.995
+Epoch: 0/2  Iteration: 58/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.970
+Epoch: 0/2  Iteration: 59/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.028
+Epoch: 0/2  Iteration: 60/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.146
+Epoch: 0/2  Iteration: 61/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.952
+Epoch: 0/2  Iteration: 62/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.958
+Epoch: 0/2  Iteration: 63/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.044
+Epoch: 0/2  Iteration: 64/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.058
+Epoch: 0/2  Iteration: 65/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.972
+Epoch: 0/2  Iteration: 66/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.025
+Epoch: 0/2  Iteration: 67/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.973
+Epoch: 0/2  Iteration: 68/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.232
+Epoch: 0/2  Iteration: 69/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.949
+Epoch: 0/2  Iteration: 70/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.021
+Epoch: 0/2  Iteration: 71/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.968
+Epoch: 0/2  Iteration: 72/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.018
+Epoch: 0/2  Iteration: 73/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.015
+Epoch: 0/2  Iteration: 74/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.958
+Epoch: 0/2  Iteration: 75/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.965
+Epoch: 0/2  Iteration: 76/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.924
+Epoch: 0/2  Iteration: 77/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.987
+Epoch: 0/2  Iteration: 78/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.929
+Epoch: 0/2  Iteration: 79/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.088
+Epoch: 0/2  Iteration: 80/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.908
+Epoch: 0/2  Iteration: 81/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.937
+Epoch: 0/2  Iteration: 82/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.003
+Epoch: 0/2  Iteration: 83/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.972
+Epoch: 0/2  Iteration: 84/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.947
+Epoch: 0/2  Iteration: 85/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.947
+Epoch: 0/2  Iteration: 86/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.953
+Epoch: 0/2  Iteration: 87/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.965
+Epoch: 0/2  Iteration: 88/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.925
+Epoch: 0/2  Iteration: 89/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.942
+Epoch: 0/2  Iteration: 90/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.937
+Epoch: 0/2  Iteration: 91/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.928
+Epoch: 0/2  Iteration: 92/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.929
+Epoch: 0/2  Iteration: 93/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.913
+Epoch: 0/2  Iteration: 94/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.919
+Epoch: 0/2  Iteration: 95/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.923
+Epoch: 0/2  Iteration: 96/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.912
+Epoch: 0/2  Iteration: 97/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.932
+Epoch: 0/2  Iteration: 98/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.919
+Epoch: 0/2  Iteration: 99/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.913
+Epoch: 0/2  Iteration: 100/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.925
+Summary Epoch: 0/2;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.173
+Epoch: 1/2  Iteration: 1/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.914
+Epoch: 1/2  Iteration: 2/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.924
+Epoch: 1/2  Iteration: 3/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.915
+Epoch: 1/2  Iteration: 4/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.923
+Epoch: 1/2  Iteration: 5/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.921
+Epoch: 1/2  Iteration: 6/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.922
+Epoch: 1/2  Iteration: 7/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.929
+Epoch: 1/2  Iteration: 8/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.950
+Epoch: 1/2  Iteration: 9/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.919
+Epoch: 1/2  Iteration: 10/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.920
+Epoch: 1/2  Iteration: 11/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.914
+Epoch: 1/2  Iteration: 12/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.921
+Epoch: 1/2  Iteration: 13/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.910
+Epoch: 1/2  Iteration: 14/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.921
+Epoch: 1/2  Iteration: 15/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.920
+Epoch: 1/2  Iteration: 16/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.917
+Epoch: 1/2  Iteration: 17/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.916
+Epoch: 1/2  Iteration: 18/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.919
+Epoch: 1/2  Iteration: 19/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.912
+Epoch: 1/2  Iteration: 20/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.915
+Epoch: 1/2  Iteration: 21/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.909
+Epoch: 1/2  Iteration: 22/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.908
+Epoch: 1/2  Iteration: 23/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.917
+Epoch: 1/2  Iteration: 24/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.905
+Epoch: 1/2  Iteration: 25/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.956
+Epoch: 1/2  Iteration: 26/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.904
+Epoch: 1/2  Iteration: 27/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.918
+Epoch: 1/2  Iteration: 28/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.910
+Epoch: 1/2  Iteration: 29/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.907
+Epoch: 1/2  Iteration: 30/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.975
+Epoch: 1/2  Iteration: 31/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.905
+Epoch: 1/2  Iteration: 32/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.905
+Epoch: 1/2  Iteration: 33/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.916
+Epoch: 1/2  Iteration: 34/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.909
+Epoch: 1/2  Iteration: 35/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.906
+Epoch: 1/2  Iteration: 36/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.911
+Epoch: 1/2  Iteration: 37/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.913
+Epoch: 1/2  Iteration: 38/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.916
+Epoch: 1/2  Iteration: 39/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.909
+Epoch: 1/2  Iteration: 40/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.906
+Epoch: 1/2  Iteration: 41/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.928
+Epoch: 1/2  Iteration: 42/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.903
+Epoch: 1/2  Iteration: 43/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.936
+Epoch: 1/2  Iteration: 44/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.909
+Epoch: 1/2  Iteration: 45/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.908
+Epoch: 1/2  Iteration: 46/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.906
+Epoch: 1/2  Iteration: 47/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.908
+Epoch: 1/2  Iteration: 48/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.918
+Epoch: 1/2  Iteration: 49/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.900
+Epoch: 1/2  Iteration: 50/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.926
+Epoch: 1/2  Iteration: 51/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.903
+Epoch: 1/2  Iteration: 52/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.901
+Epoch: 1/2  Iteration: 53/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.901
+Epoch: 1/2  Iteration: 54/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.904
+Epoch: 1/2  Iteration: 55/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.906
+Epoch: 1/2  Iteration: 56/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.902
+Epoch: 1/2  Iteration: 57/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.932
+Epoch: 1/2  Iteration: 58/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.909
+Epoch: 1/2  Iteration: 59/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.892
+Epoch: 1/2  Iteration: 60/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.902
+Epoch: 1/2  Iteration: 61/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.908
+Epoch: 1/2  Iteration: 62/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.894
+Epoch: 1/2  Iteration: 63/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.903
+Epoch: 1/2  Iteration: 64/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.895
+Epoch: 1/2  Iteration: 65/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.896
+Epoch: 1/2  Iteration: 66/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.884
+Epoch: 1/2  Iteration: 67/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.905
+Epoch: 1/2  Iteration: 68/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.899
+Epoch: 1/2  Iteration: 69/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.913
+Epoch: 1/2  Iteration: 70/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.902
+Epoch: 1/2  Iteration: 71/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.898
+Epoch: 1/2  Iteration: 72/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.896
+Epoch: 1/2  Iteration: 73/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.897
+Epoch: 1/2  Iteration: 74/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.894
+Epoch: 1/2  Iteration: 75/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.885
+Epoch: 1/2  Iteration: 76/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.891
+Epoch: 1/2  Iteration: 77/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.892
+Epoch: 1/2  Iteration: 78/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.902
+Epoch: 1/2  Iteration: 79/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.893
+Epoch: 1/2  Iteration: 80/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.893
+Epoch: 1/2  Iteration: 81/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.893
+Epoch: 1/2  Iteration: 82/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.890
+Epoch: 1/2  Iteration: 83/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.890
+Epoch: 1/2  Iteration: 84/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.898
+Epoch: 1/2  Iteration: 85/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.875
+Epoch: 1/2  Iteration: 86/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.886
+Epoch: 1/2  Iteration: 87/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.894
+Epoch: 1/2  Iteration: 88/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.893
+Epoch: 1/2  Iteration: 89/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.891
+Epoch: 1/2  Iteration: 90/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.877
+Epoch: 1/2  Iteration: 91/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.883
+Epoch: 1/2  Iteration: 92/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.873
+Epoch: 1/2  Iteration: 93/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.888
+Epoch: 1/2  Iteration: 94/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.881
+Epoch: 1/2  Iteration: 95/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.886
+Epoch: 1/2  Iteration: 96/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.870
+Epoch: 1/2  Iteration: 97/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.876
+Epoch: 1/2  Iteration: 98/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.869
+Epoch: 1/2  Iteration: 99/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.875
+Epoch: 1/2  Iteration: 100/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.882
+Summary Epoch: 1/2;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.905
+None
+Experiment ended
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '8', 'main.py', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+Job ended sucessfully
+train.total_ips
+[[137.78075556141258, 4436.949685950413, 6476.829957413954, 6470.555803130899, 6303.160550573159, 6448.531909590744, 6353.793289337233, 6385.10630428125, 6329.326884591693, 6374.729010358457, 5985.466557780051, 6304.539150091743, 6344.9793709041705, 6487.50341144075, 6345.419954761761, 6395.66029329426, 6487.101664758533, 6384.565282862924, 6368.481036758055, 6355.401016280012, 6283.123498329364, 6451.399034460797, 6358.8354374157025, 3691.207550575085, 6490.748604365081, 5053.800493970105, 5515.971776503194, 6342.571302415216, 3780.335150607235, 6393.679953316105, 6495.224644234405, 4797.254202795273, 6482.627024987359, 2608.8099459890227, 6496.904751171947, 6137.1404794293485, 3022.977120921413, 6312.41519106408, 2377.2522054094384, 6495.64704547895, 6282.709903352315, 5453.725889459309, 6388.14532062933, 1960.397968838792, 6376.669224282304, 6402.849320949925, 6279.210313480448, 6464.332710224108, 2604.0615763696132, 6359.805274458413, 6403.498462850481, 6347.689461868496, 6331.463553636529, 2593.0218479602213, 6387.451790359113, 6364.781515170376, 6392.252584454281, 6349.791609932066, 2098.466615560432, 6313.027565872057, 6395.526962674855, 6480.18180254532, 6248.070351334799, 3541.008651834166, 6521.616850953727, 6379.482264310127, 4621.146285409332, 6400.101472556096, 2947.303794193596, 6341.559896821518, 6394.70805367129, 5493.774905728918, 6415.579290143235, 2342.421103438722, 6387.16682157585, 6382.136562416879, 6417.793780296102, 6355.965323838529, 3413.957905061837, 6345.68245933635, 6296.304277268189, 6419.357306091337, 6509.646772812355, 2457.879406762396, 5472.787863188181, 6405.742834685833, 6403.718055342262, 6407.310052019698, 3443.4695813847584, 5216.2194642373515, 6402.849320949925, 5439.125397173153, 6400.559283489561, 3576.138437161482, 3409.9463979338507, 6403.469821461851, 6393.832243619518, 6393.508635396043, 6388.648936977246, 1911.7155879671832], [524.3918925832107, 6275.256156591845, 6330.576987477301, 6323.754079919903, 2424.4531791907516, 6323.158240632232, 6337.985104514834, 6372.175407518185, 6283.197032026263, 2989.7708655574384, 6391.501093036857, 6441.201350937918, 6168.067543367087, 6332.733175370125, 5511.972166574479, 6459.257933142036, 6375.438707742915, 6372.619776489231, 6316.499935290311, 3027.5436642791537, 6471.423507041022, 6296.082760036062, 6298.889797187403, 6334.06869456726, 3529.2157160171737, 6331.444886526966, 6364.517428093001, 6249.534076589751, 6224.473011378046, 5155.268131198071, 6482.627024987359, 6456.4420539308685, 6317.865789562718, 6239.692147661732, 4874.142105872393, 4380.983526560489, 5206.626826879249, 6249.697765515957, 6308.168951528806, 5020.6523928646575, 4479.224682541007, 5272.861676868719, 6266.5489159298495, 6301.1723585489735, 3809.0843104440655, 2815.1001259103264, 6283.004009742754, 6273.798687677844, 6330.287740666992, 3908.580647509774, 5499.508044452241, 6363.913882772702, 6434.716414869327, 6336.395523918415, 3109.7847795330435, 3542.398833432582, 6228.209866893659, 6270.473794475809, 6269.210709849377, 4866.807436130456, 6461.570731795383, 6481.45308795678, 6249.152169105237, 6288.339464572002, 3163.1974063793227, 6260.501975097734, 6293.0200367181105, 6332.322359681598, 6276.796859677813, 3416.6139355953424, 6451.001746815404, 6388.487391008154, 6241.62358436138, 6239.7918639468035, 2520.853572801573, 6341.990641247322, 6273.670389510986, 6128.033786483124, 6456.840011966668, 6365.338056119144, 6296.202746601931, 6264.867023355952, 6137.710546510481, 6228.2550254207545, 5191.509908063038, 6288.256603817784, 6389.086102330286, 6281.331646598915, 6254.23900257598, 6348.571443775175, 3683.9256072948288, 6246.852618243857, 6366.1683319622625, 6313.296677225656, 3130.385595014668, 6422.332985921601, 6210.890320192271, 6320.962053334903, 6200.507154818964, 3774.56765359839], []]
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '8', 'main.py', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+Job ended sucessfully
+train.total_ips
+[[175.90590473723736, 4063.613583831709, 6314.141279068058, 6329.140344413957, 6286.415817006092, 6374.804703884727, 6367.2253599844635, 6284.6220872127815, 6349.2941009508495, 6258.011694338606, 6270.272399058065, 6353.830887693889, 6386.302571788832, 6041.51487180497, 6325.709966567006, 5481.2319606114015, 6347.201662255365, 6308.113361846125, 6339.145066425005, 6361.086289273898, 6382.174496963429, 6397.7848093534985, 6268.021312894126, 6269.69574737678, 6311.54322595056, 6001.373963200608, 4830.8267536484545, 6309.1141260598515, 6340.005957731988, 6399.605584611029, 6396.031743620673, 6351.660311507315, 6254.557773913854, 6302.198663835669, 6394.9556086942275, 4485.0200193186265, 6279.981541538848, 6316.760052475835, 6362.452645659797, 6335.85337882791, 6302.624077528002, 6369.04766960777, 6339.472551867465, 6152.595994120967, 6279.3296578141335, 4728.25514057171, 6378.904299369679, 6372.629231821547, 6327.079807254616, 6345.157471904551, 6401.083939043929, 6278.301609274708, 6399.758157332435, 6343.704834545465, 6394.565242183906, 4270.922005111223, 6355.288166792442, 6310.031772243582, 6286.866710091998, 6416.921222914634, 6307.9188056720295, 6377.256253322286, 6354.000085805544, 6366.1494596513485, 6352.919252967923, 4911.273139762519, 6298.705046775024, 6363.555581895657, 6357.00955704849, 6331.836918944499, 6368.4621507327865, 6309.651704573835, 6376.0633721689765, 6305.983162382872, 6359.541600158731, 6384.44190485251, 6275.393688615371, 6376.820705301042, 5134.492812253061, 5970.904715034839, 5174.765381941558, 5174.335217552635, 4837.235958675387, 6261.889364183761, 4964.0806972650535, 4669.5644236278495, 4563.531101312225, 5305.27133797615, 6365.639949548769, 5205.598207175902, 5260.674591421912, 6276.475817482493, 6362.754265448129, 6277.200502179864, 6024.52370973217, 6354.0752878588155, 5184.478670445712, 5248.883666987264, 6384.394453041269, 6293.112243896221], [3963.8765771411327, 6305.955386677669, 6320.20862880595, 5158.02940879766, 6343.7797930981515, 6252.317954988791, 6305.9368696768015, 5878.081631368255, 6299.453352889411, 6431.459579578501, 6323.865812287976, 6353.830887693889, 5144.665373802613, 6345.307459449557, 6392.832970896387, 5126.721458745394, 4657.1743759121955, 6345.7012104942005, 6332.135642897265, 6284.796815873806, 6333.704406197787, 6318.237552830136, 6362.009693436193, 6375.504954228128, 6334.152767065104, 6237.227449237731, 6308.2338073969195, 5143.679568478525, 6175.899137236857, 6214.817708386088, 6356.689665379532, 5190.5625259076905, 6404.224130167033, 4691.671587042368, 6385.258186424198, 5054.746196848262, 5177.2105724387075, 5495.8909054149335, 4687.23240119086, 6302.263396997195, 5049.041669311703, 5254.637507998244, 6274.696921795789, 6326.6510858501415, 4945.088144132858, 5332.8920835438985, 6274.577753494141, 6269.796424947995, 6349.829160943892, 6300.534553450798, 6289.453693453061, 6323.968237093926, 6406.440342832936, 6330.744949368394, 6350.401868910148, 6333.377516412346, 6335.068367634413, 6419.2805508517, 6350.073253346935, 6375.817277631473, 6338.172166431781, 4676.993477205064, 6337.760644789052, 6300.571524133793, 6216.598801251145, 6371.551504632205, 4811.25326092314, 6413.2035293046065, 6347.59564842772, 6307.557518900788, 6396.298452515872, 6317.196725916883, 6227.026946776275, 6360.5587500925585, 4853.158131672437, 6361.142816519251, 4988.208570260527, 6353.981285570361, 6328.384969124024, 5121.091541251631, 6403.422086383493, 6311.255715807649, 6299.037605320857, 4792.677242253546, 6356.454471455676, 6333.470910050757, 6271.343605079024, 6289.0024292280505, 6354.780393688671, 6375.069645383123, 6409.691013231374, 6305.603582256087, 6386.7489133521985, 6349.341032429931, 6368.7171215255385, 6397.184466713535, 6174.540709869133, 6302.799808639964, 6181.908239344583, 6257.893158956068], []]Warning:  if --fp16 is not used, static_loss_scale will be ignored.
+=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7f36fd1bd8c8>}
+read 1281167 files from 1000 directories
+read 50000 files from 1000 directories
+data : /data/imagenet
+data_backend : dali-cpu
+arch : resnet50
+model_config : fanin
+workers : 5
+epochs : 2
+start_epoch : 0
+batch_size : 128
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.1
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 128.0
+dynamic_loss_scale : False
+prof : 100
+amp : True
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_8GPU_128BS_dali-cpu_trainingbench.json
+final_weights : model.pth.tar
+evaluate : False
+training_only : True
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 8
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Selected optimization level O2:  FP16 training with FP32 batchnorm and FP32 master weights.
+
+Defaults for this optimization level are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : dynamic
+Processing user overrides (additional kwargs that are not None)...
+After processing overrides, optimization options are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : 128.0
+Epoch: 0/2  Iteration: 1/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.090
+Epoch: 0/2  Iteration: 2/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.034
+Epoch: 0/2  Iteration: 3/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.034
+Epoch: 0/2  Iteration: 4/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.057
+Epoch: 0/2  Iteration: 5/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.084
+Epoch: 0/2  Iteration: 6/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.255
+Epoch: 0/2  Iteration: 7/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.283
+Epoch: 0/2  Iteration: 8/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.281
+Epoch: 0/2  Iteration: 9/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.355
+Epoch: 0/2  Iteration: 10/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.277
+Epoch: 0/2  Iteration: 11/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.331
+Epoch: 0/2  Iteration: 12/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.355
+Epoch: 0/2  Iteration: 13/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.377
+Epoch: 0/2  Iteration: 14/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.387
+Epoch: 0/2  Iteration: 15/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.446
+Epoch: 0/2  Iteration: 16/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.322
+Epoch: 0/2  Iteration: 17/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.446
+Epoch: 0/2  Iteration: 18/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.552
+Epoch: 0/2  Iteration: 19/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.665
+Epoch: 0/2  Iteration: 20/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.558
+Epoch: 0/2  Iteration: 21/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.334
+Epoch: 0/2  Iteration: 22/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.689
+Epoch: 0/2  Iteration: 23/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.421
+Epoch: 0/2  Iteration: 24/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.452
+Epoch: 0/2  Iteration: 25/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.430
+Epoch: 0/2  Iteration: 26/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.956
+Epoch: 0/2  Iteration: 27/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.281
+Epoch: 0/2  Iteration: 28/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.687
+Epoch: 0/2  Iteration: 29/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.368
+Epoch: 0/2  Iteration: 30/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.239
+Epoch: 0/2  Iteration: 31/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.568
+Epoch: 0/2  Iteration: 32/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.250
+Epoch: 0/2  Iteration: 33/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.517
+Epoch: 0/2  Iteration: 34/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.651
+Epoch: 0/2  Iteration: 35/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.064
+Epoch: 0/2  Iteration: 36/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.362
+Epoch: 0/2  Iteration: 37/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.033
+Epoch: 0/2  Iteration: 38/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.092
+Epoch: 0/2  Iteration: 39/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.049
+Epoch: 0/2  Iteration: 40/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.115
+Epoch: 0/2  Iteration: 41/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.139
+Epoch: 0/2  Iteration: 42/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.432
+Epoch: 0/2  Iteration: 43/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.212
+Epoch: 0/2  Iteration: 44/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.177
+Epoch: 0/2  Iteration: 45/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.186
+Epoch: 0/2  Iteration: 46/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.218
+Epoch: 0/2  Iteration: 47/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.074
+Epoch: 0/2  Iteration: 48/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.053
+Epoch: 0/2  Iteration: 49/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.007
+Epoch: 0/2  Iteration: 50/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.245
+Epoch: 0/2  Iteration: 51/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.069
+Epoch: 0/2  Iteration: 52/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.041
+Epoch: 0/2  Iteration: 53/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.018
+Epoch: 0/2  Iteration: 54/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.026
+Epoch: 0/2  Iteration: 55/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.025
+Epoch: 0/2  Iteration: 56/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.164
+Epoch: 0/2  Iteration: 57/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.949
+Epoch: 0/2  Iteration: 58/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.981
+Epoch: 0/2  Iteration: 59/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.005
+Epoch: 0/2  Iteration: 60/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.970
+Epoch: 0/2  Iteration: 61/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.998
+Epoch: 0/2  Iteration: 62/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.982
+Epoch: 0/2  Iteration: 63/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.948
+Epoch: 0/2  Iteration: 64/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.965
+Epoch: 0/2  Iteration: 65/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.950
+Epoch: 0/2  Iteration: 66/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.975
+Epoch: 0/2  Iteration: 67/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.975
+Epoch: 0/2  Iteration: 68/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.982
+Epoch: 0/2  Iteration: 69/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.954
+Epoch: 0/2  Iteration: 70/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.937
+Epoch: 0/2  Iteration: 71/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.945
+Epoch: 0/2  Iteration: 72/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.938
+Epoch: 0/2  Iteration: 73/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.942
+Epoch: 0/2  Iteration: 74/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.930
+Epoch: 0/2  Iteration: 75/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.973
+Epoch: 0/2  Iteration: 76/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.934
+Epoch: 0/2  Iteration: 77/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.949
+Epoch: 0/2  Iteration: 78/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.939
+Epoch: 0/2  Iteration: 79/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.948
+Epoch: 0/2  Iteration: 80/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.928
+Epoch: 0/2  Iteration: 81/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.069
+Epoch: 0/2  Iteration: 82/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.930
+Epoch: 0/2  Iteration: 83/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.958
+Epoch: 0/2  Iteration: 84/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.956
+Epoch: 0/2  Iteration: 85/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.927
+Epoch: 0/2  Iteration: 86/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.001
+Epoch: 0/2  Iteration: 87/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.975
+Epoch: 0/2  Iteration: 88/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.983
+Epoch: 0/2  Iteration: 89/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.963
+Epoch: 0/2  Iteration: 90/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.964
+Epoch: 0/2  Iteration: 91/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.934
+Epoch: 0/2  Iteration: 92/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.954
+Epoch: 0/2  Iteration: 93/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.954
+Epoch: 0/2  Iteration: 94/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.941
+Epoch: 0/2  Iteration: 95/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.929
+Epoch: 0/2  Iteration: 96/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.949
+Epoch: 0/2  Iteration: 97/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.931
+Epoch: 0/2  Iteration: 98/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.926
+Epoch: 0/2  Iteration: 99/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.915
+Epoch: 0/2  Iteration: 100/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.968
+Summary Epoch: 0/2;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.140
+Epoch: 1/2  Iteration: 1/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.941
+Epoch: 1/2  Iteration: 2/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.931
+Epoch: 1/2  Iteration: 3/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.918
+Epoch: 1/2  Iteration: 4/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.924
+Epoch: 1/2  Iteration: 5/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.914
+Epoch: 1/2  Iteration: 6/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.922
+Epoch: 1/2  Iteration: 7/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.912
+Epoch: 1/2  Iteration: 8/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.927
+Epoch: 1/2  Iteration: 9/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.910
+Epoch: 1/2  Iteration: 10/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.916
+Epoch: 1/2  Iteration: 11/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.925
+Epoch: 1/2  Iteration: 12/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.949
+Epoch: 1/2  Iteration: 13/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.911
+Epoch: 1/2  Iteration: 14/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.939
+Epoch: 1/2  Iteration: 15/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.926
+Epoch: 1/2  Iteration: 16/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.926
+Epoch: 1/2  Iteration: 17/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.923
+Epoch: 1/2  Iteration: 18/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.957
+Epoch: 1/2  Iteration: 19/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.907
+Epoch: 1/2  Iteration: 20/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.918
+Epoch: 1/2  Iteration: 21/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.917
+Epoch: 1/2  Iteration: 22/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.915
+Epoch: 1/2  Iteration: 23/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.903
+Epoch: 1/2  Iteration: 24/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.910
+Epoch: 1/2  Iteration: 25/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.910
+Epoch: 1/2  Iteration: 26/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.905
+Epoch: 1/2  Iteration: 27/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.929
+Epoch: 1/2  Iteration: 28/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.905
+Epoch: 1/2  Iteration: 29/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.917
+Epoch: 1/2  Iteration: 30/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.908
+Epoch: 1/2  Iteration: 31/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.935
+Epoch: 1/2  Iteration: 32/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.904
+Epoch: 1/2  Iteration: 33/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.894
+Epoch: 1/2  Iteration: 34/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.906
+Epoch: 1/2  Iteration: 35/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.906
+Epoch: 1/2  Iteration: 36/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.906
+Epoch: 1/2  Iteration: 37/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.911
+Epoch: 1/2  Iteration: 38/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.915
+Epoch: 1/2  Iteration: 39/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.913
+Epoch: 1/2  Iteration: 40/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.904
+Epoch: 1/2  Iteration: 41/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.901
+Epoch: 1/2  Iteration: 42/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.899
+Epoch: 1/2  Iteration: 43/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.903
+Epoch: 1/2  Iteration: 44/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.903
+Epoch: 1/2  Iteration: 45/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.910
+Epoch: 1/2  Iteration: 46/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.894
+Epoch: 1/2  Iteration: 47/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.894
+Epoch: 1/2  Iteration: 48/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.918
+Epoch: 1/2  Iteration: 49/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.900
+Epoch: 1/2  Iteration: 50/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.920
+Epoch: 1/2  Iteration: 51/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.898
+Epoch: 1/2  Iteration: 52/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.906
+Epoch: 1/2  Iteration: 53/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.896
+Epoch: 1/2  Iteration: 54/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.906
+Epoch: 1/2  Iteration: 55/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.937
+Epoch: 1/2  Iteration: 56/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.899
+Epoch: 1/2  Iteration: 57/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.911
+Epoch: 1/2  Iteration: 58/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.899
+Epoch: 1/2  Iteration: 59/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.895
+Epoch: 1/2  Iteration: 60/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.890
+Epoch: 1/2  Iteration: 61/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.893
+Epoch: 1/2  Iteration: 62/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.897
+Epoch: 1/2  Iteration: 63/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.908
+Epoch: 1/2  Iteration: 64/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.898
+Epoch: 1/2  Iteration: 65/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.898
+Epoch: 1/2  Iteration: 66/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.893
+Epoch: 1/2  Iteration: 67/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.901
+Epoch: 1/2  Iteration: 68/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.884
+Epoch: 1/2  Iteration: 69/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.883
+Epoch: 1/2  Iteration: 70/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.907
+Epoch: 1/2  Iteration: 71/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.893
+Epoch: 1/2  Iteration: 72/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.894
+Epoch: 1/2  Iteration: 73/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.903
+Epoch: 1/2  Iteration: 74/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.903
+Epoch: 1/2  Iteration: 75/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.870
+Epoch: 1/2  Iteration: 76/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.881
+Epoch: 1/2  Iteration: 77/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.899
+Epoch: 1/2  Iteration: 78/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.944
+Epoch: 1/2  Iteration: 79/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.896
+Epoch: 1/2  Iteration: 80/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.879
+Epoch: 1/2  Iteration: 81/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.889
+Epoch: 1/2  Iteration: 82/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.885
+Epoch: 1/2  Iteration: 83/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.878
+Epoch: 1/2  Iteration: 84/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.884
+Epoch: 1/2  Iteration: 85/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.887
+Epoch: 1/2  Iteration: 86/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.882
+Epoch: 1/2  Iteration: 87/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.894
+Epoch: 1/2  Iteration: 88/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.890
+Epoch: 1/2  Iteration: 89/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.877
+Epoch: 1/2  Iteration: 90/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.873
+Epoch: 1/2  Iteration: 91/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.874
+Epoch: 1/2  Iteration: 92/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.870
+Epoch: 1/2  Iteration: 93/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.880
+Epoch: 1/2  Iteration: 94/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.885
+Epoch: 1/2  Iteration: 95/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.897
+Epoch: 1/2  Iteration: 96/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.881
+Epoch: 1/2  Iteration: 97/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.933
+Epoch: 1/2  Iteration: 98/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.893
+Epoch: 1/2  Iteration: 99/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.897
+Epoch: 1/2  Iteration: 100/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.892
+Summary Epoch: 1/2;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.905
+None
+Experiment ended
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+Warning:  if --fp16 is not used, static_loss_scale will be ignored.
+=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7ff7c799c8c8>}
+data : /data/imagenet
+data_backend : pytorch
+arch : resnet50
+model_config : fanin
+workers : 5
+epochs : 2
+start_epoch : 0
+batch_size : 224
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.1
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 128.0
+dynamic_loss_scale : False
+prof : 100
+amp : True
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_8GPU_224BS_pytorch_trainingbench.json
+final_weights : model.pth.tar
+evaluate : False
+training_only : True
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 8
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Selected optimization level O2:  FP16 training with FP32 batchnorm and FP32 master weights.
+
+Defaults for this optimization level are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : dynamic
+Processing user overrides (additional kwargs that are not None)...
+After processing overrides, optimization options are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : 128.0
+Epoch: 0/2  Iteration: 1/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.091
+Epoch: 0/2  Iteration: 2/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.023
+Epoch: 0/2  Iteration: 3/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.973
+Epoch: 0/2  Iteration: 4/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.016
+Epoch: 0/2  Iteration: 5/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.023
+Epoch: 0/2  Iteration: 6/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.076
+Epoch: 0/2  Iteration: 7/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.090
+Epoch: 0/2  Iteration: 8/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.075
+Epoch: 0/2  Iteration: 9/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.097
+Epoch: 0/2  Iteration: 10/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.087
+Epoch: 0/2  Iteration: 11/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.099
+Epoch: 0/2  Iteration: 12/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.147
+Epoch: 0/2  Iteration: 13/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.115
+Epoch: 0/2  Iteration: 14/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.117
+Epoch: 0/2  Iteration: 15/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.098
+Epoch: 0/2  Iteration: 16/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.126
+Epoch: 0/2  Iteration: 17/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.165
+Epoch: 0/2  Iteration: 18/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.154
+Epoch: 0/2  Iteration: 19/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.158
+Epoch: 0/2  Iteration: 20/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.082
+Epoch: 0/2  Iteration: 21/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.124
+Epoch: 0/2  Iteration: 22/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.198
+Epoch: 0/2  Iteration: 23/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.162
+Epoch: 0/2  Iteration: 24/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.181
+Epoch: 0/2  Iteration: 25/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.210
+Epoch: 0/2  Iteration: 26/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.221
+Epoch: 0/2  Iteration: 27/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.217
+Epoch: 0/2  Iteration: 28/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.176
+Epoch: 0/2  Iteration: 29/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.176
+Epoch: 0/2  Iteration: 30/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.125
+Epoch: 0/2  Iteration: 31/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.133
+Epoch: 0/2  Iteration: 32/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.031
+Epoch: 0/2  Iteration: 33/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.108
+Epoch: 0/2  Iteration: 34/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.195
+Epoch: 0/2  Iteration: 35/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.077
+Epoch: 0/2  Iteration: 36/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.114
+Epoch: 0/2  Iteration: 37/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.023
+Epoch: 0/2  Iteration: 38/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.088
+Epoch: 0/2  Iteration: 39/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.143
+Epoch: 0/2  Iteration: 40/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.141
+Epoch: 0/2  Iteration: 41/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.127
+Epoch: 0/2  Iteration: 42/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.195
+Epoch: 0/2  Iteration: 43/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.145
+Epoch: 0/2  Iteration: 44/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.176
+Epoch: 0/2  Iteration: 45/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.053
+Epoch: 0/2  Iteration: 46/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.130
+Epoch: 0/2  Iteration: 47/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.192
+Epoch: 0/2  Iteration: 48/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.300
+Epoch: 0/2  Iteration: 49/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.049
+Epoch: 0/2  Iteration: 50/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.093
+Epoch: 0/2  Iteration: 51/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.181
+Epoch: 0/2  Iteration: 52/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.130
+/opt/conda/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+Epoch: 0/2  Iteration: 53/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.011
+Epoch: 0/2  Iteration: 54/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.083
+Epoch: 0/2  Iteration: 55/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.990
+Epoch: 0/2  Iteration: 56/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.005
+Epoch: 0/2  Iteration: 57/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.016
+Epoch: 0/2  Iteration: 58/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.969
+Epoch: 0/2  Iteration: 59/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.979
+Epoch: 0/2  Iteration: 60/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.177
+Epoch: 0/2  Iteration: 61/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.059
+Epoch: 0/2  Iteration: 62/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.958
+Epoch: 0/2  Iteration: 63/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.950
+Epoch: 0/2  Iteration: 64/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.041
+Epoch: 0/2  Iteration: 65/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.011
+Epoch: 0/2  Iteration: 66/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.983
+Epoch: 0/2  Iteration: 67/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.002
+Epoch: 0/2  Iteration: 68/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.968
+/opt/conda/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:771: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+Epoch: 0/2  Iteration: 69/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.990
+Epoch: 0/2  Iteration: 70/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.946
+Epoch: 0/2  Iteration: 71/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.938
+Epoch: 0/2  Iteration: 72/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.936
+Epoch: 0/2  Iteration: 73/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.932
+Epoch: 0/2  Iteration: 74/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.930
+Epoch: 0/2  Iteration: 75/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.952
+Epoch: 0/2  Iteration: 76/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.931
+Epoch: 0/2  Iteration: 77/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.949
+Epoch: 0/2  Iteration: 78/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.957
+Epoch: 0/2  Iteration: 79/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.928
+Epoch: 0/2  Iteration: 80/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.930
+Epoch: 0/2  Iteration: 81/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.975
+Epoch: 0/2  Iteration: 82/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.914
+Epoch: 0/2  Iteration: 83/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.918
+Epoch: 0/2  Iteration: 84/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.907
+Epoch: 0/2  Iteration: 85/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.920
+Epoch: 0/2  Iteration: 86/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.911
+Epoch: 0/2  Iteration: 87/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.896
+Epoch: 0/2  Iteration: 88/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.913
+Epoch: 0/2  Iteration: 89/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.922
+Epoch: 0/2  Iteration: 90/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.907
+Epoch: 0/2  Iteration: 91/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.906
+Epoch: 0/2  Iteration: 92/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.910
+Epoch: 0/2  Iteration: 93/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.899
+Epoch: 0/2  Iteration: 94/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.898
+Epoch: 0/2  Iteration: 95/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.925
+Epoch: 0/2  Iteration: 96/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.876
+Epoch: 0/2  Iteration: 97/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.886
+Epoch: 0/2  Iteration: 98/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.918
+Epoch: 0/2  Iteration: 99/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.935
+Epoch: 0/2  Iteration: 100/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.890
+Summary Epoch: 0/2;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.042
+Epoch: 1/2  Iteration: 1/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.877
+Epoch: 1/2  Iteration: 2/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.885
+Epoch: 1/2  Iteration: 3/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.888
+Epoch: 1/2  Iteration: 4/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.876
+Epoch: 1/2  Iteration: 5/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.873
+Epoch: 1/2  Iteration: 6/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.887
+Epoch: 1/2  Iteration: 7/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.890
+Epoch: 1/2  Iteration: 8/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.865
+Epoch: 1/2  Iteration: 9/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.853
+Epoch: 1/2  Iteration: 10/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.859
+Epoch: 1/2  Iteration: 11/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.885
+Epoch: 1/2  Iteration: 12/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.872
+Epoch: 1/2  Iteration: 13/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.862
+Epoch: 1/2  Iteration: 14/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.823
+Epoch: 1/2  Iteration: 15/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.849
+Epoch: 1/2  Iteration: 16/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.833
+Epoch: 1/2  Iteration: 17/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.816
+Epoch: 1/2  Iteration: 18/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.856
+Epoch: 1/2  Iteration: 19/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.845
+Epoch: 1/2  Iteration: 20/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.855
+/opt/conda/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 19660800 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/opt/conda/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 18481152 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/opt/conda/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 37093376 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/opt/conda/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 39976960 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/opt/conda/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 34865152 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/opt/conda/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:771: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 10. 
+  warnings.warn(str(msg))
+Epoch: 1/2  Iteration: 21/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.829
+Epoch: 1/2  Iteration: 22/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.824
+Epoch: 1/2  Iteration: 23/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.834
+Epoch: 1/2  Iteration: 24/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.829
+Epoch: 1/2  Iteration: 25/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.810
+Epoch: 1/2  Iteration: 26/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.813
+Epoch: 1/2  Iteration: 27/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.821
+Epoch: 1/2  Iteration: 28/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.832
+Epoch: 1/2  Iteration: 29/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.839
+Epoch: 1/2  Iteration: 30/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.800
+Epoch: 1/2  Iteration: 31/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.802
+Epoch: 1/2  Iteration: 32/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.821
+Epoch: 1/2  Iteration: 33/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.822
+Epoch: 1/2  Iteration: 34/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.819
+Epoch: 1/2  Iteration: 35/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.808
+Epoch: 1/2  Iteration: 36/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.808
+Epoch: 1/2  Iteration: 37/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.805
+Epoch: 1/2  Iteration: 38/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.787
+Epoch: 1/2  Iteration: 39/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.781
+Epoch: 1/2  Iteration: 40/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.785
+Epoch: 1/2  Iteration: 41/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.800
+Epoch: 1/2  Iteration: 42/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.785
+Epoch: 1/2  Iteration: 43/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.778
+Epoch: 1/2  Iteration: 44/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.785
+Epoch: 1/2  Iteration: 45/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.769
+Epoch: 1/2  Iteration: 46/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.786
+Epoch: 1/2  Iteration: 47/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.756
+Epoch: 1/2  Iteration: 48/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.758
+Epoch: 1/2  Iteration: 49/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.745
+Epoch: 1/2  Iteration: 50/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.764
+Epoch: 1/2  Iteration: 51/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.723
+Epoch: 1/2  Iteration: 52/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.784
+Epoch: 1/2  Iteration: 53/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.744
+Epoch: 1/2  Iteration: 54/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.744
+Epoch: 1/2  Iteration: 55/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.720
+Epoch: 1/2  Iteration: 56/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.772
+Epoch: 1/2  Iteration: 57/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.714
+Epoch: 1/2  Iteration: 58/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.741
+Epoch: 1/2  Iteration: 59/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.733
+Epoch: 1/2  Iteration: 60/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.717
+Epoch: 1/2  Iteration: 61/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.737
+Epoch: 1/2  Iteration: 62/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.731
+Epoch: 1/2  Iteration: 63/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.712
+Epoch: 1/2  Iteration: 64/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.684
+Epoch: 1/2  Iteration: 65/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.688
+Epoch: 1/2  Iteration: 66/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.676
+Epoch: 1/2  Iteration: 67/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.684
+Epoch: 1/2  Iteration: 68/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.659
+Epoch: 1/2  Iteration: 69/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.652
+Epoch: 1/2  Iteration: 70/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.692
+Epoch: 1/2  Iteration: 71/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.671
+Epoch: 1/2  Iteration: 72/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.658
+Epoch: 1/2  Iteration: 73/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.693
+Epoch: 1/2  Iteration: 74/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.681
+Epoch: 1/2  Iteration: 75/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.691
+Epoch: 1/2  Iteration: 76/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.705
+Epoch: 1/2  Iteration: 77/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.658
+Epoch: 1/2  Iteration: 78/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.669
+Epoch: 1/2  Iteration: 79/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.674
+Epoch: 1/2  Iteration: 80/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.703
+Epoch: 1/2  Iteration: 81/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.700
+Epoch: 1/2  Iteration: 82/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.671
+Epoch: 1/2  Iteration: 83/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.667
+Epoch: 1/2  Iteration: 84/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.641
+Epoch: 1/2  Iteration: 85/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.675
+/opt/conda/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 1835008 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+Epoch: 1/2  Iteration: 86/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.644
+Epoch: 1/2  Iteration: 87/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.702
+Epoch: 1/2  Iteration: 88/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.662
+Epoch: 1/2  Iteration: 89/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.640
+Epoch: 1/2  Iteration: 90/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.652
+Epoch: 1/2  Iteration: 91/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.606
+Epoch: 1/2  Iteration: 92/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.583
+Epoch: 1/2  Iteration: 93/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.668
+Epoch: 1/2  Iteration: 94/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.650
+Epoch: 1/2  Iteration: 95/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.676
+Epoch: 1/2  Iteration: 96/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.585
+Epoch: 1/2  Iteration: 97/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.566
+Epoch: 1/2  Iteration: 98/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.642
+Epoch: 1/2  Iteration: 99/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.570
+Epoch: 1/2  Iteration: 100/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.569
+Summary Epoch: 1/2;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.751
+None
+Experiment ended
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_224BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_224BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_224BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_224BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_224BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_224BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_224BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_224BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '8', 'main.py', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+Job ended sucessfully
+train.total_ips
+[[182.11997731433533, 4375.841600459696, 6498.861057983295, 6500.503692223401, 6448.125294258948, 4869.798285636537, 6505.4070204403115, 6503.9490340918555, 4886.274975938183, 6475.365225440916, 3391.1027650133433, 6513.763628201551, 6158.603966486615, 6085.660821365012, 6010.705008585787, 5407.00422744085, 3844.145171063525, 6460.375255145401, 4792.468676878031, 6044.890580313914, 5678.394563507278, 6519.537960849079, 6502.659064276133, 5337.9690905000825, 6518.47922645779, 6501.497544700975, 6078.847707782824, 5178.496471481882, 6505.288780979875, 5081.424437637611, 6494.360366408705, 6524.678201028461, 3680.1408797788645, 6520.616838349717, 6387.641783675175, 6107.841982738638, 5958.958896051102, 5617.02369499656, 3591.890625052269, 6406.841717732841, 4324.699605789805, 6539.012542210828, 6454.870114099527, 5160.28520074203, 6378.459053545307, 6523.280917853118, 6524.162821254806, 5401.448650633653, 6526.383498988745, 5005.626035513993, 6535.301236314945, 6528.248449244192, 6302.013719272863, 6516.036544699289, 6414.946859340577, 6525.035050111739, 5279.888200743001, 6468.470366047426, 5640.822392199714, 5015.323179610658, 6306.585029418718, 6531.186915020932, 6526.0463345220605, 5178.858635978329, 6533.432254865124, 4460.556536296952, 6447.9123257399015, 4943.613937068869, 6533.770182962171, 4147.955458635056, 6462.1637745944, 6026.087469430878, 5146.872482417215, 6515.90803321242, 6517.490065873434, 6528.863719762922, 6534.644982738972, 6528.248449244192, 6222.200598320935, 6430.814385369674, 6537.400143686908, 6486.602000516516, 6529.8265531071265, 6460.375255145401, 6472.564550571534, 4301.863182681839, 6520.171386932232, 5076.967527255662, 6048.244511475557, 4410.477707150266, 6518.301155394751, 6533.91928000073, 6173.670919991778, 6518.756245228523, 6503.6338797234985, 5600.178497758608, 6529.995326342612, 5777.837815731981, 6511.709486094097, 6043.818788187516], [2888.9558285716207, 6529.6577885955885, 6516.204605831099, 5998.61632166795, 5670.64247878279, 6521.567338162923, 6524.043899023133, 6517.084596802583, 6514.583671704953, 6517.549407042649, 6523.261102538244, 6525.421680669715, 6485.906517668378, 6530.193894260227, 5329.947079861706, 6502.580304071752, 4878.538013130694, 6430.082679965087, 6488.816784332447, 6406.30656237508, 6510.939516776977, 5187.158570048309, 6525.738950221679, 5543.946333674535, 6518.26158536863, 6526.958742316138, 6103.146513577651, 6514.484860343246, 3971.3242280361906, 6532.518036427241, 5715.527317634033, 6524.648465366689, 6504.46122508939, 3478.9035060648403, 6447.796167022461, 5581.45318496128, 5707.779777693907, 6400.74051841177, 4452.3720034375265, 6529.5882998616535, 6041.922817540982, 6493.005484703905, 4088.2568529986806, 6526.274412554854, 4354.660988834949, 6530.144251148676, 3162.39387749993, 6534.137967966506, 6445.918848340407, 3232.6188370913283, 6504.4809263541765, 4430.496173961482, 6502.048722591271, 6529.598226733093, 6522.993607569464, 6382.269335302763, 5627.798912431044, 6455.782134106931, 6527.266241542605, 4990.09211815048, 6441.124072441077, 2781.656919027585, 6005.678934938216, 6522.745946602679, 6525.778611084944, 5849.485658095981, 6521.379196414201, 5303.175133290364, 6520.824736508091, 6497.248739872081, 6515.789411723656, 6523.70697624259, 3500.2781466884426, 6440.505911214813, 2803.902445648271, 6510.870425870257, 6086.928658385357, 6524.588994856245, 6296.544271860317, 3405.8524774890866, 6529.330211798187, 6517.35160734744, 5760.649296511394, 4811.167028860501, 6526.095915347002, 6522.835102384232, 3786.2371181006433, 6522.458683440422, 4730.3902585158685, 6434.581450885567, 6519.894247876275, 6523.746612410554, 5423.98632058971, 6531.633872900585, 6518.568265637853, 6480.524022632969, 5543.932021453051, 6532.070957537413, 6518.281370321637, 6233.570238865845], []]
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '8', 'main.py', '-p', '1', '-j', '5', '--training-only', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_224BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.1']
+Job ended sucessfully
+train.total_ips
+[[156.78640927821317, 4773.755919724709, 6827.76927528122, 6816.258452542247, 6813.848518143809, 6645.235037774133, 6480.666508591664, 6666.039429374698, 6671.856042153403, 6674.599226171288, 6648.315070395501, 6634.940032838404, 6687.8372466321425, 6654.289293030882, 6572.321902601667, 6718.768955721266, 6673.81099641101, 6646.474936640804, 6596.247158096124, 6582.014090192998, 6719.309534452117, 6613.939045262435, 6817.1981707593595, 6600.985878854465, 6654.030089326026, 6578.60936176172, 6710.92235136974, 6673.929515308977, 6523.532865923834, 6670.612576568965, 6630.468291719008, 6686.956647995388, 6670.150835966065, 6635.4379161939905, 6669.541199510534, 6821.578695728726, 6657.383623220883, 6665.596055373755, 6637.312970951462, 6726.3931384674315, 6650.650508253815, 6679.184129613371, 6701.516244251341, 6654.536733588081, 6653.476403603196, 6696.817104778977, 6642.328085121425, 6793.451093106577, 6481.510377394286, 6625.377620090704, 6683.2642302483755, 6829.8290932716645, 6693.107832320399, 6657.324656712822, 6717.129732188579, 6678.911113046291, 6830.083554605644, 6827.614218805071, 6684.661042303676, 6615.033384995454, 6688.057432531636, 6742.449491682941, 6822.8171521006225, 6664.987251188911, 6668.984929509857, 6589.839289550077, 6652.540059814679, 6763.405451078599, 6684.167633486501, 6638.884144903444, 6683.282058213131, 6731.911602487054, 6750.988477087557, 6818.496892020858, 6691.826643755731, 6769.6188881573435, 6674.611080671387, 6708.484522952051, 6701.916602689793, 6671.411894087395, 6681.303734624995, 6684.007142704695, 6715.9173416514695, 5431.116528278873, 6664.4376497376325, 5727.22960222073, 6632.053782141385, 6660.002789402751, 5482.578356333653, 6682.016509029292, 4001.721168753727, 6683.50194426586, 6826.68402782193, 6795.8711964079375, 6659.583820355334, 6726.9349447968725, 6628.456805017602, 6693.006511177284, 6708.04745848632, 4800.844640833726], [745.1425720777573, 6523.646107350978, 6708.209105830084, 6646.980430999109, 3689.057517096301, 6688.765696304365, 6780.354766920006, 6689.694403799393, 6621.9570641060545, 3981.7408110019524, 6791.0572562880725, 6646.416163216797, 6552.000390529656, 6544.298933400667, 6680.9177119777, 6657.873085556258, 6634.2489774374235, 6494.643756842488, 6459.34674956923, 5148.334655088919, 6685.939488284339, 6638.977969863911, 6662.251960686985, 6649.314931115537, 6692.291390351096, 6742.080562028959, 6631.322373169066, 6755.284299759401, 6773.1998385143315, 6666.305482088533, 6785.478192415193, 6632.832178471205, 6564.54395930716, 6694.109288595458, 6636.492504116798, 6774.890972662268, 6540.016782944185, 6673.046650644426, 6464.446685593925, 6651.627525491646, 6663.669541534271, 6773.028940529357, 6610.85588686192, 6294.44164475337, 6607.682656508656, 6744.052687681921, 6646.874623491978, 6611.681658683768, 6416.429572186396, 6603.003927790502, 6688.152652546211, 6650.050314710249, 6772.845845115224, 6665.282773310821, 6607.235394744939, 6687.182725517585, 6811.711899889616, 6793.230052854963, 6704.0147848455335, 6607.978928156337, 6616.314455255196, 6679.391874562887, 6725.436160550906, 6659.77854589113, 4541.382722524161, 6663.356440532665, 6682.170963529049, 6676.033926457148, 6660.6401955250085, 3176.4676810309816, 6673.248089125886, 6662.659453402913, 6702.801146117496, 6601.971553224176, 2636.4169669214625, 6811.681033724932, 6651.344984982647, 6671.986336804169, 6723.480920510026, 3751.0032368790617, 6595.969302675792, 6607.154080929408, 6706.060431510895, 6672.199557210247, 2790.399714878656, 6707.903778498489, 6673.360662986172, 6686.65325218694, 6636.943735772351, 3978.5140176032555, 6662.370069387567, 6791.026577025487, 6677.641285883849, 6666.305482088533, 3041.690145678491, 6644.248150469443, 6642.087421273046, 6815.479671965847, 6671.7849744888, 3327.453964464978], []]Warning:  if --fp16 is not used, static_loss_scale will be ignored.
+=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7f28f504b8c8>}
+read 1281167 files from 1000 directories
+read 50000 files from 1000 directories
+data : /data/imagenet
+data_backend : dali-gpu
+arch : resnet50
+model_config : fanin
+workers : 5
+epochs : 2
+start_epoch : 0
+batch_size : 224
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.1
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 128.0
+dynamic_loss_scale : False
+prof : 100
+amp : True
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_8GPU_224BS_dali-gpu_trainingbench.json
+final_weights : model.pth.tar
+evaluate : False
+training_only : True
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 8
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Selected optimization level O2:  FP16 training with FP32 batchnorm and FP32 master weights.
+
+Defaults for this optimization level are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : dynamic
+Processing user overrides (additional kwargs that are not None)...
+After processing overrides, optimization options are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : 128.0
+Epoch: 0/2  Iteration: 1/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.108
+Epoch: 0/2  Iteration: 2/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.010
+Epoch: 0/2  Iteration: 3/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.010
+Epoch: 0/2  Iteration: 4/714;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.009
+slurmstepd: *** JOB 6368 ON dgx1v-loki-03 CANCELLED AT 2019-04-11T18:05:00 DUE TO TIME LIMIT ***

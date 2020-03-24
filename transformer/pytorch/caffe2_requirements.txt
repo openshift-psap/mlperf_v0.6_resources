@@ -1,0 +1,16 @@
+matplotlib
+hypothesis
+numpy
+protobuf
+flask
+ipython
+notebook
+pydot
+python-nvd3
+scipy
+tornado
+networkx==2.0
+future
+lmdb
+tabulate
+

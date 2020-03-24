@@ -1,0 +1,1382 @@
+resnet50v1.5: Pulling from asulecki/pytorch-off/conv_tests
+Digest: sha256:99b133e1db076d9d1ae08196e1c6d1e0018144fa5d46f853acf7d79b3607f5f4
+Status: Image is up to date for gitlab-master.nvidia.com:5005/asulecki/pytorch-off/conv_tests:resnet50v1.5
+
+=============
+== PyTorch ==
+=============
+
+NVIDIA Release 19.04 (build 6012988)
+PyTorch Version 1.1.0a0+9eb0f43
+
+Container image Copyright (c) 2019, NVIDIA CORPORATION.  All rights reserved.
+
+Copyright (c) 2014-2019 Facebook Inc.
+Copyright (c) 2011-2014 Idiap Research Institute (Ronan Collobert)
+Copyright (c) 2012-2014 Deepmind Technologies    (Koray Kavukcuoglu)
+Copyright (c) 2011-2012 NEC Laboratories America (Koray Kavukcuoglu)
+Copyright (c) 2011-2013 NYU                      (Clement Farabet)
+Copyright (c) 2006-2010 NEC Laboratories America (Ronan Collobert, Leon Bottou, Iain Melvin, Jason Weston)
+Copyright (c) 2006      Idiap Research Institute (Samy Bengio)
+Copyright (c) 2001-2004 Idiap Research Institute (Ronan Collobert, Samy Bengio, Johnny Mariethoz)
+Copyright (c) 2015      Google Inc.
+Copyright (c) 2015      Yangqing Jia
+Copyright (c) 2013-2016 The Caffe contributors
+All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION.  All rights reserved.
+NVIDIA modifications are covered by the license terms that apply to the underlying project or file.
+
+Detected MOFED 4.4-1.0.0.
+
+Warning:  if --fp16 is not used, static_loss_scale will be ignored.
+=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7f3d159558c8>}
+data : /data/imagenet
+data_backend : pytorch
+arch : resnet50
+model_config : fanin
+workers : 3
+epochs : 2
+start_epoch : 0
+batch_size : 224
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.0
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 128.0
+dynamic_loss_scale : False
+prof : 100
+amp : True
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_16GPU_224BS_pytorch_inferencebench.json
+final_weights : model.pth.tar
+evaluate : True
+training_only : False
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 16
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Selected optimization level O2:  FP16 training with FP32 batchnorm and FP32 master weights.
+
+Defaults for this optimization level are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : dynamic
+Processing user overrides (additional kwargs that are not None)...
+After processing overrides, optimization options are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : 128.0
+Epoch: 0/2 Validation Iteration: 1/14;	val.top1 : 0.084	val.top5 : 0.391	val.loss : 954.719
+Epoch: 0/2 Validation Iteration: 2/14;	val.top1 : 0.056	val.top5 : 0.446	val.loss : 949.531
+Epoch: 0/2 Validation Iteration: 3/14;	val.top1 : 0.140	val.top5 : 0.586	val.loss : 948.969
+Epoch: 0/2 Validation Iteration: 4/14;	val.top1 : 0.167	val.top5 : 0.446	val.loss : 956.688
+Epoch: 0/2 Validation Iteration: 5/14;	val.top1 : 0.167	val.top5 : 0.419	val.loss : 956.875
+Epoch: 0/2 Validation Iteration: 6/14;	val.top1 : 0.167	val.top5 : 0.586	val.loss : 944.875
+Epoch: 0/2 Validation Iteration: 7/14;	val.top1 : 0.084	val.top5 : 0.530	val.loss : 959.250
+Epoch: 0/2 Validation Iteration: 8/14;	val.top1 : 0.167	val.top5 : 0.698	val.loss : 963.531
+Epoch: 0/2 Validation Iteration: 9/14;	val.top1 : 0.028	val.top5 : 0.335	val.loss : 966.500
+Epoch: 0/2 Validation Iteration: 10/14;	val.top1 : 0.140	val.top5 : 0.558	val.loss : 960.469
+Epoch: 0/2 Validation Iteration: 11/14;	val.top1 : 0.140	val.top5 : 0.558	val.loss : 959.094
+Epoch: 0/2 Validation Iteration: 12/14;	val.top1 : 0.167	val.top5 : 0.502	val.loss : 954.531
+Epoch: 0/2 Validation Iteration: 13/14;	val.top1 : 0.167	val.top5 : 0.614	val.loss : 956.844
+Epoch: 0/2 Validation Iteration: 14/14;	val.top1 : 0.088	val.top5 : 0.440	val.loss : 959.500
+Summary Epoch: 0/2;	val.top1 : 0.126	val.top5 : 0.508	val.loss : 956.527
+Epoch: 1/2 Validation Iteration: 1/14;	val.top1 : 0.112	val.top5 : 0.586	val.loss : 945.625
+Epoch: 1/2 Validation Iteration: 2/14;	val.top1 : 0.056	val.top5 : 0.474	val.loss : 948.906
+Epoch: 1/2 Validation Iteration: 3/14;	val.top1 : 0.056	val.top5 : 0.530	val.loss : 948.875
+Epoch: 1/2 Validation Iteration: 4/14;	val.top1 : 0.195	val.top5 : 0.474	val.loss : 963.094
+Epoch: 1/2 Validation Iteration: 5/14;	val.top1 : 0.140	val.top5 : 0.558	val.loss : 955.844
+Epoch: 1/2 Validation Iteration: 6/14;	val.top1 : 0.112	val.top5 : 0.419	val.loss : 960.625
+Epoch: 1/2 Validation Iteration: 7/14;	val.top1 : 0.195	val.top5 : 0.753	val.loss : 954.594
+Epoch: 1/2 Validation Iteration: 8/14;	val.top1 : 0.112	val.top5 : 0.614	val.loss : 958.281
+Epoch: 1/2 Validation Iteration: 9/14;	val.top1 : 0.056	val.top5 : 0.279	val.loss : 962.031
+Epoch: 1/2 Validation Iteration: 10/14;	val.top1 : 0.167	val.top5 : 0.474	val.loss : 952.875
+Epoch: 1/2 Validation Iteration: 11/14;	val.top1 : 0.140	val.top5 : 0.474	val.loss : 960.812
+Epoch: 1/2 Validation Iteration: 12/14;	val.top1 : 0.112	val.top5 : 0.391	val.loss : 960.844
+Epoch: 1/2 Validation Iteration: 13/14;	val.top1 : 0.167	val.top5 : 0.530	val.loss : 950.969
+Epoch: 1/2 Validation Iteration: 14/14;	val.top1 : 0.147	val.top5 : 0.587	val.loss : 968.500
+Summary Epoch: 1/2;	val.top1 : 0.126	val.top5 : 0.510	val.loss : 956.562
+None
+Experiment ended
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_224BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_224BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_224BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_224BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_224BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_224BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_224BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_224BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=8', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_224BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=9', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_224BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=10', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_224BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=11', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_224BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=12', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_224BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=13', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_224BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=14', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_224BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=15', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_224BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+Warning:  if --fp16 is not used, static_loss_scale will be ignored.
+=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7f3d834418c8>}
+read 1281167 files from 1000 directories
+read 50000 files from 1000 directories
+data : /data/imagenet
+data_backend : dali-gpu
+arch : resnet50
+model_config : fanin
+workers : 3
+epochs : 2
+start_epoch : 0
+batch_size : 224
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.0
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 128.0
+dynamic_loss_scale : False
+prof : 100
+amp : True
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_16GPU_224BS_dali-gpu_inferencebench.json
+final_weights : model.pth.tar
+evaluate : True
+training_only : False
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 16
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Selected optimization level O2:  FP16 training with FP32 batchnorm and FP32 master weights.
+
+Defaults for this optimization level are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : dynamic
+Processing user overrides (additional kwargs that are not None)...
+After processing overrides, optimization options are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : 128.0
+Epoch: 0/2 Validation Iteration: 1/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1361.812
+Epoch: 0/2 Validation Iteration: 2/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1441.500
+Epoch: 0/2 Validation Iteration: 3/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1394.250
+Epoch: 0/2 Validation Iteration: 4/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1369.969
+Epoch: 0/2 Validation Iteration: 5/13;	val.top1 : 0.000	val.top5 : 1.228	val.loss : 1348.094
+Epoch: 0/2 Validation Iteration: 6/13;	val.top1 : 0.000	val.top5 : 0.167	val.loss : 1436.062
+Epoch: 0/2 Validation Iteration: 7/13;	val.top1 : 0.000	val.top5 : 1.311	val.loss : 1413.719
+Epoch: 0/2 Validation Iteration: 8/13;	val.top1 : 0.000	val.top5 : 1.395	val.loss : 1415.719
+Epoch: 0/2 Validation Iteration: 9/13;	val.top1 : 0.000	val.top5 : 1.395	val.loss : 1406.375
+Epoch: 0/2 Validation Iteration: 10/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1482.750
+Epoch: 0/2 Validation Iteration: 11/13;	val.top1 : 1.395	val.top5 : 1.395	val.loss : 1435.500
+Epoch: 0/2 Validation Iteration: 12/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1444.562
+Epoch: 0/2 Validation Iteration: 13/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1440.250
+Epoch: 0/2 Validation Iteration: 14/13;	val.top1 : 0.000	val.top5 : 0.028	val.loss : 1448.406
+Summary Epoch: 0/2;	val.top1 : 0.100	val.top5 : 0.494	val.loss : 1417.069
+Epoch: 1/2 Validation Iteration: 1/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1367.500
+Epoch: 1/2 Validation Iteration: 2/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1439.188
+Epoch: 1/2 Validation Iteration: 3/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1399.125
+Epoch: 1/2 Validation Iteration: 4/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1368.375
+Epoch: 1/2 Validation Iteration: 5/13;	val.top1 : 0.000	val.top5 : 1.395	val.loss : 1348.188
+Epoch: 1/2 Validation Iteration: 6/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1438.500
+Epoch: 1/2 Validation Iteration: 7/13;	val.top1 : 0.000	val.top5 : 1.311	val.loss : 1412.031
+Epoch: 1/2 Validation Iteration: 8/13;	val.top1 : 0.000	val.top5 : 1.395	val.loss : 1409.688
+Epoch: 1/2 Validation Iteration: 9/13;	val.top1 : 0.000	val.top5 : 1.395	val.loss : 1417.062
+Epoch: 1/2 Validation Iteration: 10/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1471.562
+Epoch: 1/2 Validation Iteration: 11/13;	val.top1 : 1.395	val.top5 : 1.395	val.loss : 1444.875
+Epoch: 1/2 Validation Iteration: 12/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1439.312
+Epoch: 1/2 Validation Iteration: 13/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1438.438
+Epoch: 1/2 Validation Iteration: 14/13;	val.top1 : 0.000	val.top5 : 0.028	val.loss : 1444.500
+Summary Epoch: 1/2;	val.top1 : 0.100	val.top5 : 0.494	val.loss : 1417.025
+None
+Experiment ended
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=8', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=9', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=10', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=11', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=12', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=13', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=14', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=15', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+Warning:  if --fp16 is not used, static_loss_scale will be ignored.
+=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7f1581e018c8>}
+read 1281167 files from 1000 directories
+read 50000 files from 1000 directories
+data : /data/imagenet
+data_backend : dali-cpu
+arch : resnet50
+model_config : fanin
+workers : 3
+epochs : 2
+start_epoch : 0
+batch_size : 224
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.0
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 128.0
+dynamic_loss_scale : False
+prof : 100
+amp : True
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_16GPU_224BS_dali-cpu_inferencebench.json
+final_weights : model.pth.tar
+evaluate : True
+training_only : False
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 16
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Selected optimization level O2:  FP16 training with FP32 batchnorm and FP32 master weights.
+
+Defaults for this optimization level are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : dynamic
+Processing user overrides (additional kwargs that are not None)...
+After processing overrides, optimization options are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : 128.0
+Epoch: 0/2 Validation Iteration: 1/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1438.188
+Epoch: 0/2 Validation Iteration: 2/13;	val.top1 : 0.000	val.top5 : 1.395	val.loss : 1390.938
+Epoch: 0/2 Validation Iteration: 3/13;	val.top1 : 0.000	val.top5 : 1.395	val.loss : 1432.438
+Epoch: 0/2 Validation Iteration: 4/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1385.219
+Epoch: 0/2 Validation Iteration: 5/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1363.562
+Epoch: 0/2 Validation Iteration: 6/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1375.938
+Epoch: 0/2 Validation Iteration: 7/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1405.500
+Epoch: 0/2 Validation Iteration: 8/13;	val.top1 : 0.000	val.top5 : 1.395	val.loss : 1362.344
+Epoch: 0/2 Validation Iteration: 9/13;	val.top1 : 0.000	val.top5 : 0.028	val.loss : 1444.812
+Epoch: 0/2 Validation Iteration: 10/13;	val.top1 : 1.395	val.top5 : 1.646	val.loss : 1423.438
+Epoch: 0/2 Validation Iteration: 11/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1484.312
+Epoch: 0/2 Validation Iteration: 12/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1392.188
+Epoch: 0/2 Validation Iteration: 13/13;	val.top1 : 0.000	val.top5 : 0.614	val.loss : 1384.812
+Epoch: 0/2 Validation Iteration: 14/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1407.562
+Summary Epoch: 0/2;	val.top1 : 0.100	val.top5 : 0.462	val.loss : 1406.518
+Epoch: 1/2 Validation Iteration: 1/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1439.375
+Epoch: 1/2 Validation Iteration: 2/13;	val.top1 : 0.000	val.top5 : 1.395	val.loss : 1388.812
+Epoch: 1/2 Validation Iteration: 3/13;	val.top1 : 0.000	val.top5 : 1.395	val.loss : 1432.938
+Epoch: 1/2 Validation Iteration: 4/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1387.688
+Epoch: 1/2 Validation Iteration: 5/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1357.625
+Epoch: 1/2 Validation Iteration: 6/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1386.062
+Epoch: 1/2 Validation Iteration: 7/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1401.000
+Epoch: 1/2 Validation Iteration: 8/13;	val.top1 : 0.000	val.top5 : 1.395	val.loss : 1356.500
+Epoch: 1/2 Validation Iteration: 9/13;	val.top1 : 0.028	val.top5 : 0.140	val.loss : 1453.750
+Epoch: 1/2 Validation Iteration: 10/13;	val.top1 : 1.367	val.top5 : 1.535	val.loss : 1417.938
+Epoch: 1/2 Validation Iteration: 11/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1487.500
+Epoch: 1/2 Validation Iteration: 12/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1389.938
+Epoch: 1/2 Validation Iteration: 13/13;	val.top1 : 0.000	val.top5 : 0.614	val.loss : 1381.750
+Epoch: 1/2 Validation Iteration: 14/13;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1411.812
+Summary Epoch: 1/2;	val.top1 : 0.100	val.top5 : 0.462	val.loss : 1406.621
+None
+Experiment ended
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=8', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=9', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=10', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=11', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=12', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=13', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=14', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=15', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+Warning:  if --fp16 is not used, static_loss_scale will be ignored.
+=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7fb62356a8c8>}
+data : /data/imagenet
+data_backend : pytorch
+arch : resnet50
+model_config : fanin
+workers : 3
+epochs : 2
+start_epoch : 0
+batch_size : 256
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.0
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 128.0
+dynamic_loss_scale : False
+prof : 100
+amp : True
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_16GPU_256BS_pytorch_inferencebench.json
+final_weights : model.pth.tar
+evaluate : True
+training_only : False
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 16
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Selected optimization level O2:  FP16 training with FP32 batchnorm and FP32 master weights.
+
+Defaults for this optimization level are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : dynamic
+Processing user overrides (additional kwargs that are not None)...
+After processing overrides, optimization options are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : 128.0
+Epoch: 0/2 Validation Iteration: 1/13;	val.top1 : 0.073	val.top5 : 0.513	val.loss : 1577.625
+Epoch: 0/2 Validation Iteration: 2/13;	val.top1 : 0.073	val.top5 : 0.464	val.loss : 1581.812
+Epoch: 0/2 Validation Iteration: 3/13;	val.top1 : 0.098	val.top5 : 0.464	val.loss : 1592.625
+Epoch: 0/2 Validation Iteration: 4/13;	val.top1 : 0.098	val.top5 : 0.464	val.loss : 1581.688
+Epoch: 0/2 Validation Iteration: 5/13;	val.top1 : 0.049	val.top5 : 0.439	val.loss : 1583.812
+Epoch: 0/2 Validation Iteration: 6/13;	val.top1 : 0.073	val.top5 : 0.439	val.loss : 1590.062
+Epoch: 0/2 Validation Iteration: 7/13;	val.top1 : 0.049	val.top5 : 0.391	val.loss : 1606.688
+Epoch: 0/2 Validation Iteration: 8/13;	val.top1 : 0.073	val.top5 : 0.586	val.loss : 1595.062
+Epoch: 0/2 Validation Iteration: 9/13;	val.top1 : 0.171	val.top5 : 0.488	val.loss : 1610.812
+Epoch: 0/2 Validation Iteration: 10/13;	val.top1 : 0.195	val.top5 : 0.562	val.loss : 1601.312
+Epoch: 0/2 Validation Iteration: 11/13;	val.top1 : 0.122	val.top5 : 0.635	val.loss : 1591.500
+Epoch: 0/2 Validation Iteration: 12/13;	val.top1 : 0.122	val.top5 : 0.415	val.loss : 1600.250
+Epoch: 0/2 Validation Iteration: 13/13;	val.top1 : 0.118	val.top5 : 0.472	val.loss : 1616.250
+Summary Epoch: 0/2;	val.top1 : 0.101	val.top5 : 0.487	val.loss : 1594.577
+Epoch: 1/2 Validation Iteration: 1/13;	val.top1 : 0.098	val.top5 : 0.464	val.loss : 1587.375
+Epoch: 1/2 Validation Iteration: 2/13;	val.top1 : 0.073	val.top5 : 0.293	val.loss : 1582.188
+Epoch: 1/2 Validation Iteration: 3/13;	val.top1 : 0.098	val.top5 : 0.317	val.loss : 1594.062
+Epoch: 1/2 Validation Iteration: 4/13;	val.top1 : 0.146	val.top5 : 0.586	val.loss : 1600.250
+Epoch: 1/2 Validation Iteration: 5/13;	val.top1 : 0.146	val.top5 : 0.537	val.loss : 1588.500
+Epoch: 1/2 Validation Iteration: 6/13;	val.top1 : 0.073	val.top5 : 0.537	val.loss : 1576.688
+Epoch: 1/2 Validation Iteration: 7/13;	val.top1 : 0.122	val.top5 : 0.610	val.loss : 1604.750
+Epoch: 1/2 Validation Iteration: 8/13;	val.top1 : 0.122	val.top5 : 0.513	val.loss : 1609.500
+Epoch: 1/2 Validation Iteration: 9/13;	val.top1 : 0.073	val.top5 : 0.586	val.loss : 1600.500
+Epoch: 1/2 Validation Iteration: 10/13;	val.top1 : 0.073	val.top5 : 0.391	val.loss : 1592.062
+Epoch: 1/2 Validation Iteration: 11/13;	val.top1 : 0.049	val.top5 : 0.488	val.loss : 1591.438
+Epoch: 1/2 Validation Iteration: 12/13;	val.top1 : 0.098	val.top5 : 0.513	val.loss : 1597.188
+Epoch: 1/2 Validation Iteration: 13/13;	val.top1 : 0.236	val.top5 : 0.590	val.loss : 1562.188
+Summary Epoch: 1/2;	val.top1 : 0.108	val.top5 : 0.494	val.loss : 1591.284
+None
+Experiment ended
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=8', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=9', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=10', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=11', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=12', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=13', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=14', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=15', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+Warning:  if --fp16 is not used, static_loss_scale will be ignored.
+=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7f806e2eb8c8>}
+read 1281167 files from 1000 directories
+read 50000 files from 1000 directories
+data : /data/imagenet
+data_backend : dali-gpu
+arch : resnet50
+model_config : fanin
+workers : 3
+epochs : 2
+start_epoch : 0
+batch_size : 256
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.0
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 128.0
+dynamic_loss_scale : False
+prof : 100
+amp : True
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_16GPU_256BS_dali-gpu_inferencebench.json
+final_weights : model.pth.tar
+evaluate : True
+training_only : False
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 16
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Selected optimization level O2:  FP16 training with FP32 batchnorm and FP32 master weights.
+
+Defaults for this optimization level are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : dynamic
+Processing user overrides (additional kwargs that are not None)...
+After processing overrides, optimization options are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : 128.0
+Epoch: 0/2 Validation Iteration: 1/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1681.875
+Epoch: 0/2 Validation Iteration: 2/12;	val.top1 : 0.000	val.top5 : 0.269	val.loss : 1614.125
+Epoch: 0/2 Validation Iteration: 3/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1632.312
+Epoch: 0/2 Validation Iteration: 4/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1562.688
+Epoch: 0/2 Validation Iteration: 5/12;	val.top1 : 1.221	val.top5 : 1.221	val.loss : 1609.438
+Epoch: 0/2 Validation Iteration: 6/12;	val.top1 : 0.000	val.top5 : 2.124	val.loss : 1450.938
+Epoch: 0/2 Validation Iteration: 7/12;	val.top1 : 0.000	val.top5 : 0.146	val.loss : 1618.312
+Epoch: 0/2 Validation Iteration: 8/12;	val.top1 : 0.000	val.top5 : 1.025	val.loss : 1603.125
+Epoch: 0/2 Validation Iteration: 9/12;	val.top1 : 0.000	val.top5 : 1.221	val.loss : 1581.375
+Epoch: 0/2 Validation Iteration: 10/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1566.625
+Epoch: 0/2 Validation Iteration: 11/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1614.062
+Epoch: 0/2 Validation Iteration: 12/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1571.438
+Epoch: 0/2 Validation Iteration: 13/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1699.562
+Summary Epoch: 0/2;	val.top1 : 0.094	val.top5 : 0.462	val.loss : 1600.452
+Epoch: 1/2 Validation Iteration: 1/12;	val.top1 : 0.000	val.top5 : 0.269	val.loss : 1647.250
+Epoch: 1/2 Validation Iteration: 2/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1626.688
+Epoch: 1/2 Validation Iteration: 3/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1561.188
+Epoch: 1/2 Validation Iteration: 4/12;	val.top1 : 0.195	val.top5 : 0.195	val.loss : 1632.625
+Epoch: 1/2 Validation Iteration: 5/12;	val.top1 : 1.025	val.top5 : 2.246	val.loss : 1434.312
+Epoch: 1/2 Validation Iteration: 6/12;	val.top1 : 0.000	val.top5 : 1.050	val.loss : 1600.312
+Epoch: 1/2 Validation Iteration: 7/12;	val.top1 : 0.000	val.top5 : 0.488	val.loss : 1588.000
+Epoch: 1/2 Validation Iteration: 8/12;	val.top1 : 0.000	val.top5 : 1.758	val.loss : 1620.375
+Epoch: 1/2 Validation Iteration: 9/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1562.500
+Epoch: 1/2 Validation Iteration: 10/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1604.000
+Epoch: 1/2 Validation Iteration: 11/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1557.625
+Epoch: 1/2 Validation Iteration: 12/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1671.125
+Summary Epoch: 1/2;	val.top1 : 0.102	val.top5 : 0.500	val.loss : 1592.167
+None
+Experiment ended
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=8', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=9', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=10', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=11', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=12', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=13', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=14', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=15', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '16', 'main.py', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_224BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+Job ended sucessfully
+val.total_ips
+[[159.4552770657969, 12575.045579188465, 39619.90310346191, 40084.43737633927, 39971.98824696269, 39960.19377751313, 39538.931739752545, 1666.6719001246536, 2912.2365499948564, 39789.68950438861, 1943.629660641552, 9320.161236142103, 40095.44973127242, 391.7679179184927], [1035.6365392025432, 12152.036849670096, 1172.9148766688074, 7520.787969449333, 37362.95102079367, 1588.1620238699954, 7718.435062731214, 35129.290645827685, 1746.0729508038676, 10478.954819379993, 35750.11126675149, 2264.097612757664, 9434.210144277205, 12506.113892155216], []]
+val.compute_ips
+[[185.3106347763199, 14613.07787933049, 40104.86313952837, 40546.53760006905, 40432.898323228954, 40408.87815551858, 40135.16579093511, 41422.3709676086, 2914.4498556674725, 40398.45294448043, 5126.098214504931, 9337.662598005052, 40498.80122096767, 397.8329171041941], [32909.17706399524, 13082.947814023599, 41351.04168832919, 7541.816088159522, 37895.78305775228, 41168.03790254336, 7750.969638345485, 35550.58126736747, 41265.22641763225, 10506.72801678014, 35999.67798452954, 41476.54460021356, 9448.287187377633, 31256.834542568125], []]
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '16', 'main.py', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+Job ended sucessfully
+val.total_ips
+[[189.97868350272074, 13271.789726280771, 6462.251281927827, 8070.121900166477, 7479.08900743412, 7236.519385065674, 7848.809622168246, 6596.102438810345, 8300.736917784392, 9101.20381766092, 8153.401476925414, 7555.287603705374, 6797.97636777954, 7712.831404661854], [7881.025123531062, 8162.588121327961, 7121.477742636623, 7701.9365200866705, 7800.922540258152, 7435.278351341526, 8432.979968820317, 8263.49354307439, 9174.34565255071, 8211.232546935342, 8359.392111165052, 8023.575606863418, 7373.9312003178675, 7979.443340876241], []]
+val.compute_ips
+[[189.9833918685478, 13363.61720157102, 12684.77598932724, 11743.574117301485, 11825.824931616986, 9422.123455985358, 9093.50152895394, 6652.73437364466, 8332.47076808976, 9125.635467166889, 9428.10970746766, 8774.858466423835, 7132.899291663187, 7765.283654424812], [7895.011195166478, 8181.023655352196, 7135.89251244192, 7721.067431768255, 7817.124709374433, 7455.908023674579, 8455.92509115537, 9245.12327088894, 10742.720539923634, 10641.244195142048, 10555.738894007145, 9459.452908776388, 32027.27433409607, 22406.999676543757], []]
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '16', 'main.py', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '224', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_224BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+Job ended sucessfully
+val.total_ips
+[[191.45392505377308, 13952.995738653504, 6645.793228821277, 7666.545219573669, 7438.357792063844, 7533.240491231657, 8199.672357525347, 7333.783244257213, 7429.799064478247, 8380.596860255793, 7438.593362047124, 6623.631877922439, 5911.782336211019, 7847.277242122385], [7213.73181365132, 8375.507248427823, 7893.6555352104615, 7579.672525400227, 7804.721619178605, 7564.141863271277, 9066.424412615468, 7667.061368070202, 8242.69120694316, 9102.548512578052, 8002.850082970476, 8390.485558431323, 8022.774839703391, 7963.371937462222], []]
+val.compute_ips
+[[191.45832886179898, 14056.814496325984, 12041.234512086985, 10265.554686304933, 10740.563690795161, 40611.71456899789, 41403.54624728014, 26247.080691290426, 23881.81653477883, 36340.48150386555, 39511.91092700262, 26533.389232295347, 12258.896104605694, 12083.512951743553], [10151.495663507349, 9347.98107318687, 7912.260761046064, 9082.10145447647, 9662.822636599894, 9797.208164478341, 10195.539861422347, 10303.719947797286, 9464.640435996947, 9674.868857143592, 8249.80231385873, 8459.879653532016, 11188.015566959286, 11004.9002000041], []]
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '16', 'main.py', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+Job ended sucessfully
+val.total_ips
+[[174.2784352116049, 12930.553206094115, 38539.67437092139, 39627.31857100679, 39681.59592371282, 39531.02952654444, 39930.711515844574, 1274.0151786938545, 9847.623875224268, 20084.065176677992, 2268.168648996909, 40018.982801955775, 136.38708554259307], [1028.0959693603525, 13127.782269717613, 1071.5894027359295, 12308.647918404076, 19865.92041776568, 1698.0734413459913, 7579.306123799512, 34487.27230096898, 2212.585377275081, 10675.633013931869, 19903.15867618658, 40724.58352751538, 3462.6615756957412], []]
+val.compute_ips
+[[205.42916079575826, 15631.33531926199, 38950.61347456628, 40082.286396882984, 40223.806175033424, 40184.3845380164, 40308.74477425289, 3285.9115153522857, 18104.826673945186, 20180.95948858851, 4199.576026349485, 40270.38365919463, 140.10531827650559], [12512.030856447022, 14297.637113553064, 3665.897459074147, 12415.353228883621, 19996.21626805842, 4239.240361823648, 7596.518832921742, 34777.69672726831, 42014.73995906099, 10692.862418908211, 19989.375977660133, 40995.32340497627, 35983.305093833784], []]
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '16', 'main.py', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+Job ended sucessfully
+val.total_ips
+[[214.19340575020664, 13845.331785996928, 8638.713085436919, 6705.817744790559, 7851.529635865402, 8389.763231069903, 7938.17839320435, 7341.695801056478, 8740.858627491583, 9025.178329530787, 6435.632391481226, 7414.070435068561, 7853.06931826337], [7828.485233076924, 7486.5190140728455, 6537.852928394363, 7875.056638040297, 8064.379011800933, 6987.333707512376, 7496.011630687282, 8589.591008359666, 7709.823540631034, 7522.479680392888, 7466.583387985836, 8490.724719020604], []]
+val.compute_ips
+[[214.1993424329348, 13947.665156064033, 20451.227004396213, 11930.779551127043, 15753.326685953482, 21389.678821193123, 18315.327939616527, 18528.603273483404, 21226.407908441575, 26993.01944517767, 13017.369898428888, 9719.885908717242, 8709.586896788074], [9340.144324269664, 7510.679928932163, 6548.648743511338, 7891.936237447109, 8081.339529387747, 7000.279599326696, 7530.5747537969855, 8608.550582634947, 7897.410651932077, 8521.413902807524, 7479.973799864332, 8507.81292771523], []]
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '16', 'main.py', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']Warning:  if --fp16 is not used, static_loss_scale will be ignored.
+=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7fe2675f58c8>}
+read 1281167 files from 1000 directories
+read 50000 files from 1000 directories
+data : /data/imagenet
+data_backend : dali-cpu
+arch : resnet50
+model_config : fanin
+workers : 3
+epochs : 2
+start_epoch : 0
+batch_size : 256
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.0
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 128.0
+dynamic_loss_scale : False
+prof : 100
+amp : True
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_16GPU_256BS_dali-cpu_inferencebench.json
+final_weights : model.pth.tar
+evaluate : True
+training_only : False
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 16
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Selected optimization level O2:  FP16 training with FP32 batchnorm and FP32 master weights.
+
+Defaults for this optimization level are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : dynamic
+Processing user overrides (additional kwargs that are not None)...
+After processing overrides, optimization options are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : 128.0
+Epoch: 0/2 Validation Iteration: 1/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 3267.375
+Epoch: 0/2 Validation Iteration: 2/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 3059.875
+Epoch: 0/2 Validation Iteration: 3/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 3328.250
+Epoch: 0/2 Validation Iteration: 4/12;	val.top1 : 1.099	val.top5 : 1.221	val.loss : 3202.750
+Epoch: 0/2 Validation Iteration: 5/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 3405.625
+Epoch: 0/2 Validation Iteration: 6/12;	val.top1 : 0.122	val.top5 : 2.051	val.loss : 3122.750
+Epoch: 0/2 Validation Iteration: 7/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 3425.625
+Epoch: 0/2 Validation Iteration: 8/12;	val.top1 : 0.000	val.top5 : 1.221	val.loss : 3069.625
+Epoch: 0/2 Validation Iteration: 9/12;	val.top1 : 0.000	val.top5 : 0.537	val.loss : 3204.500
+Epoch: 0/2 Validation Iteration: 10/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 3384.625
+Epoch: 0/2 Validation Iteration: 11/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 3319.000
+Epoch: 0/2 Validation Iteration: 12/12;	val.top1 : 0.000	val.top5 : 1.221	val.loss : 3213.875
+Epoch: 0/2 Validation Iteration: 13/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 3307.375
+Summary Epoch: 0/2;	val.top1 : 0.094	val.top5 : 0.481	val.loss : 3254.712
+Epoch: 1/2 Validation Iteration: 1/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 3087.125
+Epoch: 1/2 Validation Iteration: 2/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 3312.250
+Epoch: 1/2 Validation Iteration: 3/12;	val.top1 : 1.099	val.top5 : 1.221	val.loss : 3230.625
+Epoch: 1/2 Validation Iteration: 4/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 3322.875
+Epoch: 1/2 Validation Iteration: 5/12;	val.top1 : 0.122	val.top5 : 1.367	val.loss : 3171.250
+Epoch: 1/2 Validation Iteration: 6/12;	val.top1 : 0.000	val.top5 : 0.684	val.loss : 3391.125
+Epoch: 1/2 Validation Iteration: 7/12;	val.top1 : 0.000	val.top5 : 1.196	val.loss : 3085.000
+Epoch: 1/2 Validation Iteration: 8/12;	val.top1 : 0.000	val.top5 : 0.562	val.loss : 3204.000
+Epoch: 1/2 Validation Iteration: 9/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 3324.875
+Epoch: 1/2 Validation Iteration: 10/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 3369.125
+Epoch: 1/2 Validation Iteration: 11/12;	val.top1 : 0.000	val.top5 : 1.221	val.loss : 3137.125
+Epoch: 1/2 Validation Iteration: 12/12;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 3371.750
+Summary Epoch: 1/2;	val.top1 : 0.102	val.top5 : 0.521	val.loss : 3250.594
+None
+Experiment ended
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=8', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=9', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=10', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=11', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=12', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=13', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=14', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=15', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+Warning:  if --fp16 is not used, static_loss_scale will be ignored.
+=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7f6669b018c8>}
+data : /data/imagenet
+data_backend : pytorch
+arch : resnet50
+model_config : fanin
+workers : 3
+epochs : 2
+start_epoch : 0
+batch_size : 448
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.0
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 128.0
+dynamic_loss_scale : False
+prof : 100
+amp : True
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_16GPU_448BS_pytorch_inferencebench.json
+final_weights : model.pth.tar
+evaluate : True
+training_only : False
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 16
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Selected optimization level O2:  FP16 training with FP32 batchnorm and FP32 master weights.
+
+Defaults for this optimization level are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : dynamic
+Processing user overrides (additional kwargs that are not None)...
+After processing overrides, optimization options are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : 128.0
+Epoch: 0/2 Validation Iteration: 1/7;	val.top1 : 0.126	val.top5 : 0.502	val.loss : 1195.438
+Epoch: 0/2 Validation Iteration: 2/7;	val.top1 : 0.070	val.top5 : 0.432	val.loss : 1203.625
+Epoch: 0/2 Validation Iteration: 3/7;	val.top1 : 0.056	val.top5 : 0.516	val.loss : 1197.938
+Epoch: 0/2 Validation Iteration: 4/7;	val.top1 : 0.056	val.top5 : 0.516	val.loss : 1197.000
+Epoch: 0/2 Validation Iteration: 5/7;	val.top1 : 0.098	val.top5 : 0.628	val.loss : 1192.500
+Epoch: 0/2 Validation Iteration: 6/7;	val.top1 : 0.126	val.top5 : 0.502	val.loss : 1193.000
+Epoch: 0/2 Validation Iteration: 7/7;	val.top1 : 0.172	val.top5 : 0.543	val.loss : 1195.062
+Summary Epoch: 0/2;	val.top1 : 0.100	val.top5 : 0.520	val.loss : 1196.366
+Epoch: 1/2 Validation Iteration: 1/7;	val.top1 : 0.042	val.top5 : 0.488	val.loss : 1188.438
+Epoch: 1/2 Validation Iteration: 2/7;	val.top1 : 0.084	val.top5 : 0.572	val.loss : 1202.062
+Epoch: 1/2 Validation Iteration: 3/7;	val.top1 : 0.126	val.top5 : 0.530	val.loss : 1194.375
+Epoch: 1/2 Validation Iteration: 4/7;	val.top1 : 0.126	val.top5 : 0.488	val.loss : 1197.375
+Epoch: 1/2 Validation Iteration: 5/7;	val.top1 : 0.070	val.top5 : 0.377	val.loss : 1202.812
+Epoch: 1/2 Validation Iteration: 6/7;	val.top1 : 0.153	val.top5 : 0.544	val.loss : 1190.438
+Epoch: 1/2 Validation Iteration: 7/7;	val.top1 : 0.100	val.top5 : 0.615	val.loss : 1198.938
+Summary Epoch: 1/2;	val.top1 : 0.100	val.top5 : 0.516	val.loss : 1196.348
+None
+Experiment ended
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_448BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_448BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_448BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_448BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_448BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_448BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_448BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_448BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=8', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_448BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=9', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_448BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=10', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_448BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=11', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_448BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=12', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_448BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=13', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_448BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=14', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_448BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=15', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_448BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+Warning:  if --fp16 is not used, static_loss_scale will be ignored.
+=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7fc28fcec8c8>}
+read 1281167 files from 1000 directories
+read 50000 files from 1000 directories
+data : /data/imagenet
+data_backend : dali-gpu
+arch : resnet50
+model_config : fanin
+workers : 3
+epochs : 2
+start_epoch : 0
+batch_size : 448
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.0
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 128.0
+dynamic_loss_scale : False
+prof : 100
+amp : True
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_16GPU_448BS_dali-gpu_inferencebench.json
+final_weights : model.pth.tar
+evaluate : True
+training_only : False
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 16
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Selected optimization level O2:  FP16 training with FP32 batchnorm and FP32 master weights.
+
+Defaults for this optimization level are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : dynamic
+Processing user overrides (additional kwargs that are not None)...
+After processing overrides, optimization options are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : 128.0
+Epoch: 0/2 Validation Iteration: 1/6;	val.top1 : 0.000	val.top5 : 0.028	val.loss : 1923.812
+Epoch: 0/2 Validation Iteration: 2/6;	val.top1 : 0.000	val.top5 : 0.698	val.loss : 1856.750
+Epoch: 0/2 Validation Iteration: 3/6;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1848.812
+Epoch: 0/2 Validation Iteration: 4/6;	val.top1 : 0.698	val.top5 : 1.395	val.loss : 1876.812
+Epoch: 0/2 Validation Iteration: 5/6;	val.top1 : 0.000	val.top5 : 0.698	val.loss : 1909.000
+Epoch: 0/2 Validation Iteration: 6/6;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1909.812
+Epoch: 0/2 Validation Iteration: 7/6;	val.top1 : 0.000	val.top5 : 0.698	val.loss : 1802.625
+Summary Epoch: 0/2;	val.top1 : 0.100	val.top5 : 0.502	val.loss : 1875.375
+Epoch: 1/2 Validation Iteration: 1/6;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1927.000
+Epoch: 1/2 Validation Iteration: 2/6;	val.top1 : 0.000	val.top5 : 0.698	val.loss : 1861.250
+Epoch: 1/2 Validation Iteration: 3/6;	val.top1 : 0.042	val.top5 : 0.042	val.loss : 1840.750
+Epoch: 1/2 Validation Iteration: 4/6;	val.top1 : 0.656	val.top5 : 1.353	val.loss : 1882.438
+Epoch: 1/2 Validation Iteration: 5/6;	val.top1 : 0.000	val.top5 : 0.698	val.loss : 1905.500
+Epoch: 1/2 Validation Iteration: 6/6;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1913.188
+Epoch: 1/2 Validation Iteration: 7/6;	val.top1 : 0.000	val.top5 : 0.698	val.loss : 1798.375
+Summary Epoch: 1/2;	val.top1 : 0.100	val.top5 : 0.498	val.loss : 1875.500
+None
+Experiment ended
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=8', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=9', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=10', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=11', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=12', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=13', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=14', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=15', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+Warning:  if --fp16 is not used, static_loss_scale will be ignored.
+=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7f3e092d38c8>}
+read 1281167 files from 1000 directories
+read 50000 files from 1000 directories
+data : /data/imagenet
+data_backend : dali-cpu
+arch : resnet50
+model_config : fanin
+workers : 3
+epochs : 2
+start_epoch : 0
+batch_size : 448
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.0
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 128.0
+dynamic_loss_scale : False
+prof : 100
+amp : True
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_16GPU_448BS_dali-cpu_inferencebench.json
+final_weights : model.pth.tar
+evaluate : True
+training_only : False
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 16
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Selected optimization level O2:  FP16 training with FP32 batchnorm and FP32 master weights.
+
+Defaults for this optimization level are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : dynamic
+Processing user overrides (additional kwargs that are not None)...
+After processing overrides, optimization options are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : 128.0
+Epoch: 0/2 Validation Iteration: 1/6;	val.top1 : 0.698	val.top5 : 0.935	val.loss : 1473.062
+Epoch: 0/2 Validation Iteration: 2/6;	val.top1 : 0.000	val.top5 : 0.028	val.loss : 1498.750
+Epoch: 0/2 Validation Iteration: 3/6;	val.top1 : 0.000	val.top5 : 1.632	val.loss : 1565.438
+Epoch: 0/2 Validation Iteration: 4/6;	val.top1 : 0.000	val.top5 : 0.698	val.loss : 1534.875
+Epoch: 0/2 Validation Iteration: 5/6;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1521.125
+Epoch: 0/2 Validation Iteration: 6/6;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1501.125
+Epoch: 0/2 Validation Iteration: 7/6;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1540.875
+Summary Epoch: 0/2;	val.top1 : 0.100	val.top5 : 0.470	val.loss : 1519.321
+Epoch: 1/2 Validation Iteration: 1/6;	val.top1 : 0.698	val.top5 : 0.963	val.loss : 1472.438
+Epoch: 1/2 Validation Iteration: 2/6;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1502.438
+Epoch: 1/2 Validation Iteration: 3/6;	val.top1 : 0.000	val.top5 : 1.632	val.loss : 1565.188
+Epoch: 1/2 Validation Iteration: 4/6;	val.top1 : 0.000	val.top5 : 0.698	val.loss : 1536.562
+Epoch: 1/2 Validation Iteration: 5/6;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1517.688
+Epoch: 1/2 Validation Iteration: 6/6;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1500.375
+Epoch: 1/2 Validation Iteration: 7/6;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1541.875
+Summary Epoch: 1/2;	val.top1 : 0.100	val.top5 : 0.470	val.loss : 1519.509
+None
+Experiment ended
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=8', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=9', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=10', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=11', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=12', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=13', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=14', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=15', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+Warning:  if --fp16 is not used, static_loss_scale will be ignored.
+=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7f2de69b98c8>}
+data : /data/imagenet
+data_backend : pytorch
+arch : resnet50
+model_config : fanin
+workers : 3
+epochs : 2
+start_epoch : 0
+batch_size : 512
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.0
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 128.0
+dynamic_loss_scale : False
+prof : 100
+amp : True
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_16GPU_512BS_pytorch_inferencebench.json
+final_weights : model.pth.tar
+evaluate : True
+training_only : False
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 16
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Selected optimization level O2:  FP16 training with FP32 batchnorm and FP32 master weights.
+
+Defaults for this optimization level are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : dynamic
+Processing user overrides (additional kwargs that are not None)...
+After processing overrides, optimization options are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : 128.0
+Epoch: 0/2 Validation Iteration: 1/7;	val.top1 : 0.122	val.top5 : 0.623	val.loss : 1059.875
+Epoch: 0/2 Validation Iteration: 2/7;	val.top1 : 0.110	val.top5 : 0.500	val.loss : 1068.688
+Epoch: 0/2 Validation Iteration: 3/7;	val.top1 : 0.110	val.top5 : 0.513	val.loss : 1067.688
+Epoch: 0/2 Validation Iteration: 4/7;	val.top1 : 0.085	val.top5 : 0.513	val.loss : 1065.312
+Epoch: 0/2 Validation Iteration: 5/7;	val.top1 : 0.134	val.top5 : 0.549	val.loss : 1067.688
+Epoch: 0/2 Validation Iteration: 6/7;	val.top1 : 0.037	val.top5 : 0.378	val.loss : 1071.188
+Epoch: 0/2 Validation Iteration: 7/7;	val.top1 : 0.118	val.top5 : 0.472	val.loss : 1080.125
+Summary Epoch: 0/2;	val.top1 : 0.102	val.top5 : 0.507	val.loss : 1068.652
+Epoch: 1/2 Validation Iteration: 1/7;	val.top1 : 0.061	val.top5 : 0.537	val.loss : 1062.562
+Epoch: 1/2 Validation Iteration: 2/7;	val.top1 : 0.061	val.top5 : 0.500	val.loss : 1064.000
+Epoch: 1/2 Validation Iteration: 3/7;	val.top1 : 0.110	val.top5 : 0.452	val.loss : 1064.438
+Epoch: 1/2 Validation Iteration: 4/7;	val.top1 : 0.183	val.top5 : 0.549	val.loss : 1072.438
+Epoch: 1/2 Validation Iteration: 5/7;	val.top1 : 0.098	val.top5 : 0.586	val.loss : 1069.938
+Epoch: 1/2 Validation Iteration: 6/7;	val.top1 : 0.073	val.top5 : 0.427	val.loss : 1070.750
+Epoch: 1/2 Validation Iteration: 7/7;	val.top1 : 0.236	val.top5 : 0.708	val.loss : 1043.969
+Summary Epoch: 1/2;	val.top1 : 0.117	val.top5 : 0.537	val.loss : 1064.013
+None
+Experiment ended
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_512BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_512BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_512BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_512BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_512BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_512BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_512BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_512BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=8', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_512BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=9', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_512BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=10', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_512BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=11', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_512BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=12', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_512BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=13', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_512BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=14', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_512BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=15', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_512BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+Warning:  if --fp16 is not used, static_loss_scale will be ignored.
+=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7f6233e698c8>}
+read 1281167 files from 1000 directories
+read 50000 files from 1000 directories
+data : /data/imagenet
+data_backend : dali-gpu
+arch : resnet50
+model_config : fanin
+workers : 3
+epochs : 2
+start_epoch : 0
+batch_size : 512
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.0
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 128.0
+dynamic_loss_scale : False
+prof : 100
+amp : True
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_16GPU_512BS_dali-gpu_inferencebench.json
+final_weights : model.pth.tar
+evaluate : True
+training_only : False
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 16
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Selected optimization level O2:  FP16 training with FP32 batchnorm and FP32 master weights.
+
+Defaults for this optimization level are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : dynamic
+Processing user overrides (additional kwargs that are not None)...
+After processing overrides, optimization options are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : 128.0
+Epoch: 0/2 Validation Iteration: 1/6;	val.top1 : 0.000	val.top5 : 0.635	val.loss : 1330.062
+Epoch: 0/2 Validation Iteration: 2/6;	val.top1 : 0.000	val.top5 : 0.610	val.loss : 1335.812
+Epoch: 0/2 Validation Iteration: 3/6;	val.top1 : 0.000	val.top5 : 0.610	val.loss : 1331.438
+Epoch: 0/2 Validation Iteration: 4/6;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1407.188
+Epoch: 0/2 Validation Iteration: 5/6;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1378.062
+Epoch: 0/2 Validation Iteration: 6/6;	val.top1 : 0.610	val.top5 : 1.221	val.loss : 1342.625
+Epoch: 0/2 Validation Iteration: 7/6;	val.top1 : 0.000	val.top5 : 0.635	val.loss : 1329.281
+Summary Epoch: 0/2;	val.top1 : 0.087	val.top5 : 0.530	val.loss : 1350.638
+Epoch: 1/2 Validation Iteration: 1/6;	val.top1 : 0.000	val.top5 : 0.610	val.loss : 1323.000
+Epoch: 1/2 Validation Iteration: 2/6;	val.top1 : 0.000	val.top5 : 0.610	val.loss : 1326.438
+Epoch: 1/2 Validation Iteration: 3/6;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1405.875
+Epoch: 1/2 Validation Iteration: 4/6;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1389.438
+Epoch: 1/2 Validation Iteration: 5/6;	val.top1 : 0.610	val.top5 : 1.221	val.loss : 1339.625
+Epoch: 1/2 Validation Iteration: 6/6;	val.top1 : 0.000	val.top5 : 0.610	val.loss : 1350.875
+Summary Epoch: 1/2;	val.top1 : 0.102	val.top5 : 0.509	val.loss : 1355.875
+None
+Experiment ended
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=8', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=9', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=10', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=11', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=12', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=13', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=14', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=15', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+Warning:  if --fp16 is not used, static_loss_scale will be ignored.
+=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7efbfb6d48c8>}
+read 1281167 files from 1000 directories
+read 50000 files from 1000 directories
+data : /data/imagenet
+data_backend : dali-cpu
+arch : resnet50
+model_config : fanin
+workers : 3
+epochs : 2
+start_epoch : 0
+batch_size : 512
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.0
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 128.0
+dynamic_loss_scale : False
+prof : 100
+amp : True
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_16GPU_512BS_dali-cpu_inferencebench.json
+final_weights : model.pth.tar
+evaluate : True
+training_only : False
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 16
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Selected optimization level O2:  FP16 training with FP32 batchnorm and FP32 master weights.
+
+Defaults for this optimization level are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : dynamic
+Processing user overrides (additional kwargs that are not None)...
+After processing overrides, optimization options are:
+enabled                : True
+opt_level              : O2
+cast_model_type        : torch.float16
+patch_torch_functions  : False
+keep_batchnorm_fp32    : True
+master_weights         : True
+loss_scale             : 128.0
+Epoch: 0/2 Validation Iteration: 1/6;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1484.312
+Epoch: 0/2 Validation Iteration: 2/6;	val.top1 : 0.610	val.top5 : 0.610	val.loss : 1505.062
+Epoch: 0/2 Validation Iteration: 3/6;	val.top1 : 0.000	val.top5 : 0.500	val.loss : 1507.312
+Epoch: 0/2 Validation Iteration: 4/6;	val.top1 : 0.000	val.top5 : 0.610	val.loss : 1453.188
+Epoch: 0/2 Validation Iteration: 5/6;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1456.312
+Epoch: 0/2 Validation Iteration: 6/6;	val.top1 : 0.000	val.top5 : 1.111	val.loss : 1455.875
+Epoch: 0/2 Validation Iteration: 7/6;	val.top1 : 0.000	val.top5 : 0.195	val.loss : 1481.125
+Summary Epoch: 0/2;	val.top1 : 0.087	val.top5 : 0.432	val.loss : 1477.598
+Epoch: 1/2 Validation Iteration: 1/6;	val.top1 : 0.610	val.top5 : 0.610	val.loss : 1500.750
+Epoch: 1/2 Validation Iteration: 2/6;	val.top1 : 0.000	val.top5 : 0.500	val.loss : 1498.312
+Epoch: 1/2 Validation Iteration: 3/6;	val.top1 : 0.000	val.top5 : 0.610	val.loss : 1462.750
+Epoch: 1/2 Validation Iteration: 4/6;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1457.688
+Epoch: 1/2 Validation Iteration: 5/6;	val.top1 : 0.000	val.top5 : 0.696	val.loss : 1467.062
+Epoch: 1/2 Validation Iteration: 6/6;	val.top1 : 0.000	val.top5 : 0.610	val.loss : 1471.062
+Summary Epoch: 1/2;	val.top1 : 0.102	val.top5 : 0.505	val.loss : 1476.271
+None
+Experiment ended
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=8', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=9', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=10', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=11', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=12', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=13', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=14', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=15', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+
+Job ended sucessfully
+val.total_ips
+[[209.97815201025728, 13470.09677217016, 8440.678081485099, 6942.584303335861, 7143.298733946686, 7517.453350958789, 8178.31197213069, 6546.153470745177, 8156.5834688817795, 8180.223983666092, 6215.942016904018, 7197.680127296844, 8555.358112189586], [7168.143984825783, 7101.5434127516255, 6491.653621164917, 7225.816121347529, 7495.455653004008, 10110.920338524194, 8461.939298175794, 7906.617071519532, 8746.813057594485, 6262.76820982985, 7511.372813957444, 7670.163143558599], []]
+val.compute_ips
+[[209.98327728358674, 13545.908350745503, 24243.88173750083, 16848.95569416657, 15472.035014976827, 11486.603218412938, 10367.787187176193, 7861.355917591496, 8177.603469843549, 8203.535752742213, 6225.469970031997, 7210.004601344143, 8575.330803641398], [8538.92306560607, 7113.882273047622, 6501.933065911861, 7242.423719582011, 7509.573548265551, 10135.807392233954, 10944.759875363847, 10157.60320363075, 10517.458737332121, 41893.74121273306, 23126.408977099567, 19125.805097878554], []]
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '16', 'main.py', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_448BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+Job ended sucessfully
+val.total_ips
+[[242.69844128615026, 17834.729891804385, 40938.09208111155, 41356.84366677672, 41228.67045884644, 41360.82635887135, 535.2201314462961], [1093.3882934517235, 12836.141055598653, 1645.555039404953, 15333.489264690732, 19128.93251408833, 1856.044263396695, 15818.325061678719], []]
+val.compute_ips
+[[305.77636933681123, 20429.474844679768, 41123.27099983723, 41512.452549241614, 41431.44717226325, 41588.136773654514, 544.1119791202829], [6673.886551722071, 41952.05313641603, 6285.859848406444, 15361.662777638685, 42001.870745296146, 4800.089643653895, 42287.41145426283], []]
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '16', 'main.py', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+Job ended sucessfully
+val.total_ips
+[[322.08045818583923, 15888.757804126828, 8955.450004587226, 7889.543728716242, 7644.595211469446, 6694.0660648010125, 7467.21344818996], [7251.907863766814, 6564.214306144274, 6511.93938402844, 6810.122656079052, 8128.357673171295, 6378.212774046194, 7884.445658014646], []]
+val.compute_ips
+[[322.08707621042134, 15969.669386816331, 41956.79536678459, 26947.2926768057, 20441.559452992893, 12398.493064172846, 9717.246206156511], [26050.381268190566, 15206.492269236625, 9712.982986562285, 7623.930339593972, 8142.572360705838, 27259.175003150718, 21522.770765175585], []]
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '16', 'main.py', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '448', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_448BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+Job ended sucessfully
+val.total_ips
+[[316.0654729908249, 15206.96145348602, 9278.674709377598, 7694.7927552456285, 7692.656539524282, 6881.887478623411, 6894.5254716416475], [7693.276608985631, 6780.896125308035, 8042.650601752142, 7893.775743120692, 8181.863005750616, 6684.858723501332, 7720.641135755662], []]
+val.compute_ips
+[[316.0730423712255, 15279.772695831865, 35570.13939720193, 24188.14122152451, 19426.56848006379, 12276.205528070728, 8838.436060270567], [8829.919181174051, 6788.83219500321, 8054.110714392871, 7904.621937708002, 8194.221584449911, 32669.47570009269, 25137.894564688453], []]
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '16', 'main.py', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_16GPU_512BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+Job ended sucessfully
+val.total_ips
+[[263.7780182062264, 17999.428146060498, 40502.94092726036, 41313.75167793305, 41286.54760605893, 41667.41048653985, 132.09745419436933], [1088.0685931770804, 13006.351950929795, 1492.5447503161256, 11033.700687716919, 17565.771620735948, 41868.318952260495, 3419.6158398935495], []]
+val.compute_ips
+[[336.24740873453135, 20481.972846276734, 40739.214125564526, 41496.56692761234, 41406.60409995987, 41790.40706793547, 136.24829547406884], [7329.91020108981, 13717.541207033048, 3225.61654412172, 17716.64819088751, 17588.32280448864, 42003.85123970983, 16673.166006478437], []]
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '16', 'main.py', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+Job ended sucessfully
+val.total_ips
+[[342.4588142847357, 17618.93299421586, 8770.588991397559, 7598.153335705379, 6661.303921009827, 7546.1194988512725, 7538.9469590671115], [7223.2413487046315, 8491.826398659685, 8607.657759326454, 6525.797202280552, 7802.480909890651, 7267.054521089846], []]
+val.compute_ips
+[[342.46635429829445, 17716.913112729617, 41334.62579367657, 26532.9033425844, 14690.146439985207, 12280.32608445469, 28216.012107684815], [19528.78122540057, 17541.334697442857, 16318.706560730416, 26899.151189098717, 20773.861475499536, 16029.518783277483], []]
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '16', 'main.py', '-p', '1', '-j', '3', '--evaluate', '--amp', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '512', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_16GPU_512BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--static-loss-scale', '128', '--mixup', '0.0']
+Job ended sucessfully
+val.total_ips
+[[340.44635857694595, 17460.893534999042, 8876.093179021778, 7301.609419572882, 6910.412411163015, 6638.5700704860765, 7334.518129162787], [7216.600990336906, 7453.499520161045, 8350.47430326111, 6977.52884913355, 6793.478916032475, 6856.300225225989], []]
+val.compute_ips
+[[340.4529601401456, 17548.87822078761, 42445.84082935555, 27322.761216651426, 15931.37511069979, 10457.108900236108, 9363.099560535924], [8439.042404054897, 7760.943582524915, 8363.484875510672, 42397.6031697262, 18733.034435570356, 13311.495380457522], []]
+ val.total_ips |      16 p |      16 d-g |      16 d-c |
+--------------------------------------------------------
+           224 |   14681.7 |    8068.8 |    8127.9 |
+           256 |   15291.8 |    7800.2 |    7932.4 |
+           448 |   13034.2 |    7300.3 |    7620.3 |
+           512 |   18471.9 |    7198.4 |    6875.8 |
+ val.compute_ips |      16 p |      16 d-g |      16 d-c |
+----------------------------------------------------------
+             224 |   27260.0 |   12411.7 |    9734.9 |
+             256 |   22870.1 |    7946.6 |   15628.2 |
+             448 |   26112.8 |   16137.1 |   18476.6 |
+             512 |   23495.5 |   21234.2 |   24814.0 |

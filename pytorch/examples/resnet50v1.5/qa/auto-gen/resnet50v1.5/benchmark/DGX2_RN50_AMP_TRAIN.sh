@@ -1,0 +1,1 @@
+python ./qa/testscript.py /data/imagenet --data-backends pytorch dali-gpu --bs 256 512 --ngpus 16 --workspace $1 -j 3 --arch resnet50 -c fanin --label-smoothing 0.1 --amp --static-loss-scale 128 --mode training --mixup 0.0

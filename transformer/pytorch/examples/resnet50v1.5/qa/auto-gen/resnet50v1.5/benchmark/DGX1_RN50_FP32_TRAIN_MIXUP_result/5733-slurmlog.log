@@ -1,0 +1,1910 @@
+resnet50v1.5: Pulling from asulecki/pytorch-off/conv_tests
+Digest: sha256:205281eea3cedb2a9ac3d3738680d0d1f51c36b89aed411e2e24fba82bc54293
+Status: Image is up to date for gitlab-master.nvidia.com:5005/asulecki/pytorch-off/conv_tests:resnet50v1.5
+
+=============
+== PyTorch ==
+=============
+
+NVIDIA Release 19.04 (build 6012988)
+PyTorch Version 1.1.0a0+9eb0f43
+
+Container image Copyright (c) 2019, NVIDIA CORPORATION.  All rights reserved.
+
+Copyright (c) 2014-2019 Facebook Inc.
+Copyright (c) 2011-2014 Idiap Research Institute (Ronan Collobert)
+Copyright (c) 2012-2014 Deepmind Technologies    (Koray Kavukcuoglu)
+Copyright (c) 2011-2012 NEC Laboratories America (Koray Kavukcuoglu)
+Copyright (c) 2011-2013 NYU                      (Clement Farabet)
+Copyright (c) 2006-2010 NEC Laboratories America (Ronan Collobert, Leon Bottou, Iain Melvin, Jason Weston)
+Copyright (c) 2006      Idiap Research Institute (Samy Bengio)
+Copyright (c) 2001-2004 Idiap Research Institute (Ronan Collobert, Samy Bengio, Johnny Mariethoz)
+Copyright (c) 2015      Google Inc.
+Copyright (c) 2015      Yangqing Jia
+Copyright (c) 2013-2016 The Caffe contributors
+All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION.  All rights reserved.
+NVIDIA modifications are covered by the license terms that apply to the underlying project or file.
+
+NOTE: Legacy NVIDIA Driver detected.  Compatibility mode ENABLED.
+
+NOTE: Detected MOFED driver 3.4-1.0.0; version automatically upgraded.
+
+=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'bn': True, 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7ff063e5c048>}
+data : /data/imagenet
+data_backend : pytorch
+arch : resnet50
+model_config : fanin
+workers : 5
+epochs : 2
+start_epoch : 0
+batch_size : 128
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.1
+true_weight_decay : False
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 1
+dynamic_loss_scale : False
+prof : 100
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_8GPU_128BS_pytorch_trainingbench.json
+final_weights : model.pth.tar
+evaluate : False
+training_only : True
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 8
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Epoch: 0/2  Iteration: 1/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.085
+Epoch: 0/2  Iteration: 2/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.038
+Epoch: 0/2  Iteration: 3/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.043
+Epoch: 0/2  Iteration: 4/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.034
+Epoch: 0/2  Iteration: 5/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.151
+Epoch: 0/2  Iteration: 6/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.205
+Epoch: 0/2  Iteration: 7/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.210
+Epoch: 0/2  Iteration: 8/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.216
+Epoch: 0/2  Iteration: 9/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.233
+Epoch: 0/2  Iteration: 10/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.210
+Epoch: 0/2  Iteration: 11/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.239
+Epoch: 0/2  Iteration: 12/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.402
+Epoch: 0/2  Iteration: 13/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.482
+Epoch: 0/2  Iteration: 14/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.605
+Epoch: 0/2  Iteration: 15/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.473
+Epoch: 0/2  Iteration: 16/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.462
+Epoch: 0/2  Iteration: 17/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.861
+Epoch: 0/2  Iteration: 18/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.597
+Epoch: 0/2  Iteration: 19/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.566
+Epoch: 0/2  Iteration: 20/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.619
+Epoch: 0/2  Iteration: 21/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.686
+Epoch: 0/2  Iteration: 22/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.389
+Epoch: 0/2  Iteration: 23/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.653
+Epoch: 0/2  Iteration: 24/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.574
+Epoch: 0/2  Iteration: 25/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.412
+Epoch: 0/2  Iteration: 26/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.415
+Epoch: 0/2  Iteration: 27/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.419
+Epoch: 0/2  Iteration: 28/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.449
+Epoch: 0/2  Iteration: 29/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.518
+Epoch: 0/2  Iteration: 30/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.203
+Epoch: 0/2  Iteration: 31/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.186
+Epoch: 0/2  Iteration: 32/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.240
+Epoch: 0/2  Iteration: 33/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.187
+Epoch: 0/2  Iteration: 34/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.259
+Epoch: 0/2  Iteration: 35/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.692
+Epoch: 0/2  Iteration: 36/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.295
+Epoch: 0/2  Iteration: 37/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.186
+Epoch: 0/2  Iteration: 38/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.094
+Epoch: 0/2  Iteration: 39/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.203
+Epoch: 0/2  Iteration: 40/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.429
+Epoch: 0/2  Iteration: 41/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.189
+Epoch: 0/2  Iteration: 42/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.208
+Epoch: 0/2  Iteration: 43/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.265
+Epoch: 0/2  Iteration: 44/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.121
+Epoch: 0/2  Iteration: 45/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.104
+Epoch: 0/2  Iteration: 46/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.158
+Epoch: 0/2  Iteration: 47/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.173
+Epoch: 0/2  Iteration: 48/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.171
+Epoch: 0/2  Iteration: 49/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.460
+Epoch: 0/2  Iteration: 50/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.086
+Epoch: 0/2  Iteration: 51/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.199
+Epoch: 0/2  Iteration: 52/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.185
+Epoch: 0/2  Iteration: 53/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.147
+Epoch: 0/2  Iteration: 54/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.055
+Epoch: 0/2  Iteration: 55/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.321
+Epoch: 0/2  Iteration: 56/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.073
+Epoch: 0/2  Iteration: 57/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.052
+Epoch: 0/2  Iteration: 58/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.015
+Epoch: 0/2  Iteration: 59/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.965
+Epoch: 0/2  Iteration: 60/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.104
+Epoch: 0/2  Iteration: 61/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.990
+Epoch: 0/2  Iteration: 62/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.974
+Epoch: 0/2  Iteration: 63/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.036
+Epoch: 0/2  Iteration: 64/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.095
+Epoch: 0/2  Iteration: 65/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.078
+Epoch: 0/2  Iteration: 66/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.967
+Epoch: 0/2  Iteration: 67/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.008
+Epoch: 0/2  Iteration: 68/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.218
+Epoch: 0/2  Iteration: 69/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.999
+Epoch: 0/2  Iteration: 70/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.923
+Epoch: 0/2  Iteration: 71/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.969
+Epoch: 0/2  Iteration: 72/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.932
+Epoch: 0/2  Iteration: 73/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.135
+Epoch: 0/2  Iteration: 74/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.956
+Epoch: 0/2  Iteration: 75/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.914
+Epoch: 0/2  Iteration: 76/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.924
+Epoch: 0/2  Iteration: 77/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.046
+Epoch: 0/2  Iteration: 78/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.938
+Epoch: 0/2  Iteration: 79/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.938
+Epoch: 0/2  Iteration: 80/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.956
+Epoch: 0/2  Iteration: 81/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.964
+Epoch: 0/2  Iteration: 82/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.967
+Epoch: 0/2  Iteration: 83/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.912
+Epoch: 0/2  Iteration: 84/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.975
+Epoch: 0/2  Iteration: 85/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.945
+Epoch: 0/2  Iteration: 86/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.930
+Epoch: 0/2  Iteration: 87/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.936
+Epoch: 0/2  Iteration: 88/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.914
+Epoch: 0/2  Iteration: 89/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.907
+Epoch: 0/2  Iteration: 90/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.030
+Epoch: 0/2  Iteration: 91/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.915
+Epoch: 0/2  Iteration: 92/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.918
+Epoch: 0/2  Iteration: 93/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.929
+Epoch: 0/2  Iteration: 94/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.031
+Epoch: 0/2  Iteration: 95/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.930
+Epoch: 0/2  Iteration: 96/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.943
+Epoch: 0/2  Iteration: 97/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.922
+/opt/conda/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 2555904 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+Epoch: 0/2  Iteration: 98/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.957
+Epoch: 0/2  Iteration: 99/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.937
+Epoch: 0/2  Iteration: 100/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.965
+Summary Epoch: 0/2;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.162
+Epoch: 1/2  Iteration: 1/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.959
+Epoch: 1/2  Iteration: 2/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.918
+Epoch: 1/2  Iteration: 3/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.968
+Epoch: 1/2  Iteration: 4/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.965
+Epoch: 1/2  Iteration: 5/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.915
+Epoch: 1/2  Iteration: 6/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.918
+Epoch: 1/2  Iteration: 7/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.907
+Epoch: 1/2  Iteration: 8/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.914
+Epoch: 1/2  Iteration: 9/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.913
+Epoch: 1/2  Iteration: 10/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.922
+Epoch: 1/2  Iteration: 11/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.900
+Epoch: 1/2  Iteration: 12/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.916
+Epoch: 1/2  Iteration: 13/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.942
+Epoch: 1/2  Iteration: 14/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.939
+Epoch: 1/2  Iteration: 15/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.908
+Epoch: 1/2  Iteration: 16/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.912
+Epoch: 1/2  Iteration: 17/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.925
+Epoch: 1/2  Iteration: 18/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.924
+Epoch: 1/2  Iteration: 19/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.903
+Epoch: 1/2  Iteration: 20/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.975
+Epoch: 1/2  Iteration: 21/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.933
+Epoch: 1/2  Iteration: 22/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.931
+Epoch: 1/2  Iteration: 23/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.929
+Epoch: 1/2  Iteration: 24/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.916
+Epoch: 1/2  Iteration: 25/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.958
+Epoch: 1/2  Iteration: 26/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.913
+Epoch: 1/2  Iteration: 27/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.949
+Epoch: 1/2  Iteration: 28/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.912
+Epoch: 1/2  Iteration: 29/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.929
+Epoch: 1/2  Iteration: 30/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.960
+Epoch: 1/2  Iteration: 31/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.912
+Epoch: 1/2  Iteration: 32/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.911
+Epoch: 1/2  Iteration: 33/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.913
+Epoch: 1/2  Iteration: 34/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.912
+Epoch: 1/2  Iteration: 35/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.910
+Epoch: 1/2  Iteration: 36/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.905
+/opt/conda/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 19660800 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/opt/conda/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 18481152 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/opt/conda/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 37093376 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/opt/conda/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 39976960 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/opt/conda/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:754: UserWarning: Possibly corrupt EXIF data.  Expecting to read 34865152 bytes but only got 0. Skipping tag 0
+  " Skipping tag %s" % (size, len(data), tag))
+/opt/conda/lib/python3.6/site-packages/PIL/TiffImagePlugin.py:771: UserWarning: Corrupt EXIF data.  Expecting to read 12 bytes but only got 10. 
+  warnings.warn(str(msg))
+Epoch: 1/2  Iteration: 37/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.910
+Epoch: 1/2  Iteration: 38/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.910
+Epoch: 1/2  Iteration: 39/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.907
+Epoch: 1/2  Iteration: 40/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.914
+Epoch: 1/2  Iteration: 41/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.947
+Epoch: 1/2  Iteration: 42/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.910
+Epoch: 1/2  Iteration: 43/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.909
+Epoch: 1/2  Iteration: 44/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.909
+Epoch: 1/2  Iteration: 45/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.902
+Epoch: 1/2  Iteration: 46/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.914
+Epoch: 1/2  Iteration: 47/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.904
+Epoch: 1/2  Iteration: 48/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.904
+Epoch: 1/2  Iteration: 49/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.903
+Epoch: 1/2  Iteration: 50/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.976
+Epoch: 1/2  Iteration: 51/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.903
+Epoch: 1/2  Iteration: 52/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.908
+Epoch: 1/2  Iteration: 53/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.914
+Epoch: 1/2  Iteration: 54/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.941
+Epoch: 1/2  Iteration: 55/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.898
+Epoch: 1/2  Iteration: 56/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.953
+Epoch: 1/2  Iteration: 57/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.932
+Epoch: 1/2  Iteration: 58/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.901
+Epoch: 1/2  Iteration: 59/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.909
+Epoch: 1/2  Iteration: 60/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.905
+Epoch: 1/2  Iteration: 61/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.899
+Epoch: 1/2  Iteration: 62/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.910
+Epoch: 1/2  Iteration: 63/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.907
+Epoch: 1/2  Iteration: 64/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.906
+Epoch: 1/2  Iteration: 65/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.905
+Epoch: 1/2  Iteration: 66/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.905
+Epoch: 1/2  Iteration: 67/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.905
+Epoch: 1/2  Iteration: 68/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.907
+Epoch: 1/2  Iteration: 69/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.902
+Epoch: 1/2  Iteration: 70/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.901
+Epoch: 1/2  Iteration: 71/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.901
+Epoch: 1/2  Iteration: 72/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.912
+Epoch: 1/2  Iteration: 73/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.905
+Epoch: 1/2  Iteration: 74/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.894
+Epoch: 1/2  Iteration: 75/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.911
+Epoch: 1/2  Iteration: 76/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.903
+Epoch: 1/2  Iteration: 77/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.905
+Epoch: 1/2  Iteration: 78/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.908
+Epoch: 1/2  Iteration: 79/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.906
+Epoch: 1/2  Iteration: 80/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.903
+Epoch: 1/2  Iteration: 81/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.898
+Epoch: 1/2  Iteration: 82/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.908
+Epoch: 1/2  Iteration: 83/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.929
+Epoch: 1/2  Iteration: 84/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.906
+Epoch: 1/2  Iteration: 85/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.905
+Epoch: 1/2  Iteration: 86/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.924
+Epoch: 1/2  Iteration: 87/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.903
+Epoch: 1/2  Iteration: 88/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.907
+Epoch: 1/2  Iteration: 89/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.898
+Epoch: 1/2  Iteration: 90/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.911
+Epoch: 1/2  Iteration: 91/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.913
+Epoch: 1/2  Iteration: 92/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.988
+Epoch: 1/2  Iteration: 93/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.930
+Epoch: 1/2  Iteration: 94/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.936
+Epoch: 1/2  Iteration: 95/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.905
+Epoch: 1/2  Iteration: 96/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.911
+Epoch: 1/2  Iteration: 97/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.931
+Epoch: 1/2  Iteration: 98/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.902
+Epoch: 1/2  Iteration: 99/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.901
+Epoch: 1/2  Iteration: 100/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.910
+Summary Epoch: 1/2;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.917
+None
+Experiment ended
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'bn': True, 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7f5d5375a048>}
+read 1281167 files from 1000 directories
+read 50000 files from 1000 directories
+data : /data/imagenet
+data_backend : dali-gpu
+arch : resnet50
+model_config : fanin
+workers : 5
+epochs : 2
+start_epoch : 0
+batch_size : 128
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.1
+true_weight_decay : False
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 1
+dynamic_loss_scale : False
+prof : 100
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_8GPU_128BS_dali-gpu_trainingbench.json
+final_weights : model.pth.tar
+evaluate : False
+training_only : True
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 8
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Epoch: 0/2  Iteration: 1/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.114
+Epoch: 0/2  Iteration: 2/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.024
+Epoch: 0/2  Iteration: 3/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.027
+Epoch: 0/2  Iteration: 4/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.063
+Epoch: 0/2  Iteration: 5/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.111
+Epoch: 0/2  Iteration: 6/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.157
+Epoch: 0/2  Iteration: 7/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.277
+Epoch: 0/2  Iteration: 8/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.304
+Epoch: 0/2  Iteration: 9/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.305
+Epoch: 0/2  Iteration: 10/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.231
+Epoch: 0/2  Iteration: 11/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.314
+Epoch: 0/2  Iteration: 12/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.357
+Epoch: 0/2  Iteration: 13/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.470
+Epoch: 0/2  Iteration: 14/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.372
+Epoch: 0/2  Iteration: 15/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.292
+Epoch: 0/2  Iteration: 16/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.394
+Epoch: 0/2  Iteration: 17/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.289
+Epoch: 0/2  Iteration: 18/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.398
+Epoch: 0/2  Iteration: 19/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 8.047
+Epoch: 0/2  Iteration: 20/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.491
+Epoch: 0/2  Iteration: 21/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.630
+Epoch: 0/2  Iteration: 22/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.495
+Epoch: 0/2  Iteration: 23/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.623
+Epoch: 0/2  Iteration: 24/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.450
+Epoch: 0/2  Iteration: 25/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.365
+Epoch: 0/2  Iteration: 26/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.291
+Epoch: 0/2  Iteration: 27/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.317
+Epoch: 0/2  Iteration: 28/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.383
+Epoch: 0/2  Iteration: 29/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.573
+Epoch: 0/2  Iteration: 30/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.214
+Epoch: 0/2  Iteration: 31/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.289
+Epoch: 0/2  Iteration: 32/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.239
+Epoch: 0/2  Iteration: 33/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.171
+Epoch: 0/2  Iteration: 34/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.266
+Epoch: 0/2  Iteration: 35/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.168
+Epoch: 0/2  Iteration: 36/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.173
+Epoch: 0/2  Iteration: 37/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.184
+Epoch: 0/2  Iteration: 38/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.113
+Epoch: 0/2  Iteration: 39/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.173
+Epoch: 0/2  Iteration: 40/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.654
+Epoch: 0/2  Iteration: 41/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.134
+Epoch: 0/2  Iteration: 42/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.221
+Epoch: 0/2  Iteration: 43/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.107
+Epoch: 0/2  Iteration: 44/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.217
+Epoch: 0/2  Iteration: 45/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.272
+Epoch: 0/2  Iteration: 46/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.178
+Epoch: 0/2  Iteration: 47/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.161
+Epoch: 0/2  Iteration: 48/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.057
+Epoch: 0/2  Iteration: 49/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.018
+Epoch: 0/2  Iteration: 50/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.081
+Epoch: 0/2  Iteration: 51/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.059
+Epoch: 0/2  Iteration: 52/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.030
+Epoch: 0/2  Iteration: 53/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.004
+Epoch: 0/2  Iteration: 54/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.995
+Epoch: 0/2  Iteration: 55/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.956
+Epoch: 0/2  Iteration: 56/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.016
+Epoch: 0/2  Iteration: 57/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.946
+Epoch: 0/2  Iteration: 58/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.950
+Epoch: 0/2  Iteration: 59/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.963
+Epoch: 0/2  Iteration: 60/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.014
+Epoch: 0/2  Iteration: 61/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.971
+Epoch: 0/2  Iteration: 62/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.008
+Epoch: 0/2  Iteration: 63/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.979
+Epoch: 0/2  Iteration: 64/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.976
+Epoch: 0/2  Iteration: 65/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.972
+Epoch: 0/2  Iteration: 66/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.954
+Epoch: 0/2  Iteration: 67/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.951
+Epoch: 0/2  Iteration: 68/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.950
+Epoch: 0/2  Iteration: 69/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.957
+Epoch: 0/2  Iteration: 70/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.982
+Epoch: 0/2  Iteration: 71/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.924
+Epoch: 0/2  Iteration: 72/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.076
+Epoch: 0/2  Iteration: 73/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.964
+Epoch: 0/2  Iteration: 74/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.027
+Epoch: 0/2  Iteration: 75/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.014
+Epoch: 0/2  Iteration: 76/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.928
+Epoch: 0/2  Iteration: 77/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.985
+Epoch: 0/2  Iteration: 78/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.923
+Epoch: 0/2  Iteration: 79/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.939
+Epoch: 0/2  Iteration: 80/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.959
+Epoch: 0/2  Iteration: 81/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.072
+Epoch: 0/2  Iteration: 82/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.978
+Epoch: 0/2  Iteration: 83/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.990
+Epoch: 0/2  Iteration: 84/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.972
+Epoch: 0/2  Iteration: 85/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.969
+Epoch: 0/2  Iteration: 86/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.969
+Epoch: 0/2  Iteration: 87/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.960
+Epoch: 0/2  Iteration: 88/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.951
+Epoch: 0/2  Iteration: 89/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.942
+Epoch: 0/2  Iteration: 90/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.930
+Epoch: 0/2  Iteration: 91/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.977
+Epoch: 0/2  Iteration: 92/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.944
+Epoch: 0/2  Iteration: 93/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.939
+Epoch: 0/2  Iteration: 94/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.938
+Epoch: 0/2  Iteration: 95/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.933
+Epoch: 0/2  Iteration: 96/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.934
+Epoch: 0/2  Iteration: 97/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.056
+Epoch: 0/2  Iteration: 98/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.933
+Epoch: 0/2  Iteration: 99/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.926
+Epoch: 0/2  Iteration: 100/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.920
+Summary Epoch: 0/2;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.129
+Epoch: 1/2  Iteration: 1/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.913
+Epoch: 1/2  Iteration: 2/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.942
+Epoch: 1/2  Iteration: 3/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.927
+Epoch: 1/2  Iteration: 4/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.036
+Epoch: 1/2  Iteration: 5/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.948
+Epoch: 1/2  Iteration: 6/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.998
+Epoch: 1/2  Iteration: 7/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.924
+Epoch: 1/2  Iteration: 8/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.924
+Epoch: 1/2  Iteration: 9/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.915
+Epoch: 1/2  Iteration: 10/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.926
+Epoch: 1/2  Iteration: 11/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.912
+Epoch: 1/2  Iteration: 12/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.131
+Epoch: 1/2  Iteration: 13/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.916
+Epoch: 1/2  Iteration: 14/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.924
+Epoch: 1/2  Iteration: 15/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.908
+Epoch: 1/2  Iteration: 16/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.928
+Epoch: 1/2  Iteration: 17/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.012
+Epoch: 1/2  Iteration: 18/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.970
+Epoch: 1/2  Iteration: 19/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.907
+Epoch: 1/2  Iteration: 20/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.927
+Epoch: 1/2  Iteration: 21/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.912
+Epoch: 1/2  Iteration: 22/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.916
+Epoch: 1/2  Iteration: 23/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.925
+Epoch: 1/2  Iteration: 24/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.908
+Epoch: 1/2  Iteration: 25/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.920
+Epoch: 1/2  Iteration: 26/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.925
+Epoch: 1/2  Iteration: 27/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.908
+Epoch: 1/2  Iteration: 28/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.920
+Epoch: 1/2  Iteration: 29/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.924
+Epoch: 1/2  Iteration: 30/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.908
+Epoch: 1/2  Iteration: 31/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.901
+Epoch: 1/2  Iteration: 32/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.908
+Epoch: 1/2  Iteration: 33/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.905
+Epoch: 1/2  Iteration: 34/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.984
+Epoch: 1/2  Iteration: 35/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.934
+Epoch: 1/2  Iteration: 36/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.920
+Epoch: 1/2  Iteration: 37/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.907
+Epoch: 1/2  Iteration: 38/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.908
+Epoch: 1/2  Iteration: 39/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.910
+Epoch: 1/2  Iteration: 40/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.900
+Epoch: 1/2  Iteration: 41/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.912
+Epoch: 1/2  Iteration: 42/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.903
+Epoch: 1/2  Iteration: 43/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.906
+Epoch: 1/2  Iteration: 44/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.910
+Epoch: 1/2  Iteration: 45/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.935
+Epoch: 1/2  Iteration: 46/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.922
+Epoch: 1/2  Iteration: 47/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.918
+Epoch: 1/2  Iteration: 48/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.908
+Epoch: 1/2  Iteration: 49/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.912
+Epoch: 1/2  Iteration: 50/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.903
+Epoch: 1/2  Iteration: 51/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.905
+Epoch: 1/2  Iteration: 52/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.913
+Epoch: 1/2  Iteration: 53/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.974
+Epoch: 1/2  Iteration: 54/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.916
+Epoch: 1/2  Iteration: 55/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.901
+Epoch: 1/2  Iteration: 56/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.909
+Epoch: 1/2  Iteration: 57/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.910
+Epoch: 1/2  Iteration: 58/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.908
+Epoch: 1/2  Iteration: 59/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.919
+Epoch: 1/2  Iteration: 60/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.925
+Epoch: 1/2  Iteration: 61/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.898
+Epoch: 1/2  Iteration: 62/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.906
+Epoch: 1/2  Iteration: 63/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.900
+Epoch: 1/2  Iteration: 64/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.934
+Epoch: 1/2  Iteration: 65/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.904
+Epoch: 1/2  Iteration: 66/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.895
+Epoch: 1/2  Iteration: 67/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.910
+Epoch: 1/2  Iteration: 68/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.902
+Epoch: 1/2  Iteration: 69/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.901
+Epoch: 1/2  Iteration: 70/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.922
+Epoch: 1/2  Iteration: 71/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.943
+Epoch: 1/2  Iteration: 72/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.913
+Epoch: 1/2  Iteration: 73/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.904
+Epoch: 1/2  Iteration: 74/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.890
+Epoch: 1/2  Iteration: 75/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.903
+Epoch: 1/2  Iteration: 76/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.894
+Epoch: 1/2  Iteration: 77/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.893
+Epoch: 1/2  Iteration: 78/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.906
+Epoch: 1/2  Iteration: 79/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.899
+Epoch: 1/2  Iteration: 80/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.890
+Epoch: 1/2  Iteration: 81/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.899
+Epoch: 1/2  Iteration: 82/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.889
+Epoch: 1/2  Iteration: 83/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.903
+Epoch: 1/2  Iteration: 84/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.904
+Epoch: 1/2  Iteration: 85/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.885
+Epoch: 1/2  Iteration: 86/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.907
+Epoch: 1/2  Iteration: 87/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.897
+Epoch: 1/2  Iteration: 88/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.889
+Epoch: 1/2  Iteration: 89/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.899
+Epoch: 1/2  Iteration: 90/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.883
+Epoch: 1/2  Iteration: 91/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.896
+Epoch: 1/2  Iteration: 92/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.882
+Epoch: 1/2  Iteration: 93/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.885
+Epoch: 1/2  Iteration: 94/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.889
+Epoch: 1/2  Iteration: 95/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.888
+Epoch: 1/2  Iteration: 96/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.884
+Epoch: 1/2  Iteration: 97/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.876
+Epoch: 1/2  Iteration: 98/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.882
+Epoch: 1/2  Iteration: 99/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.884
+Epoch: 1/2  Iteration: 100/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.897
+Summary Epoch: 1/2;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.916
+None
+Experiment ended
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '8', 'main.py', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+Job ended sucessfully
+train.total_ips
+[[119.67020301542787, 1658.5818248941318, 2916.3304176597203, 2934.6850269794927, 2884.2647526732535, 2940.759369419704, 2932.883436286634, 2925.368344480922, 2919.474433502091, 2922.231510536443, 2942.9839933342105, 2927.6774963156654, 2921.5675883789427, 2897.9634455732007, 2943.3167670280222, 2920.611990852533, 2927.6774963156654, 2920.7808139621866, 2924.2649084177256, 2921.575537757655, 2936.061256479721, 2906.362509735881, 2916.7126503442696, 2935.5535464080717, 2915.744390119387, 2913.236638011143, 2916.7166118292603, 2906.0911294867988, 2916.433392771536, 2927.4280600376105, 2919.557784572382, 2932.422872936023, 2904.5365866194184, 2925.772880637776, 2910.6957164669375, 2910.210543647731, 2937.059127314106, 2906.730330523811, 2939.668438466351, 2922.440290926213, 2925.3384570850603, 2924.4361453527326, 2921.5417531968847, 2906.5473919713713, 2929.27489561608, 2930.4141064863966, 2863.9320492773436, 2908.129686644101, 2932.7312341327447, 2921.935292416857, 2913.007437551292, 2903.5862070830467, 2924.0419322379607, 2912.0594051081775, 2932.7252264770773, 2928.6517025858248, 2911.8086747474777, 2928.2323950191717, 2910.8653678934866, 2931.9624542112037, 2922.197710802961, 2929.638547379335, 2925.7868321559704, 2921.8935483827076, 2912.6261753163394, 2926.578300363934, 2923.03498140677, 2898.17268382281, 2911.38233485829, 2900.1316014790445, 2912.7802485546194, 2914.3337429490566, 2921.845842375591, 2934.2218930828353, 2918.4349296172777, 2923.0250347601027, 2919.2958400906996, 2907.082502885107, 2924.2888007396905, 2888.9111352061063, 2928.9392971856055, 2911.561935054388, 2929.6065743736935, 2914.058894969597, 2922.7087666959733, 2909.7551017642936, 2923.56225056787, 2924.563590506229, 2917.1603662541406, 2897.836352976023, 2924.702996362309, 2896.085565651287, 2920.617948982978, 2907.7792291584437, 2927.7952450061794, 2917.6042557267338, 2926.472613595017, 2920.5702846200716, 2902.9856681311253, 2907.6611164555916], [564.7690190209605, 2833.8395988387438, 2891.552358703336, 2873.6432359810974, 2898.2196199153404, 2892.978056308087, 2916.2710122491103, 2900.5605289798254, 2902.0264988455997, 2890.567656623522, 2915.79783557219, 2920.2624897416076, 2883.3469474891194, 2913.0904197595173, 2899.6812662285492, 2915.8968138068594, 2909.343158114352, 2919.6649572277724, 2926.1037667656124, 2903.86300964198, 2901.969635504433, 2897.2655514189287, 2909.711733781367, 2915.281278253669, 2916.278932830693, 2912.971875194991, 2918.3992346193413, 2922.0287238631213, 2931.0340493891526, 2919.4129155267046, 2914.539418512725, 2912.2114437559203, 2920.2982303333924, 2903.281981466172, 2901.646145105031, 2915.020100557082, 2912.162078818148, 2905.7922765550506, 2906.8286941031874, 2919.3891028128987, 2919.7661830717534, 2919.035926503621, 2922.088364080695, 2880.017552482768, 2906.616237111309, 2876.909723961927, 2895.8590558820774, 2918.760190933902, 2929.015199624647, 2915.6157331760223, 2901.328606507267, 2927.232531717607, 2903.321232802169, 2932.518978560699, 2892.0176983403935, 2913.5192364961254, 2891.340182394802, 2896.54845871426, 2912.9758265250343, 2907.6335582055804, 2911.664573687029, 2906.883780615574, 2921.9193897870146, 2905.615353131357, 2919.8773411034163, 2916.7126503442696, 2907.8934138928626, 2911.2106498929047, 2895.2285299811792, 2892.9546728814585, 2873.2664411297005, 2921.674908641693, 2892.0488561337825, 2918.0502628643176, 2912.5945725641673, 2913.495519830575, 2917.673625659963, 2915.174427175741, 2893.7089789205675, 2907.369812809989, 2897.5861109105913, 2911.9409444387948, 2893.6602392559835, 2914.6917162405553, 2906.2563114285426, 2922.366717289656, 2897.464915446675, 2904.8764393451092, 2908.3522119219647, 2904.5228370269633, 2910.457054337529, 2891.00543540085, 2930.752042841848, 2919.706637607603, 2915.807733093278, 2913.0785648688866, 2910.709524564678, 2907.047085045481, 2912.958045624256, 2897.988865430407], []]
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '8', 'main.py', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+Job ended sucessfully
+train.total_ips
+[[140.77578556764178, 1082.6427715462676, 2056.0914127490128, 2839.478838284003, 2899.67735088321, 2897.564607749746, 2907.422951689703, 2907.635526634686, 2885.14825610101, 2911.8145970139944, 2909.7373601604804, 2887.7845420658273, 2890.4976243226292, 2865.980714038341, 2901.277649994495, 2819.243003530809, 2904.3048251723662, 2893.2918205107994, 2903.1681585932743, 2899.604918901585, 2907.296996018428, 2914.238825556203, 2899.849636081291, 2879.075428328575, 2911.94884151691, 2918.742339347325, 2893.4419057114756, 2918.3516426469887, 2924.2250887486944, 2907.4032703966554, 2900.180559391356, 2900.4763003282055, 2909.5737533448496, 2898.914060548955, 2912.0574306847084, 2860.7101915324997, 2899.1019101143315, 2897.0290865284087, 2927.905019265012, 2877.6036286891563, 2911.423779090734, 2907.6611164555916, 2900.75838761181, 2898.667544934751, 2891.9105985458864, 2908.297069741427, 2919.162901404947, 2911.800778429595, 2900.846551140727, 2898.2078857496836, 2833.445130032702, 2910.4195820212626, 2907.0569232476983, 2914.0925066882155, 2892.5727970819476, 2847.0491857178463, 2919.2978243418956, 2903.7766258737593, 2896.1656336143883, 2903.4978769488907, 2892.736445793276, 2915.1862991309354, 2905.348043052242, 2899.8692152401272, 2894.2491243060826, 2886.137026362492, 2907.9308211869593, 2898.986458019049, 2900.196226272399, 2914.501841002026, 2897.421913041601, 2904.126119145132, 2901.0287727507907, 2899.0451613251607, 2890.573492801778, 2909.0416656506954, 2903.8237436556547, 2892.1053313455427, 2902.4540256566725, 2911.344838712301, 2897.5548336912298, 2840.881821723552, 2913.616083554598, 2911.690234475895, 2899.9122903202283, 2901.9794393697894, 2892.7228076934216, 2913.266278635184, 2902.301042876672, 2887.147823094132, 2905.1986853114877, 2887.8563846990187, 2897.5098738713455, 2902.7090327991723, 2911.935021658317, 2901.3776048421964, 2896.8121981340205, 2884.3925946769623, 2907.3363559933555, 2918.1077581491923], [2546.733838493745, 2909.0062000571647, 2894.2432732759244, 2896.4703229234947, 2904.5640861948636, 2906.354642928437, 2908.167100017334, 2901.5246097774357, 2897.634982917654, 2909.3451288588913, 2898.4660593451104, 2904.870545267629, 2901.189460259819, 2888.1942871821702, 2901.595177437781, 2819.0838636248773, 2909.2899490209943, 2896.2281287593933, 2839.4600661113313, 2901.218856242329, 2898.17463946298, 2893.0443114030595, 2896.558225984517, 2907.607968869741, 2906.1776510192, 2900.439084575287, 2902.7620014409163, 2897.52746667818, 2896.2261757452866, 2893.595905412716, 2898.837753616488, 2895.9273956143393, 2896.7653076158867, 2702.5851861966376, 2897.842218542823, 2894.5143958539725, 2907.4741242986806, 2895.7575285212374, 2901.8716004940316, 2895.5876813548352, 2904.218415116386, 2876.8788915190707, 2904.4953382325793, 2877.927565462462, 2908.970735328381, 2905.3342857761327, 2898.87297170152, 2890.392582233809, 2899.5853433114935, 2907.2556691917225, 2910.8042121928042, 2897.0544899964857, 2750.1695551670923, 2905.819799912994, 2901.4403251259214, 2894.5787705461057, 2845.724950472745, 2911.240249304381, 2904.5680147481494, 2822.8154206421345, 2903.31534503411, 2902.4579485041245, 2900.4939291760847, 2897.259688186376, 2894.395407748952, 2894.2140184799837, 2898.3878200650943, 2911.34089180575, 2894.543656722705, 2878.228429205764, 2897.1150692952033, 2904.695698515314, 2897.920428369204, 2896.736001812919, 2880.6163533064296, 2911.431673364027, 2900.6780655065218, 2898.702758884136, 2904.632837411685, 2905.7313338321715, 2895.9801170402925, 2900.848510391128, 2862.1933671245765, 2898.3076291865514, 2906.665414208051, 2881.648420113321, 2901.7657301222466, 2895.210965079917, 2899.456151045601, 2899.6068764751312, 2891.4725456125693, 2884.570817592322, 2891.6964227524045, 2893.810362682431, 2897.2675058350533, 2895.775100055017, 2885.60765917993, 2899.8790049186914, 2908.9273907230586, 2897.263597005441], []]=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'bn': True, 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7f88b60a1048>}
+read 1281167 files from 1000 directories
+read 50000 files from 1000 directories
+data : /data/imagenet
+data_backend : dali-cpu
+arch : resnet50
+model_config : fanin
+workers : 5
+epochs : 2
+start_epoch : 0
+batch_size : 128
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.1
+true_weight_decay : False
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 1
+dynamic_loss_scale : False
+prof : 100
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_8GPU_128BS_dali-cpu_trainingbench.json
+final_weights : model.pth.tar
+evaluate : False
+training_only : True
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 8
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Epoch: 0/2  Iteration: 1/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.079
+Epoch: 0/2  Iteration: 2/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.061
+Epoch: 0/2  Iteration: 3/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.041
+Epoch: 0/2  Iteration: 4/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.054
+Epoch: 0/2  Iteration: 5/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.086
+Epoch: 0/2  Iteration: 6/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.176
+Epoch: 0/2  Iteration: 7/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.185
+Epoch: 0/2  Iteration: 8/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.239
+Epoch: 0/2  Iteration: 9/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.218
+Epoch: 0/2  Iteration: 10/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.203
+Epoch: 0/2  Iteration: 11/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.244
+Epoch: 0/2  Iteration: 12/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.240
+Epoch: 0/2  Iteration: 13/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.294
+Epoch: 0/2  Iteration: 14/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.358
+Epoch: 0/2  Iteration: 15/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.319
+Epoch: 0/2  Iteration: 16/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.340
+Epoch: 0/2  Iteration: 17/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.330
+Epoch: 0/2  Iteration: 18/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.566
+Epoch: 0/2  Iteration: 19/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 8.065
+Epoch: 0/2  Iteration: 20/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.588
+Epoch: 0/2  Iteration: 21/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.510
+Epoch: 0/2  Iteration: 22/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.424
+Epoch: 0/2  Iteration: 23/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.390
+Epoch: 0/2  Iteration: 24/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.574
+Epoch: 0/2  Iteration: 25/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.411
+Epoch: 0/2  Iteration: 26/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.647
+Epoch: 0/2  Iteration: 27/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.265
+Epoch: 0/2  Iteration: 28/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.407
+Epoch: 0/2  Iteration: 29/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.301
+Epoch: 0/2  Iteration: 30/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.607
+Epoch: 0/2  Iteration: 31/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.370
+Epoch: 0/2  Iteration: 32/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.406
+Epoch: 0/2  Iteration: 33/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.191
+Epoch: 0/2  Iteration: 34/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.171
+Epoch: 0/2  Iteration: 35/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.210
+Epoch: 0/2  Iteration: 36/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.277
+Epoch: 0/2  Iteration: 37/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.168
+Epoch: 0/2  Iteration: 38/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.279
+Epoch: 0/2  Iteration: 39/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.229
+Epoch: 0/2  Iteration: 40/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.125
+Epoch: 0/2  Iteration: 41/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.222
+Epoch: 0/2  Iteration: 42/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.202
+Epoch: 0/2  Iteration: 43/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.199
+Epoch: 0/2  Iteration: 44/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.103
+Epoch: 0/2  Iteration: 45/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.131
+Epoch: 0/2  Iteration: 46/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.234
+Epoch: 0/2  Iteration: 47/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.094
+Epoch: 0/2  Iteration: 48/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.100
+Epoch: 0/2  Iteration: 49/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.097
+Epoch: 0/2  Iteration: 50/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.038
+Epoch: 0/2  Iteration: 51/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.028
+Epoch: 0/2  Iteration: 52/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.016
+Epoch: 0/2  Iteration: 53/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.036
+Epoch: 0/2  Iteration: 54/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.027
+Epoch: 0/2  Iteration: 55/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.018
+Epoch: 0/2  Iteration: 56/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.992
+Epoch: 0/2  Iteration: 57/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.009
+Epoch: 0/2  Iteration: 58/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.005
+Epoch: 0/2  Iteration: 59/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.022
+Epoch: 0/2  Iteration: 60/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.158
+Epoch: 0/2  Iteration: 61/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.976
+Epoch: 0/2  Iteration: 62/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.959
+Epoch: 0/2  Iteration: 63/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.959
+Epoch: 0/2  Iteration: 64/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.961
+Epoch: 0/2  Iteration: 65/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.993
+Epoch: 0/2  Iteration: 66/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.068
+Epoch: 0/2  Iteration: 67/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.963
+Epoch: 0/2  Iteration: 68/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.022
+Epoch: 0/2  Iteration: 69/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.943
+Epoch: 0/2  Iteration: 70/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.983
+Epoch: 0/2  Iteration: 71/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.959
+Epoch: 0/2  Iteration: 72/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.945
+Epoch: 0/2  Iteration: 73/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.946
+Epoch: 0/2  Iteration: 74/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.924
+Epoch: 0/2  Iteration: 75/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.921
+Epoch: 0/2  Iteration: 76/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.957
+Epoch: 0/2  Iteration: 77/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.942
+Epoch: 0/2  Iteration: 78/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.937
+Epoch: 0/2  Iteration: 79/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.939
+Epoch: 0/2  Iteration: 80/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.922
+Epoch: 0/2  Iteration: 81/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.922
+Epoch: 0/2  Iteration: 82/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.937
+Epoch: 0/2  Iteration: 83/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.008
+Epoch: 0/2  Iteration: 84/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.929
+Epoch: 0/2  Iteration: 85/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.934
+Epoch: 0/2  Iteration: 86/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.920
+Epoch: 0/2  Iteration: 87/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.940
+Epoch: 0/2  Iteration: 88/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.947
+Epoch: 0/2  Iteration: 89/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.934
+Epoch: 0/2  Iteration: 90/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.925
+Epoch: 0/2  Iteration: 91/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.937
+Epoch: 0/2  Iteration: 92/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.952
+Epoch: 0/2  Iteration: 93/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.938
+Epoch: 0/2  Iteration: 94/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.928
+Epoch: 0/2  Iteration: 95/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.941
+Epoch: 0/2  Iteration: 96/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.945
+Epoch: 0/2  Iteration: 97/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.933
+Epoch: 0/2  Iteration: 98/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.949
+Epoch: 0/2  Iteration: 99/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.970
+Epoch: 0/2  Iteration: 100/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.980
+Summary Epoch: 0/2;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.125
+Epoch: 1/2  Iteration: 1/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.931
+Epoch: 1/2  Iteration: 2/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.020
+Epoch: 1/2  Iteration: 3/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.929
+Epoch: 1/2  Iteration: 4/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.930
+Epoch: 1/2  Iteration: 5/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.955
+Epoch: 1/2  Iteration: 6/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.990
+Epoch: 1/2  Iteration: 7/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.073
+Epoch: 1/2  Iteration: 8/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.927
+Epoch: 1/2  Iteration: 9/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.940
+Epoch: 1/2  Iteration: 10/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.081
+Epoch: 1/2  Iteration: 11/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.913
+Epoch: 1/2  Iteration: 12/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.914
+Epoch: 1/2  Iteration: 13/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.927
+Epoch: 1/2  Iteration: 14/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.944
+Epoch: 1/2  Iteration: 15/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.944
+Epoch: 1/2  Iteration: 16/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.965
+Epoch: 1/2  Iteration: 17/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.907
+Epoch: 1/2  Iteration: 18/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.914
+Epoch: 1/2  Iteration: 19/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.969
+Epoch: 1/2  Iteration: 20/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.937
+Epoch: 1/2  Iteration: 21/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.906
+Epoch: 1/2  Iteration: 22/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.943
+Epoch: 1/2  Iteration: 23/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.933
+Epoch: 1/2  Iteration: 24/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.916
+Epoch: 1/2  Iteration: 25/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.910
+Epoch: 1/2  Iteration: 26/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.900
+Epoch: 1/2  Iteration: 27/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.946
+Epoch: 1/2  Iteration: 28/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.927
+Epoch: 1/2  Iteration: 29/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.912
+Epoch: 1/2  Iteration: 30/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.916
+Epoch: 1/2  Iteration: 31/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.944
+Epoch: 1/2  Iteration: 32/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.913
+Epoch: 1/2  Iteration: 33/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.908
+Epoch: 1/2  Iteration: 34/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.980
+Epoch: 1/2  Iteration: 35/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.902
+Epoch: 1/2  Iteration: 36/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.941
+Epoch: 1/2  Iteration: 37/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.903
+Epoch: 1/2  Iteration: 38/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 7.027
+Epoch: 1/2  Iteration: 39/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.921
+Epoch: 1/2  Iteration: 40/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.918
+Epoch: 1/2  Iteration: 41/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.926
+Epoch: 1/2  Iteration: 42/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.916
+Epoch: 1/2  Iteration: 43/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.911
+Epoch: 1/2  Iteration: 44/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.920
+Epoch: 1/2  Iteration: 45/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.909
+Epoch: 1/2  Iteration: 46/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.915
+Epoch: 1/2  Iteration: 47/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.921
+Epoch: 1/2  Iteration: 48/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.935
+Epoch: 1/2  Iteration: 49/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.907
+Epoch: 1/2  Iteration: 50/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.912
+Epoch: 1/2  Iteration: 51/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.910
+Epoch: 1/2  Iteration: 52/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.915
+Epoch: 1/2  Iteration: 53/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.911
+Epoch: 1/2  Iteration: 54/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.914
+Epoch: 1/2  Iteration: 55/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.903
+Epoch: 1/2  Iteration: 56/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.915
+Epoch: 1/2  Iteration: 57/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.908
+Epoch: 1/2  Iteration: 58/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.914
+Epoch: 1/2  Iteration: 59/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.904
+Epoch: 1/2  Iteration: 60/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.923
+Epoch: 1/2  Iteration: 61/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.910
+Epoch: 1/2  Iteration: 62/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.900
+Epoch: 1/2  Iteration: 63/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.896
+Epoch: 1/2  Iteration: 64/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.961
+Epoch: 1/2  Iteration: 65/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.989
+Epoch: 1/2  Iteration: 66/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.932
+Epoch: 1/2  Iteration: 67/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.897
+Epoch: 1/2  Iteration: 68/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.896
+Epoch: 1/2  Iteration: 69/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.901
+Epoch: 1/2  Iteration: 70/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.899
+Epoch: 1/2  Iteration: 71/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.903
+Epoch: 1/2  Iteration: 72/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.899
+Epoch: 1/2  Iteration: 73/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.960
+Epoch: 1/2  Iteration: 74/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.904
+Epoch: 1/2  Iteration: 75/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.890
+Epoch: 1/2  Iteration: 76/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.900
+Epoch: 1/2  Iteration: 77/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.913
+Epoch: 1/2  Iteration: 78/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.945
+Epoch: 1/2  Iteration: 79/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.900
+Epoch: 1/2  Iteration: 80/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.897
+Epoch: 1/2  Iteration: 81/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.890
+Epoch: 1/2  Iteration: 82/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.911
+Epoch: 1/2  Iteration: 83/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.896
+Epoch: 1/2  Iteration: 84/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.902
+Epoch: 1/2  Iteration: 85/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.892
+Epoch: 1/2  Iteration: 86/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.898
+Epoch: 1/2  Iteration: 87/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.923
+Epoch: 1/2  Iteration: 88/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.892
+Epoch: 1/2  Iteration: 89/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.889
+Epoch: 1/2  Iteration: 90/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.894
+Epoch: 1/2  Iteration: 91/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.891
+Epoch: 1/2  Iteration: 92/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.880
+Epoch: 1/2  Iteration: 93/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.892
+Epoch: 1/2  Iteration: 94/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.890
+Epoch: 1/2  Iteration: 95/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.884
+Epoch: 1/2  Iteration: 96/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.879
+Epoch: 1/2  Iteration: 97/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.895
+Epoch: 1/2  Iteration: 98/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.886
+Epoch: 1/2  Iteration: 99/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.884
+Epoch: 1/2  Iteration: 100/1251;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.882
+Summary Epoch: 1/2;	train.top1 : 0.000	train.top5 : 0.000	train.loss : 6.921
+None
+Experiment ended
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'bn': True, 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7f3b58a68048>}
+data : /data/imagenet
+data_backend : pytorch
+arch : resnet50
+model_config : fanin
+workers : 5
+epochs : 2
+start_epoch : 0
+batch_size : 256
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.1
+true_weight_decay : False
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 1
+dynamic_loss_scale : False
+prof : 100
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_8GPU_256BS_pytorch_trainingbench.json
+final_weights : model.pth.tar
+evaluate : False
+training_only : True
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 8
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Traceback (most recent call last):
+  File "main.py", line 297, in <module>
+    main(args)
+  File "main.py", line 282, in main
+    save_checkpoints=args.save_checkpoints and not args.evaluate, checkpoint_dir=args.workspace)
+  File "/workspace/rn50/image_classification/training.py", line 335, in train_loop
+    train(train_loader, model_and_loss, optimizer, lr_scheduler, fp16, logger, epoch, prof = prof, register_metrics=epoch==start_epoch, batch_size_multiplier=batch_size_multiplier)
+  File "/workspace/rn50/image_classification/training.py", line 227, in train
+    loss, prec1, prec5 = step(input, target, optimizer_step = optimizer_step)
+  File "/workspace/rn50/image_classification/training.py", line 167, in _step
+    loss, output = model_and_loss(input_var, target_var)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/training.py", line 49, in forward
+    output = self.model(data)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/apex/parallel/distributed.py", line 473, in forward
+    result = self.module(*inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 459, in forward
+    x = self.layer2(x)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/container.py", line 97, in forward
+    input = module(input)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 308, in forward
+    out = self.bn3(out)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/batchnorm.py", line 77, in forward
+    exponential_average_factor, self.eps)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/functional.py", line 1671, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 392.00 MiB (GPU 3; 15.75 GiB total capacity; 14.31 GiB already allocated; 89.94 MiB free; 315.31 MiB cached)
+Traceback (most recent call last):
+  File "main.py", line 297, in <module>
+    main(args)
+  File "main.py", line 282, in main
+    save_checkpoints=args.save_checkpoints and not args.evaluate, checkpoint_dir=args.workspace)
+  File "/workspace/rn50/image_classification/training.py", line 335, in train_loop
+    train(train_loader, model_and_loss, optimizer, lr_scheduler, fp16, logger, epoch, prof = prof, register_metrics=epoch==start_epoch, batch_size_multiplier=batch_size_multiplier)
+  File "/workspace/rn50/image_classification/training.py", line 227, in train
+    loss, prec1, prec5 = step(input, target, optimizer_step = optimizer_step)
+  File "/workspace/rn50/image_classification/training.py", line 167, in _step
+    loss, output = model_and_loss(input_var, target_var)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/training.py", line 49, in forward
+    output = self.model(data)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/apex/parallel/distributed.py", line 473, in forward
+    result = self.module(*inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 459, in forward
+    x = self.layer2(x)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/container.py", line 97, in forward
+    input = module(input)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 308, in forward
+    out = self.bn3(out)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/batchnorm.py", line 77, in forward
+    exponential_average_factor, self.eps)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/functional.py", line 1671, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 392.00 MiB (GPU 4; 15.75 GiB total capacity; 14.31 GiB already allocated; 89.94 MiB free; 315.31 MiB cached)
+Traceback (most recent call last):
+  File "main.py", line 297, in <module>
+    main(args)
+  File "main.py", line 282, in main
+    save_checkpoints=args.save_checkpoints and not args.evaluate, checkpoint_dir=args.workspace)
+  File "/workspace/rn50/image_classification/training.py", line 335, in train_loop
+    train(train_loader, model_and_loss, optimizer, lr_scheduler, fp16, logger, epoch, prof = prof, register_metrics=epoch==start_epoch, batch_size_multiplier=batch_size_multiplier)
+  File "/workspace/rn50/image_classification/training.py", line 227, in train
+    loss, prec1, prec5 = step(input, target, optimizer_step = optimizer_step)
+  File "/workspace/rn50/image_classification/training.py", line 167, in _step
+    loss, output = model_and_loss(input_var, target_var)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/training.py", line 49, in forward
+    output = self.model(data)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/apex/parallel/distributed.py", line 473, in forward
+    result = self.module(*inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 459, in forward
+    x = self.layer2(x)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/container.py", line 97, in forward
+    input = module(input)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 308, in forward
+    out = self.bn3(out)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/batchnorm.py", line 77, in forward
+    exponential_average_factor, self.eps)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/functional.py", line 1671, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 392.00 MiB (GPU 2; 15.75 GiB total capacity; 14.31 GiB already allocated; 89.94 MiB free; 315.31 MiB cached)
+Traceback (most recent call last):
+  File "main.py", line 297, in <module>
+    main(args)
+  File "main.py", line 282, in main
+    save_checkpoints=args.save_checkpoints and not args.evaluate, checkpoint_dir=args.workspace)
+  File "/workspace/rn50/image_classification/training.py", line 335, in train_loop
+    train(train_loader, model_and_loss, optimizer, lr_scheduler, fp16, logger, epoch, prof = prof, register_metrics=epoch==start_epoch, batch_size_multiplier=batch_size_multiplier)
+  File "/workspace/rn50/image_classification/training.py", line 227, in train
+    loss, prec1, prec5 = step(input, target, optimizer_step = optimizer_step)
+  File "/workspace/rn50/image_classification/training.py", line 167, in _step
+    loss, output = model_and_loss(input_var, target_var)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/training.py", line 49, in forward
+    output = self.model(data)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/apex/parallel/distributed.py", line 473, in forward
+    result = self.module(*inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 459, in forward
+    x = self.layer2(x)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/container.py", line 97, in forward
+    input = module(input)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 308, in forward
+    out = self.bn3(out)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/batchnorm.py", line 77, in forward
+    exponential_average_factor, self.eps)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/functional.py", line 1671, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 392.00 MiB (GPU 0; 15.75 GiB total capacity; 14.31 GiB already allocated; 89.94 MiB free; 315.31 MiB cached)
+Traceback (most recent call last):
+  File "main.py", line 297, in <module>
+    main(args)
+  File "main.py", line 282, in main
+    save_checkpoints=args.save_checkpoints and not args.evaluate, checkpoint_dir=args.workspace)
+  File "/workspace/rn50/image_classification/training.py", line 335, in train_loop
+    train(train_loader, model_and_loss, optimizer, lr_scheduler, fp16, logger, epoch, prof = prof, register_metrics=epoch==start_epoch, batch_size_multiplier=batch_size_multiplier)
+  File "/workspace/rn50/image_classification/training.py", line 227, in train
+    loss, prec1, prec5 = step(input, target, optimizer_step = optimizer_step)
+  File "/workspace/rn50/image_classification/training.py", line 167, in _step
+    loss, output = model_and_loss(input_var, target_var)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/training.py", line 49, in forward
+    output = self.model(data)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/apex/parallel/distributed.py", line 473, in forward
+    result = self.module(*inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 459, in forward
+    x = self.layer2(x)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/container.py", line 97, in forward
+    input = module(input)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 308, in forward
+    out = self.bn3(out)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/batchnorm.py", line 77, in forward
+    exponential_average_factor, self.eps)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/functional.py", line 1671, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 392.00 MiB (GPU 6; 15.75 GiB total capacity; 14.31 GiB already allocated; 89.94 MiB free; 315.31 MiB cached)
+Traceback (most recent call last):
+  File "main.py", line 297, in <module>
+    main(args)
+  File "main.py", line 282, in main
+    save_checkpoints=args.save_checkpoints and not args.evaluate, checkpoint_dir=args.workspace)
+  File "/workspace/rn50/image_classification/training.py", line 335, in train_loop
+    train(train_loader, model_and_loss, optimizer, lr_scheduler, fp16, logger, epoch, prof = prof, register_metrics=epoch==start_epoch, batch_size_multiplier=batch_size_multiplier)
+  File "/workspace/rn50/image_classification/training.py", line 227, in train
+    loss, prec1, prec5 = step(input, target, optimizer_step = optimizer_step)
+  File "/workspace/rn50/image_classification/training.py", line 167, in _step
+    loss, output = model_and_loss(input_var, target_var)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/training.py", line 49, in forward
+    output = self.model(data)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/apex/parallel/distributed.py", line 473, in forward
+    result = self.module(*inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 459, in forward
+    x = self.layer2(x)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/container.py", line 97, in forward
+    input = module(input)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 308, in forward
+    out = self.bn3(out)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/batchnorm.py", line 77, in forward
+    exponential_average_factor, self.eps)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/functional.py", line 1671, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 392.00 MiB (GPU 1; 15.75 GiB total capacity; 14.31 GiB already allocated; 89.94 MiB free; 315.31 MiB cached)
+Traceback (most recent call last):
+  File "main.py", line 297, in <module>
+    main(args)
+  File "main.py", line 282, in main
+    save_checkpoints=args.save_checkpoints and not args.evaluate, checkpoint_dir=args.workspace)
+  File "/workspace/rn50/image_classification/training.py", line 335, in train_loop
+    train(train_loader, model_and_loss, optimizer, lr_scheduler, fp16, logger, epoch, prof = prof, register_metrics=epoch==start_epoch, batch_size_multiplier=batch_size_multiplier)
+  File "/workspace/rn50/image_classification/training.py", line 227, in train
+    loss, prec1, prec5 = step(input, target, optimizer_step = optimizer_step)
+  File "/workspace/rn50/image_classification/training.py", line 167, in _step
+    loss, output = model_and_loss(input_var, target_var)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/training.py", line 49, in forward
+    output = self.model(data)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/apex/parallel/distributed.py", line 473, in forward
+    result = self.module(*inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 459, in forward
+    x = self.layer2(x)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/container.py", line 97, in forward
+    input = module(input)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+Traceback (most recent call last):
+  File "main.py", line 297, in <module>
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 308, in forward
+    out = self.bn3(out)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/batchnorm.py", line 77, in forward
+    main(args)
+  File "main.py", line 282, in main
+    exponential_average_factor, self.eps)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/functional.py", line 1671, in batch_norm
+    save_checkpoints=args.save_checkpoints and not args.evaluate, checkpoint_dir=args.workspace)
+  File "/workspace/rn50/image_classification/training.py", line 335, in train_loop
+    train(train_loader, model_and_loss, optimizer, lr_scheduler, fp16, logger, epoch, prof = prof, register_metrics=epoch==start_epoch, batch_size_multiplier=batch_size_multiplier)
+  File "/workspace/rn50/image_classification/training.py", line 227, in train
+    loss, prec1, prec5 = step(input, target, optimizer_step = optimizer_step)
+  File "/workspace/rn50/image_classification/training.py", line 167, in _step
+    loss, output = model_and_loss(input_var, target_var)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 392.00 MiB (GPU 7; 15.75 GiB total capacity; 14.31 GiB already allocated; 89.94 MiB free; 315.31 MiB cached)
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/training.py", line 49, in forward
+    output = self.model(data)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/apex/parallel/distributed.py", line 473, in forward
+    result = self.module(*inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 459, in forward
+    x = self.layer2(x)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/container.py", line 97, in forward
+    input = module(input)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 308, in forward
+    out = self.bn3(out)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/batchnorm.py", line 77, in forward
+    exponential_average_factor, self.eps)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/functional.py", line 1671, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 392.00 MiB (GPU 5; 15.75 GiB total capacity; 14.31 GiB already allocated; 89.94 MiB free; 315.31 MiB cached)
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_256BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_256BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_256BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_256BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_256BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_256BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_256BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_256BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '8', 'main.py', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+Job ended sucessfully
+train.total_ips
+[[131.26704581279233, 1605.775337794893, 2922.6093254743237, 2936.6012673633427, 2922.551652666211, 2926.2253762561745, 2929.2109661763925, 2931.570211470547, 2937.16959736193, 2926.247306912196, 2933.9031975348194, 2928.092652510816, 2925.760922299509, 2919.809851289111, 2917.6062376790487, 2942.7521046490356, 2917.8658967155925, 2926.624166808627, 2918.8315994639365, 2922.6670005586793, 2925.671237878297, 2928.27831332612, 2933.8490862988547, 2928.859404131121, 2906.809020854737, 2918.7264714536864, 2914.707540293848, 2923.5940917763673, 2910.7233327934277, 2934.881552198581, 2928.230398603711, 2912.877046489736, 2916.5106288778175, 2923.2697419199394, 2918.288189098361, 2904.1987771843865, 2909.684136647124, 2916.073011691539, 2920.423329294347, 2918.555902492989, 2939.2560279159593, 2924.3803915907934, 2922.6451235345835, 2930.3521266194666, 2915.6790705599706, 2921.8855972733395, 2919.3811653279554, 2908.9175398565376, 2909.222947746029, 2912.193672185525, 2925.0157121190555, 2918.1831002279528, 2923.7831632375205, 2907.3147078752613, 2907.3619405485647, 2922.9653563016414, 2918.661018216117, 2914.515685235338, 2908.6831089217, 2914.800510077007, 2912.5234688791616, 2910.9955789129804, 2920.2505764054195, 2889.9102647433647, 2929.6085726661004, 2915.109133150575, 2923.697580494194, 2910.932444842663, 2905.6546675858394, 2908.336456799871, 2806.9828697582707, 2930.076248054844, 2916.6888816603046, 2913.861194671834, 2910.926526163973, 2917.6597514094206, 2917.9114904764624, 2920.9834274584055, 2907.306835912248, 2908.8663164261106, 2908.8485856589623, 2914.199278467262, 2829.027489530213, 2917.6676795364306, 2918.131549964296, 2917.760838256314, 2923.2876489305586, 2915.977980973693, 2909.973932668314, 2915.9700620267877, 2913.0647342851, 2920.7132823763022, 2931.8223554692727, 2921.653046467222, 2897.848084133368, 2911.4948290915795, 2900.472382835556, 2925.7848390737963, 2902.0010081067458, 2904.656410006702], [2094.764704677384, 2914.3950470513832, 2908.7658449368805, 2910.4373319455285, 2919.6828201019825, 2903.4409559322585, 2909.9798474738877, 2923.494590302637, 2864.6751160218932, 2915.801794572562, 2914.173573435019, 2903.0249114553762, 2922.2633227645706, 2920.8801307911394, 2928.6137602936956, 2916.898851772191, 2917.4437265312113, 2926.582288693358, 2929.2469261428582, 2907.3835893700643, 2923.486630477325, 2901.9990472992286, 2927.8351619660752, 2919.567707635866, 2922.102280481773, 2905.1593831951313, 2914.539418512725, 2915.2298304606165, 2909.697935148809, 2912.008070968109, 2910.3623892935793, 2918.599534515505, 2908.257683749792, 2909.2209771670136, 2926.4108003436772, 2812.515623495915, 2915.257532892772, 2927.6615311206997, 2914.9370083763506, 2920.3061728059292, 2907.568601540245, 2902.2049465571276, 2912.847413785503, 2909.398339970696, 2924.790629703024, 2919.6967135997043, 2902.87579246747, 2918.577718341175, 2910.182937050807, 2910.3584450503877, 2914.242780324131, 2911.743531405715, 2908.080459988029, 2910.8121031065616, 2920.351842861436, 2919.6451098461107, 2899.475724891328, 2920.5563828072777, 2917.2217893335505, 2926.4227639949822, 2914.416800739908, 2904.8528631786976, 2910.204627904298, 2912.699259307484, 2921.154280288758, 2927.017081779231, 2915.1051760309338, 2919.5835846777454, 2912.282532206564, 2915.35845334814, 2920.0024040063145, 2907.2340222752005, 2905.9574245240315, 2914.1557779091063, 2915.9720417594817, 2909.9916771571707, 2908.7303860683282, 2915.5405236065544, 2911.086338937076, 2928.6117633581853, 2913.1161056868937, 2912.7506178197946, 2912.3378256232077, 2909.144126667606, 2908.943152248268, 2914.1498461154324, 2851.4173185585196, 2908.167100017334, 2911.4099642154824, 2924.9698960759474, 2911.8145970139944, 2907.5292352767556, 2910.6740182923195, 2909.0298436901003, 2917.4595804803826, 2916.44527498316, 2920.1969675954256, 2915.3841792876497, 2900.9464762856796, 2910.685853620189], []]
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '8', 'main.py', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_256BS_pytorch_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+CMD: "/opt/conda/bin/python multiproc.py --nproc_per_node 8 main.py -p 1 -j 5 --training-only  --workspace /data/workspace --epochs 2 --prof 100  -b 256 --data-backend pytorch --raport-file /data/workspace/./raport_8GPU_256BS_pytorch_trainingbench.json --no-checkpoints /data/imagenet --arch resnet50 -c fanin --label-smoothing 0.1 --mixup 0.1" exited with status 1
+train.total_ips
+[[131.26704581279233, 1605.775337794893, 2922.6093254743237, 2936.6012673633427, 2922.551652666211, 2926.2253762561745, 2929.2109661763925, 2931.570211470547, 2937.16959736193, 2926.247306912196, 2933.9031975348194, 2928.092652510816, 2925.760922299509, 2919.809851289111, 2917.6062376790487, 2942.7521046490356, 2917.8658967155925, 2926.624166808627, 2918.8315994639365, 2922.6670005586793, 2925.671237878297, 2928.27831332612, 2933.8490862988547, 2928.859404131121, 2906.809020854737, 2918.7264714536864, 2914.707540293848, 2923.5940917763673, 2910.7233327934277, 2934.881552198581, 2928.230398603711, 2912.877046489736, 2916.5106288778175, 2923.2697419199394, 2918.288189098361, 2904.1987771843865, 2909.684136647124, 2916.073011691539, 2920.423329294347, 2918.555902492989, 2939.2560279159593, 2924.3803915907934, 2922.6451235345835, 2930.3521266194666, 2915.6790705599706, 2921.8855972733395, 2919.3811653279554, 2908.9175398565376, 2909.222947746029, 2912.193672185525, 2925.0157121190555, 2918.1831002279528, 2923.7831632375205, 2907.3147078752613, 2907.3619405485647, 2922.9653563016414, 2918.661018216117, 2914.515685235338, 2908.6831089217, 2914.800510077007, 2912.5234688791616, 2910.9955789129804, 2920.2505764054195, 2889.9102647433647, 2929.6085726661004, 2915.109133150575, 2923.697580494194, 2910.932444842663, 2905.6546675858394, 2908.336456799871, 2806.9828697582707, 2930.076248054844, 2916.6888816603046, 2913.861194671834, 2910.926526163973, 2917.6597514094206, 2917.9114904764624, 2920.9834274584055, 2907.306835912248, 2908.8663164261106, 2908.8485856589623, 2914.199278467262, 2829.027489530213, 2917.6676795364306, 2918.131549964296, 2917.760838256314, 2923.2876489305586, 2915.977980973693, 2909.973932668314, 2915.9700620267877, 2913.0647342851, 2920.7132823763022, 2931.8223554692727, 2921.653046467222, 2897.848084133368, 2911.4948290915795, 2900.472382835556, 2925.7848390737963, 2902.0010081067458, 2904.656410006702], [2094.764704677384, 2914.3950470513832, 2908.7658449368805, 2910.4373319455285, 2919.6828201019825, 2903.4409559322585, 2909.9798474738877, 2923.494590302637, 2864.6751160218932, 2915.801794572562, 2914.173573435019, 2903.0249114553762, 2922.2633227645706, 2920.8801307911394, 2928.6137602936956, 2916.898851772191, 2917.4437265312113, 2926.582288693358, 2929.2469261428582, 2907.3835893700643, 2923.486630477325, 2901.9990472992286, 2927.8351619660752, 2919.567707635866, 2922.102280481773, 2905.1593831951313, 2914.539418512725, 2915.2298304606165, 2909.697935148809, 2912.008070968109, 2910.3623892935793, 2918.599534515505, 2908.257683749792, 2909.2209771670136, 2926.4108003436772, 2812.515623495915, 2915.257532892772, 2927.6615311206997, 2914.9370083763506, 2920.3061728059292, 2907.568601540245, 2902.2049465571276, 2912.847413785503, 2909.398339970696, 2924.790629703024, 2919.6967135997043, 2902.87579246747, 2918.577718341175, 2910.182937050807, 2910.3584450503877, 2914.242780324131, 2911.743531405715, 2908.080459988029, 2910.8121031065616, 2920.351842861436, 2919.6451098461107, 2899.475724891328, 2920.5563828072777, 2917.2217893335505, 2926.4227639949822, 2914.416800739908, 2904.8528631786976, 2910.204627904298, 2912.699259307484, 2921.154280288758, 2927.017081779231, 2915.1051760309338, 2919.5835846777454, 2912.282532206564, 2915.35845334814, 2920.0024040063145, 2907.2340222752005, 2905.9574245240315, 2914.1557779091063, 2915.9720417594817, 2909.9916771571707, 2908.7303860683282, 2915.5405236065544, 2911.086338937076, 2928.6117633581853, 2913.1161056868937, 2912.7506178197946, 2912.3378256232077, 2909.144126667606, 2908.943152248268, 2914.1498461154324, 2851.4173185585196, 2908.167100017334, 2911.4099642154824, 2924.9698960759474, 2911.8145970139944, 2907.5292352767556, 2910.6740182923195, 2909.0298436901003, 2917.4595804803826, 2916.44527498316, 2920.1969675954256, 2915.3841792876497, 2900.9464762856796, 2910.685853620189], []]=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'bn': True, 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7ff688235048>}
+read 1281167 files from 1000 directories
+read 50000 files from 1000 directories
+data : /data/imagenet
+data_backend : dali-gpu
+arch : resnet50
+model_config : fanin
+workers : 5
+epochs : 2
+start_epoch : 0
+batch_size : 256
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.1
+true_weight_decay : False
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 1
+dynamic_loss_scale : False
+prof : 100
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_8GPU_256BS_dali-gpu_trainingbench.json
+final_weights : model.pth.tar
+evaluate : False
+training_only : True
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 8
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Traceback (most recent call last):
+  File "main.py", line 297, in <module>
+    main(args)
+  File "main.py", line 282, in main
+    save_checkpoints=args.save_checkpoints and not args.evaluate, checkpoint_dir=args.workspace)
+  File "/workspace/rn50/image_classification/training.py", line 335, in train_loop
+    train(train_loader, model_and_loss, optimizer, lr_scheduler, fp16, logger, epoch, prof = prof, register_metrics=epoch==start_epoch, batch_size_multiplier=batch_size_multiplier)
+  File "/workspace/rn50/image_classification/training.py", line 227, in train
+    loss, prec1, prec5 = step(input, target, optimizer_step = optimizer_step)
+  File "/workspace/rn50/image_classification/training.py", line 167, in _step
+    loss, output = model_and_loss(input_var, target_var)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/training.py", line 49, in forward
+    output = self.model(data)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/apex/parallel/distributed.py", line 473, in forward
+    result = self.module(*inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 459, in forward
+    x = self.layer2(x)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/container.py", line 97, in forward
+    input = module(input)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 306, in forward
+    out = self.conv3(out)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/conv.py", line 339, in forward
+    self.padding, self.dilation, self.groups)
+RuntimeError: CUDA out of memory. Tried to allocate 392.00 MiB (GPU 3; 15.75 GiB total capacity; 11.25 GiB already allocated; 197.94 MiB free; 22.30 MiB cached)
+Traceback (most recent call last):
+  File "main.py", line 297, in <module>
+    main(args)
+  File "main.py", line 282, in main
+    save_checkpoints=args.save_checkpoints and not args.evaluate, checkpoint_dir=args.workspace)
+  File "/workspace/rn50/image_classification/training.py", line 335, in train_loop
+    train(train_loader, model_and_loss, optimizer, lr_scheduler, fp16, logger, epoch, prof = prof, register_metrics=epoch==start_epoch, batch_size_multiplier=batch_size_multiplier)
+  File "/workspace/rn50/image_classification/training.py", line 227, in train
+    loss, prec1, prec5 = step(input, target, optimizer_step = optimizer_step)
+  File "/workspace/rn50/image_classification/training.py", line 167, in _step
+    loss, output = model_and_loss(input_var, target_var)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/training.py", line 49, in forward
+    output = self.model(data)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/apex/parallel/distributed.py", line 473, in forward
+    result = self.module(*inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 459, in forward
+    x = self.layer2(x)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/container.py", line 97, in forward
+    input = module(input)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 308, in forward
+    out = self.bn3(out)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/batchnorm.py", line 77, in forward
+    exponential_average_factor, self.eps)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/functional.py", line 1671, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 392.00 MiB (GPU 6; 15.75 GiB total capacity; 11.63 GiB already allocated; 207.94 MiB free; 22.30 MiB cached)
+Traceback (most recent call last):
+  File "main.py", line 297, in <module>
+    main(args)
+  File "main.py", line 282, in main
+    save_checkpoints=args.save_checkpoints and not args.evaluate, checkpoint_dir=args.workspace)
+  File "/workspace/rn50/image_classification/training.py", line 335, in train_loop
+    train(train_loader, model_and_loss, optimizer, lr_scheduler, fp16, logger, epoch, prof = prof, register_metrics=epoch==start_epoch, batch_size_multiplier=batch_size_multiplier)
+  File "/workspace/rn50/image_classification/training.py", line 227, in train
+    loss, prec1, prec5 = step(input, target, optimizer_step = optimizer_step)
+  File "/workspace/rn50/image_classification/training.py", line 167, in _step
+    loss, output = model_and_loss(input_var, target_var)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/training.py", line 49, in forward
+    output = self.model(data)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/apex/parallel/distributed.py", line 473, in forward
+    result = self.module(*inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 459, in forward
+    x = self.layer2(x)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/container.py", line 97, in forward
+    input = module(input)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 308, in forward
+    out = self.bn3(out)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/batchnorm.py", line 77, in forward
+    exponential_average_factor, self.eps)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/functional.py", line 1671, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 392.00 MiB (GPU 1; 15.75 GiB total capacity; 11.63 GiB already allocated; 297.94 MiB free; 22.30 MiB cached)
+Traceback (most recent call last):
+  File "main.py", line 297, in <module>
+Traceback (most recent call last):
+  File "main.py", line 297, in <module>
+    main(args)
+  File "main.py", line 282, in main
+    main(args)
+  File "main.py", line 282, in main
+    save_checkpoints=args.save_checkpoints and not args.evaluate, checkpoint_dir=args.workspace)
+  File "/workspace/rn50/image_classification/training.py", line 335, in train_loop
+    save_checkpoints=args.save_checkpoints and not args.evaluate, checkpoint_dir=args.workspace)
+  File "/workspace/rn50/image_classification/training.py", line 335, in train_loop
+    train(train_loader, model_and_loss, optimizer, lr_scheduler, fp16, logger, epoch, prof = prof, register_metrics=epoch==start_epoch, batch_size_multiplier=batch_size_multiplier)
+    train(train_loader, model_and_loss, optimizer, lr_scheduler, fp16, logger, epoch, prof = prof, register_metrics=epoch==start_epoch, batch_size_multiplier=batch_size_multiplier)
+  File "/workspace/rn50/image_classification/training.py", line 227, in train
+  File "/workspace/rn50/image_classification/training.py", line 227, in train
+    loss, prec1, prec5 = step(input, target, optimizer_step = optimizer_step)
+    loss, prec1, prec5 = step(input, target, optimizer_step = optimizer_step)
+  File "/workspace/rn50/image_classification/training.py", line 167, in _step
+  File "/workspace/rn50/image_classification/training.py", line 167, in _step
+    loss, output = model_and_loss(input_var, target_var)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    loss, output = model_and_loss(input_var, target_var)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/training.py", line 49, in forward
+    output = self.model(data)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/training.py", line 49, in forward
+    output = self.model(data)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/apex/parallel/distributed.py", line 473, in forward
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/apex/parallel/distributed.py", line 473, in forward
+    result = self.module(*inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.module(*inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 459, in forward
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 459, in forward
+    x = self.layer2(x)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    x = self.layer2(x)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/container.py", line 97, in forward
+    input = module(input)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/container.py", line 97, in forward
+    input = module(input)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 308, in forward
+    out = self.bn3(out)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 308, in forward
+    out = self.bn3(out)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/batchnorm.py", line 77, in forward
+    exponential_average_factor, self.eps)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/functional.py", line 1671, in batch_norm
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/batchnorm.py", line 77, in forward
+    exponential_average_factor, self.eps)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/functional.py", line 1671, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 392.00 MiB (GPU 5; 15.75 GiB total capacity; 11.63 GiB already allocated; 217.94 MiB free; 22.30 MiB cached)
+    training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 392.00 MiB (GPU 4; 15.75 GiB total capacity; 11.63 GiB already allocated; 183.94 MiB free; 22.30 MiB cached)
+Traceback (most recent call last):
+  File "main.py", line 297, in <module>
+    main(args)
+  File "main.py", line 282, in main
+    save_checkpoints=args.save_checkpoints and not args.evaluate, checkpoint_dir=args.workspace)
+  File "/workspace/rn50/image_classification/training.py", line 335, in train_loop
+    train(train_loader, model_and_loss, optimizer, lr_scheduler, fp16, logger, epoch, prof = prof, register_metrics=epoch==start_epoch, batch_size_multiplier=batch_size_multiplier)
+  File "/workspace/rn50/image_classification/training.py", line 227, in train
+    loss, prec1, prec5 = step(input, target, optimizer_step = optimizer_step)
+  File "/workspace/rn50/image_classification/training.py", line 167, in _step
+    loss, output = model_and_loss(input_var, target_var)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/training.py", line 49, in forward
+    output = self.model(data)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/apex/parallel/distributed.py", line 473, in forward
+    result = self.module(*inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 459, in forward
+    x = self.layer2(x)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/container.py", line 97, in forward
+    input = module(input)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 308, in forward
+    out = self.bn3(out)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/batchnorm.py", line 77, in forward
+    exponential_average_factor, self.eps)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/functional.py", line 1671, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 392.00 MiB (GPU 0; 15.75 GiB total capacity; 11.63 GiB already allocated; 31.94 MiB free; 22.30 MiB cached)
+Traceback (most recent call last):
+  File "main.py", line 297, in <module>
+    main(args)
+  File "main.py", line 282, in main
+    save_checkpoints=args.save_checkpoints and not args.evaluate, checkpoint_dir=args.workspace)
+  File "/workspace/rn50/image_classification/training.py", line 335, in train_loop
+    train(train_loader, model_and_loss, optimizer, lr_scheduler, fp16, logger, epoch, prof = prof, register_metrics=epoch==start_epoch, batch_size_multiplier=batch_size_multiplier)
+  File "/workspace/rn50/image_classification/training.py", line 227, in train
+    loss, prec1, prec5 = step(input, target, optimizer_step = optimizer_step)
+  File "/workspace/rn50/image_classification/training.py", line 167, in _step
+    loss, output = model_and_loss(input_var, target_var)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/training.py", line 49, in forward
+    output = self.model(data)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/apex/parallel/distributed.py", line 473, in forward
+    result = self.module(*inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 459, in forward
+    x = self.layer2(x)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/container.py", line 97, in forward
+    input = module(input)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 308, in forward
+    out = self.bn3(out)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/batchnorm.py", line 77, in forward
+    exponential_average_factor, self.eps)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/functional.py", line 1671, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 392.00 MiB (GPU 7; 15.75 GiB total capacity; 11.63 GiB already allocated; 313.94 MiB free; 22.30 MiB cached)
+Traceback (most recent call last):
+  File "main.py", line 297, in <module>
+    main(args)
+  File "main.py", line 282, in main
+    save_checkpoints=args.save_checkpoints and not args.evaluate, checkpoint_dir=args.workspace)
+  File "/workspace/rn50/image_classification/training.py", line 335, in train_loop
+    train(train_loader, model_and_loss, optimizer, lr_scheduler, fp16, logger, epoch, prof = prof, register_metrics=epoch==start_epoch, batch_size_multiplier=batch_size_multiplier)
+  File "/workspace/rn50/image_classification/training.py", line 227, in train
+    loss, prec1, prec5 = step(input, target, optimizer_step = optimizer_step)
+  File "/workspace/rn50/image_classification/training.py", line 167, in _step
+    loss, output = model_and_loss(input_var, target_var)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/training.py", line 49, in forward
+    output = self.model(data)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/apex/parallel/distributed.py", line 473, in forward
+    result = self.module(*inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 459, in forward
+    x = self.layer2(x)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/container.py", line 97, in forward
+    input = module(input)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 308, in forward
+    out = self.bn3(out)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/batchnorm.py", line 77, in forward
+    exponential_average_factor, self.eps)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/functional.py", line 1671, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 392.00 MiB (GPU 2; 15.75 GiB total capacity; 11.63 GiB already allocated; 257.94 MiB free; 22.30 MiB cached)
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'bn': True, 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7f337e113048>}
+read 1281167 files from 1000 directories
+read 50000 files from 1000 directories
+data : /data/imagenet
+data_backend : dali-cpu
+arch : resnet50
+model_config : fanin
+workers : 5
+epochs : 2
+start_epoch : 0
+batch_size : 256
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.1
+true_weight_decay : False
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 1
+dynamic_loss_scale : False
+prof : 100
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_8GPU_256BS_dali-cpu_trainingbench.json
+final_weights : model.pth.tar
+evaluate : False
+training_only : True
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 8
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Traceback (most recent call last):
+  File "main.py", line 297, in <module>
+    main(args)
+  File "main.py", line 282, in main
+    save_checkpoints=args.save_checkpoints and not args.evaluate, checkpoint_dir=args.workspace)
+  File "/workspace/rn50/image_classification/training.py", line 335, in train_loop
+    train(train_loader, model_and_loss, optimizer, lr_scheduler, fp16, logger, epoch, prof = prof, register_metrics=epoch==start_epoch, batch_size_multiplier=batch_size_multiplier)
+  File "/workspace/rn50/image_classification/training.py", line 227, in train
+    loss, prec1, prec5 = step(input, target, optimizer_step = optimizer_step)
+  File "/workspace/rn50/image_classification/training.py", line 167, in _step
+    loss, output = model_and_loss(input_var, target_var)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/training.py", line 49, in forward
+    output = self.model(data)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/apex/parallel/distributed.py", line 473, in forward
+    result = self.module(*inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 459, in forward
+    x = self.layer2(x)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/container.py", line 97, in forward
+    input = module(input)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 308, in forward
+    out = self.bn3(out)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/batchnorm.py", line 77, in forward
+    exponential_average_factor, self.eps)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/functional.py", line 1671, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 392.00 MiB (GPU 7; 15.75 GiB total capacity; 13.16 GiB already allocated; 37.94 MiB free; 22.29 MiB cached)
+Traceback (most recent call last):
+  File "main.py", line 297, in <module>
+    main(args)
+  File "main.py", line 282, in main
+    save_checkpoints=args.save_checkpoints and not args.evaluate, checkpoint_dir=args.workspace)
+  File "/workspace/rn50/image_classification/training.py", line 335, in train_loop
+    train(train_loader, model_and_loss, optimizer, lr_scheduler, fp16, logger, epoch, prof = prof, register_metrics=epoch==start_epoch, batch_size_multiplier=batch_size_multiplier)
+  File "/workspace/rn50/image_classification/training.py", line 227, in train
+    loss, prec1, prec5 = step(input, target, optimizer_step = optimizer_step)
+  File "/workspace/rn50/image_classification/training.py", line 167, in _step
+    loss, output = model_and_loss(input_var, target_var)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/training.py", line 49, in forward
+    output = self.model(data)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/apex/parallel/distributed.py", line 473, in forward
+    result = self.module(*inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 459, in forward
+    x = self.layer2(x)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/container.py", line 97, in forward
+    input = module(input)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 306, in forward
+    out = self.conv3(out)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/conv.py", line 339, in forward
+    self.padding, self.dilation, self.groups)
+RuntimeError: CUDA out of memory. Tried to allocate 392.00 MiB (GPU 2; 15.75 GiB total capacity; 12.78 GiB already allocated; 387.94 MiB free; 22.29 MiB cached)
+Traceback (most recent call last):
+  File "main.py", line 297, in <module>
+    main(args)
+  File "main.py", line 282, in main
+    save_checkpoints=args.save_checkpoints and not args.evaluate, checkpoint_dir=args.workspace)
+  File "/workspace/rn50/image_classification/training.py", line 335, in train_loop
+    train(train_loader, model_and_loss, optimizer, lr_scheduler, fp16, logger, epoch, prof = prof, register_metrics=epoch==start_epoch, batch_size_multiplier=batch_size_multiplier)
+  File "/workspace/rn50/image_classification/training.py", line 227, in train
+    loss, prec1, prec5 = step(input, target, optimizer_step = optimizer_step)
+  File "/workspace/rn50/image_classification/training.py", line 167, in _step
+    loss, output = model_and_loss(input_var, target_var)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/training.py", line 49, in forward
+    output = self.model(data)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/apex/parallel/distributed.py", line 473, in forward
+    result = self.module(*inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 459, in forward
+    x = self.layer2(x)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/container.py", line 97, in forward
+    input = module(input)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 306, in forward
+    out = self.conv3(out)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/conv.py", line 339, in forward
+    self.padding, self.dilation, self.groups)
+RuntimeError: CUDA out of memory. Tried to allocate 392.00 MiB (GPU 5; 15.75 GiB total capacity; 12.78 GiB already allocated; 349.94 MiB free; 22.29 MiB cached)
+Traceback (most recent call last):
+  File "main.py", line 297, in <module>
+    main(args)
+  File "main.py", line 282, in main
+    save_checkpoints=args.save_checkpoints and not args.evaluate, checkpoint_dir=args.workspace)
+  File "/workspace/rn50/image_classification/training.py", line 335, in train_loop
+    train(train_loader, model_and_loss, optimizer, lr_scheduler, fp16, logger, epoch, prof = prof, register_metrics=epoch==start_epoch, batch_size_multiplier=batch_size_multiplier)
+  File "/workspace/rn50/image_classification/training.py", line 227, in train
+    loss, prec1, prec5 = step(input, target, optimizer_step = optimizer_step)
+  File "/workspace/rn50/image_classification/training.py", line 167, in _step
+    loss, output = model_and_loss(input_var, target_var)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/training.py", line 49, in forward
+    output = self.model(data)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/apex/parallel/distributed.py", line 473, in forward
+    result = self.module(*inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 459, in forward
+    x = self.layer2(x)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/container.py", line 97, in forward
+    input = module(input)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 301, in forward
+    out = self.conv2(out)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/conv.py", line 339, in forward
+    self.padding, self.dilation, self.groups)
+RuntimeError: CUDA out of memory. Tried to allocate 410.00 MiB (GPU 1; 15.75 GiB total capacity; 12.69 GiB already allocated; 409.94 MiB free; 120.29 MiB cached)
+Traceback (most recent call last):
+  File "main.py", line 297, in <module>
+    main(args)
+  File "main.py", line 282, in main
+    save_checkpoints=args.save_checkpoints and not args.evaluate, checkpoint_dir=args.workspace)
+  File "/workspace/rn50/image_classification/training.py", line 335, in train_loop
+    train(train_loader, model_and_loss, optimizer, lr_scheduler, fp16, logger, epoch, prof = prof, register_metrics=epoch==start_epoch, batch_size_multiplier=batch_size_multiplier)
+  File "/workspace/rn50/image_classification/training.py", line 227, in train
+    loss, prec1, prec5 = step(input, target, optimizer_step = optimizer_step)
+  File "/workspace/rn50/image_classification/training.py", line 167, in _step
+    loss, output = model_and_loss(input_var, target_var)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/training.py", line 49, in forward
+    output = self.model(data)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/apex/parallel/distributed.py", line 473, in forward
+    result = self.module(*inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 459, in forward
+    x = self.layer2(x)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/container.py", line 97, in forward
+    input = module(input)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 306, in forward
+    out = self.conv3(out)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/conv.py", line 339, in forward
+    self.padding, self.dilation, self.groups)
+RuntimeError: CUDA out of memory. Tried to allocate 392.00 MiB (GPU 6; 15.75 GiB total capacity; 12.78 GiB already allocated; 333.94 MiB free; 22.29 MiB cached)
+Traceback (most recent call last):
+  File "main.py", line 297, in <module>
+    main(args)
+  File "main.py", line 282, in main
+    save_checkpoints=args.save_checkpoints and not args.evaluate, checkpoint_dir=args.workspace)
+  File "/workspace/rn50/image_classification/training.py", line 335, in train_loop
+    train(train_loader, model_and_loss, optimizer, lr_scheduler, fp16, logger, epoch, prof = prof, register_metrics=epoch==start_epoch, batch_size_multiplier=batch_size_multiplier)
+  File "/workspace/rn50/image_classification/training.py", line 227, in train
+    loss, prec1, prec5 = step(input, target, optimizer_step = optimizer_step)
+  File "/workspace/rn50/image_classification/training.py", line 167, in _step
+    loss, output = model_and_loss(input_var, target_var)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/training.py", line 49, in forward
+    output = self.model(data)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/apex/parallel/distributed.py", line 473, in forward
+    result = self.module(*inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 459, in forward
+    x = self.layer2(x)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/container.py", line 97, in forward
+    input = module(input)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 311, in forward
+    residual = self.downsample(x)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/container.py", line 97, in forward
+    input = module(input)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/batchnorm.py", line 77, in forward
+    exponential_average_factor, self.eps)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/functional.py", line 1671, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+RuntimeError: CUDA out of memory. Tried to allocate 392.00 MiB (GPU 3; 15.75 GiB total capacity; 12.40 GiB already allocated; 295.94 MiB free; 22.30 MiB cached)
+Traceback (most recent call last):
+  File "main.py", line 297, in <module>
+Traceback (most recent call last):
+  File "main.py", line 297, in <module>
+    main(args)
+  File "main.py", line 282, in main
+    save_checkpoints=args.save_checkpoints and not args.evaluate, checkpoint_dir=args.workspace)
+  File "/workspace/rn50/image_classification/training.py", line 335, in train_loop
+    main(args)
+  File "main.py", line 282, in main
+    train(train_loader, model_and_loss, optimizer, lr_scheduler, fp16, logger, epoch, prof = prof, register_metrics=epoch==start_epoch, batch_size_multiplier=batch_size_multiplier)
+  File "/workspace/rn50/image_classification/training.py", line 227, in train
+    save_checkpoints=args.save_checkpoints and not args.evaluate, checkpoint_dir=args.workspace)
+  File "/workspace/rn50/image_classification/training.py", line 335, in train_loop
+    loss, prec1, prec5 = step(input, target, optimizer_step = optimizer_step)
+  File "/workspace/rn50/image_classification/training.py", line 167, in _step
+    loss, output = model_and_loss(input_var, target_var)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    train(train_loader, model_and_loss, optimizer, lr_scheduler, fp16, logger, epoch, prof = prof, register_metrics=epoch==start_epoch, batch_size_multiplier=batch_size_multiplier)
+  File "/workspace/rn50/image_classification/training.py", line 227, in train
+    loss, prec1, prec5 = step(input, target, optimizer_step = optimizer_step)
+  File "/workspace/rn50/image_classification/training.py", line 167, in _step
+    loss, output = model_and_loss(input_var, target_var)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/training.py", line 49, in forward
+    output = self.model(data)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/training.py", line 49, in forward
+    output = self.model(data)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/apex/parallel/distributed.py", line 473, in forward
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/apex/parallel/distributed.py", line 473, in forward
+    result = self.module(*inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.module(*inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 459, in forward
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 459, in forward
+    x = self.layer2(x)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    x = self.layer2(x)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/container.py", line 97, in forward
+    input = module(input)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/container.py", line 97, in forward
+    input = module(input)
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+  File "/workspace/rn50/image_classification/resnet.py", line 306, in forward
+    out = self.conv3(out)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/workspace/rn50/image_classification/resnet.py", line 306, in forward
+    result = self.forward(*input, **kwargs)
+    out = self.conv3(out)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/conv.py", line 339, in forward
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/module.py", line 491, in __call__
+    self.padding, self.dilation, self.groups)
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/torch/nn/modules/conv.py", line 339, in forward
+RuntimeError: CUDA out of memory. Tried to allocate 392.00 MiB (GPU 4; 15.75 GiB total capacity; 12.78 GiB already allocated; 331.94 MiB free; 22.29 MiB cached)
+    self.padding, self.dilation, self.groups)
+RuntimeError: CUDA out of memory. Tried to allocate 392.00 MiB (GPU 0; 15.75 GiB total capacity; 12.78 GiB already allocated; 125.94 MiB free; 22.29 MiB cached)
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '8', 'main.py', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-gpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+CMD: "/opt/conda/bin/python multiproc.py --nproc_per_node 8 main.py -p 1 -j 5 --training-only  --workspace /data/workspace --epochs 2 --prof 100  -b 256 --data-backend dali-gpu --raport-file /data/workspace/./raport_8GPU_256BS_dali-gpu_trainingbench.json --no-checkpoints /data/imagenet --arch resnet50 -c fanin --label-smoothing 0.1 --mixup 0.1" exited with status 1
+train.total_ips
+[[131.26704581279233, 1605.775337794893, 2922.6093254743237, 2936.6012673633427, 2922.551652666211, 2926.2253762561745, 2929.2109661763925, 2931.570211470547, 2937.16959736193, 2926.247306912196, 2933.9031975348194, 2928.092652510816, 2925.760922299509, 2919.809851289111, 2917.6062376790487, 2942.7521046490356, 2917.8658967155925, 2926.624166808627, 2918.8315994639365, 2922.6670005586793, 2925.671237878297, 2928.27831332612, 2933.8490862988547, 2928.859404131121, 2906.809020854737, 2918.7264714536864, 2914.707540293848, 2923.5940917763673, 2910.7233327934277, 2934.881552198581, 2928.230398603711, 2912.877046489736, 2916.5106288778175, 2923.2697419199394, 2918.288189098361, 2904.1987771843865, 2909.684136647124, 2916.073011691539, 2920.423329294347, 2918.555902492989, 2939.2560279159593, 2924.3803915907934, 2922.6451235345835, 2930.3521266194666, 2915.6790705599706, 2921.8855972733395, 2919.3811653279554, 2908.9175398565376, 2909.222947746029, 2912.193672185525, 2925.0157121190555, 2918.1831002279528, 2923.7831632375205, 2907.3147078752613, 2907.3619405485647, 2922.9653563016414, 2918.661018216117, 2914.515685235338, 2908.6831089217, 2914.800510077007, 2912.5234688791616, 2910.9955789129804, 2920.2505764054195, 2889.9102647433647, 2929.6085726661004, 2915.109133150575, 2923.697580494194, 2910.932444842663, 2905.6546675858394, 2908.336456799871, 2806.9828697582707, 2930.076248054844, 2916.6888816603046, 2913.861194671834, 2910.926526163973, 2917.6597514094206, 2917.9114904764624, 2920.9834274584055, 2907.306835912248, 2908.8663164261106, 2908.8485856589623, 2914.199278467262, 2829.027489530213, 2917.6676795364306, 2918.131549964296, 2917.760838256314, 2923.2876489305586, 2915.977980973693, 2909.973932668314, 2915.9700620267877, 2913.0647342851, 2920.7132823763022, 2931.8223554692727, 2921.653046467222, 2897.848084133368, 2911.4948290915795, 2900.472382835556, 2925.7848390737963, 2902.0010081067458, 2904.656410006702], [2094.764704677384, 2914.3950470513832, 2908.7658449368805, 2910.4373319455285, 2919.6828201019825, 2903.4409559322585, 2909.9798474738877, 2923.494590302637, 2864.6751160218932, 2915.801794572562, 2914.173573435019, 2903.0249114553762, 2922.2633227645706, 2920.8801307911394, 2928.6137602936956, 2916.898851772191, 2917.4437265312113, 2926.582288693358, 2929.2469261428582, 2907.3835893700643, 2923.486630477325, 2901.9990472992286, 2927.8351619660752, 2919.567707635866, 2922.102280481773, 2905.1593831951313, 2914.539418512725, 2915.2298304606165, 2909.697935148809, 2912.008070968109, 2910.3623892935793, 2918.599534515505, 2908.257683749792, 2909.2209771670136, 2926.4108003436772, 2812.515623495915, 2915.257532892772, 2927.6615311206997, 2914.9370083763506, 2920.3061728059292, 2907.568601540245, 2902.2049465571276, 2912.847413785503, 2909.398339970696, 2924.790629703024, 2919.6967135997043, 2902.87579246747, 2918.577718341175, 2910.182937050807, 2910.3584450503877, 2914.242780324131, 2911.743531405715, 2908.080459988029, 2910.8121031065616, 2920.351842861436, 2919.6451098461107, 2899.475724891328, 2920.5563828072777, 2917.2217893335505, 2926.4227639949822, 2914.416800739908, 2904.8528631786976, 2910.204627904298, 2912.699259307484, 2921.154280288758, 2927.017081779231, 2915.1051760309338, 2919.5835846777454, 2912.282532206564, 2915.35845334814, 2920.0024040063145, 2907.2340222752005, 2905.9574245240315, 2914.1557779091063, 2915.9720417594817, 2909.9916771571707, 2908.7303860683282, 2915.5405236065544, 2911.086338937076, 2928.6117633581853, 2913.1161056868937, 2912.7506178197946, 2912.3378256232077, 2909.144126667606, 2908.943152248268, 2914.1498461154324, 2851.4173185585196, 2908.167100017334, 2911.4099642154824, 2924.9698960759474, 2911.8145970139944, 2907.5292352767556, 2910.6740182923195, 2909.0298436901003, 2917.4595804803826, 2916.44527498316, 2920.1969675954256, 2915.3841792876497, 2900.9464762856796, 2910.685853620189], []]
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '8', 'main.py', '-p', '1', '-j', '5', '--training-only', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-cpu_trainingbench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.1']
+CMD: "/opt/conda/bin/python multiproc.py --nproc_per_node 8 main.py -p 1 -j 5 --training-only  --workspace /data/workspace --epochs 2 --prof 100  -b 256 --data-backend dali-cpu --raport-file /data/workspace/./raport_8GPU_256BS_dali-cpu_trainingbench.json --no-checkpoints /data/imagenet --arch resnet50 -c fanin --label-smoothing 0.1 --mixup 0.1" exited with status 1
+train.total_ips
+[[131.26704581279233, 1605.775337794893, 2922.6093254743237, 2936.6012673633427, 2922.551652666211, 2926.2253762561745, 2929.2109661763925, 2931.570211470547, 2937.16959736193, 2926.247306912196, 2933.9031975348194, 2928.092652510816, 2925.760922299509, 2919.809851289111, 2917.6062376790487, 2942.7521046490356, 2917.8658967155925, 2926.624166808627, 2918.8315994639365, 2922.6670005586793, 2925.671237878297, 2928.27831332612, 2933.8490862988547, 2928.859404131121, 2906.809020854737, 2918.7264714536864, 2914.707540293848, 2923.5940917763673, 2910.7233327934277, 2934.881552198581, 2928.230398603711, 2912.877046489736, 2916.5106288778175, 2923.2697419199394, 2918.288189098361, 2904.1987771843865, 2909.684136647124, 2916.073011691539, 2920.423329294347, 2918.555902492989, 2939.2560279159593, 2924.3803915907934, 2922.6451235345835, 2930.3521266194666, 2915.6790705599706, 2921.8855972733395, 2919.3811653279554, 2908.9175398565376, 2909.222947746029, 2912.193672185525, 2925.0157121190555, 2918.1831002279528, 2923.7831632375205, 2907.3147078752613, 2907.3619405485647, 2922.9653563016414, 2918.661018216117, 2914.515685235338, 2908.6831089217, 2914.800510077007, 2912.5234688791616, 2910.9955789129804, 2920.2505764054195, 2889.9102647433647, 2929.6085726661004, 2915.109133150575, 2923.697580494194, 2910.932444842663, 2905.6546675858394, 2908.336456799871, 2806.9828697582707, 2930.076248054844, 2916.6888816603046, 2913.861194671834, 2910.926526163973, 2917.6597514094206, 2917.9114904764624, 2920.9834274584055, 2907.306835912248, 2908.8663164261106, 2908.8485856589623, 2914.199278467262, 2829.027489530213, 2917.6676795364306, 2918.131549964296, 2917.760838256314, 2923.2876489305586, 2915.977980973693, 2909.973932668314, 2915.9700620267877, 2913.0647342851, 2920.7132823763022, 2931.8223554692727, 2921.653046467222, 2897.848084133368, 2911.4948290915795, 2900.472382835556, 2925.7848390737963, 2902.0010081067458, 2904.656410006702], [2094.764704677384, 2914.3950470513832, 2908.7658449368805, 2910.4373319455285, 2919.6828201019825, 2903.4409559322585, 2909.9798474738877, 2923.494590302637, 2864.6751160218932, 2915.801794572562, 2914.173573435019, 2903.0249114553762, 2922.2633227645706, 2920.8801307911394, 2928.6137602936956, 2916.898851772191, 2917.4437265312113, 2926.582288693358, 2929.2469261428582, 2907.3835893700643, 2923.486630477325, 2901.9990472992286, 2927.8351619660752, 2919.567707635866, 2922.102280481773, 2905.1593831951313, 2914.539418512725, 2915.2298304606165, 2909.697935148809, 2912.008070968109, 2910.3623892935793, 2918.599534515505, 2908.257683749792, 2909.2209771670136, 2926.4108003436772, 2812.515623495915, 2915.257532892772, 2927.6615311206997, 2914.9370083763506, 2920.3061728059292, 2907.568601540245, 2902.2049465571276, 2912.847413785503, 2909.398339970696, 2924.790629703024, 2919.6967135997043, 2902.87579246747, 2918.577718341175, 2910.182937050807, 2910.3584450503877, 2914.242780324131, 2911.743531405715, 2908.080459988029, 2910.8121031065616, 2920.351842861436, 2919.6451098461107, 2899.475724891328, 2920.5563828072777, 2917.2217893335505, 2926.4227639949822, 2914.416800739908, 2904.8528631786976, 2910.204627904298, 2912.699259307484, 2921.154280288758, 2927.017081779231, 2915.1051760309338, 2919.5835846777454, 2912.282532206564, 2915.35845334814, 2920.0024040063145, 2907.2340222752005, 2905.9574245240315, 2914.1557779091063, 2915.9720417594817, 2909.9916771571707, 2908.7303860683282, 2915.5405236065544, 2911.086338937076, 2928.6117633581853, 2913.1161056868937, 2912.7506178197946, 2912.3378256232077, 2909.144126667606, 2908.943152248268, 2914.1498461154324, 2851.4173185585196, 2908.167100017334, 2911.4099642154824, 2924.9698960759474, 2911.8145970139944, 2907.5292352767556, 2910.6740182923195, 2909.0298436901003, 2917.4595804803826, 2916.44527498316, 2920.1969675954256, 2915.3841792876497, 2900.9464762856796, 2910.685853620189], []]
+ train.total_ips |       8 p |       8 d-g |       8 d-c |
+----------------------------------------------------------
+             128 |    2908.5 |    2892.2 |    2912.3 |
+             256 |      -1.0 |      -1.0 |      -1.0 |

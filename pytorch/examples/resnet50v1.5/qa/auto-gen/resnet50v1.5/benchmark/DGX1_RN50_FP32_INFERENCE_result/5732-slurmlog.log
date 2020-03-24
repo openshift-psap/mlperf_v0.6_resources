@@ -1,0 +1,864 @@
+resnet50v1.5: Pulling from asulecki/pytorch-off/conv_tests
+Digest: sha256:205281eea3cedb2a9ac3d3738680d0d1f51c36b89aed411e2e24fba82bc54293
+Status: Image is up to date for gitlab-master.nvidia.com:5005/asulecki/pytorch-off/conv_tests:resnet50v1.5
+
+=============
+== PyTorch ==
+=============
+
+NVIDIA Release 19.04 (build 6012988)
+PyTorch Version 1.1.0a0+9eb0f43
+
+Container image Copyright (c) 2019, NVIDIA CORPORATION.  All rights reserved.
+
+Copyright (c) 2014-2019 Facebook Inc.
+Copyright (c) 2011-2014 Idiap Research Institute (Ronan Collobert)
+Copyright (c) 2012-2014 Deepmind Technologies    (Koray Kavukcuoglu)
+Copyright (c) 2011-2012 NEC Laboratories America (Koray Kavukcuoglu)
+Copyright (c) 2011-2013 NYU                      (Clement Farabet)
+Copyright (c) 2006-2010 NEC Laboratories America (Ronan Collobert, Leon Bottou, Iain Melvin, Jason Weston)
+Copyright (c) 2006      Idiap Research Institute (Samy Bengio)
+Copyright (c) 2001-2004 Idiap Research Institute (Ronan Collobert, Samy Bengio, Johnny Mariethoz)
+Copyright (c) 2015      Google Inc.
+Copyright (c) 2015      Yangqing Jia
+Copyright (c) 2013-2016 The Caffe contributors
+All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION.  All rights reserved.
+NVIDIA modifications are covered by the license terms that apply to the underlying project or file.
+
+NOTE: Legacy NVIDIA Driver detected.  Compatibility mode ENABLED.
+
+NOTE: Detected MOFED driver 3.4-1.0.0; version automatically upgraded.
+
+=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'bn': True, 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7f5494759048>}
+data : /data/imagenet
+data_backend : pytorch
+arch : resnet50
+model_config : fanin
+workers : 5
+epochs : 2
+start_epoch : 0
+batch_size : 128
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.0
+true_weight_decay : False
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 1
+dynamic_loss_scale : False
+prof : 100
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_8GPU_128BS_pytorch_inferencebench.json
+final_weights : model.pth.tar
+evaluate : True
+training_only : False
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 8
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Epoch: 0/2 Validation Iteration: 1/49;	val.top1 : 0.098	val.top5 : 0.781	val.loss : 1246.481
+Epoch: 0/2 Validation Iteration: 2/49;	val.top1 : 0.098	val.top5 : 0.488	val.loss : 1245.633
+Epoch: 0/2 Validation Iteration: 3/49;	val.top1 : 0.000	val.top5 : 0.293	val.loss : 1242.210
+Epoch: 0/2 Validation Iteration: 4/49;	val.top1 : 0.098	val.top5 : 0.684	val.loss : 1241.976
+Epoch: 0/2 Validation Iteration: 5/49;	val.top1 : 0.293	val.top5 : 0.684	val.loss : 1238.659
+Epoch: 0/2 Validation Iteration: 6/49;	val.top1 : 0.000	val.top5 : 0.488	val.loss : 1237.528
+Epoch: 0/2 Validation Iteration: 7/49;	val.top1 : 0.195	val.top5 : 0.977	val.loss : 1265.840
+Epoch: 0/2 Validation Iteration: 8/49;	val.top1 : 0.195	val.top5 : 0.488	val.loss : 1242.299
+Epoch: 0/2 Validation Iteration: 9/49;	val.top1 : 0.000	val.top5 : 0.195	val.loss : 1238.780
+Epoch: 0/2 Validation Iteration: 10/49;	val.top1 : 0.195	val.top5 : 0.391	val.loss : 1241.738
+Epoch: 0/2 Validation Iteration: 11/49;	val.top1 : 0.195	val.top5 : 0.488	val.loss : 1247.346
+Epoch: 0/2 Validation Iteration: 12/49;	val.top1 : 0.098	val.top5 : 0.293	val.loss : 1262.226
+Epoch: 0/2 Validation Iteration: 13/49;	val.top1 : 0.000	val.top5 : 0.293	val.loss : 1253.326
+Epoch: 0/2 Validation Iteration: 14/49;	val.top1 : 0.098	val.top5 : 0.293	val.loss : 1251.730
+Epoch: 0/2 Validation Iteration: 15/49;	val.top1 : 0.000	val.top5 : 0.098	val.loss : 1270.824
+Epoch: 0/2 Validation Iteration: 16/49;	val.top1 : 0.098	val.top5 : 0.586	val.loss : 1248.331
+Epoch: 0/2 Validation Iteration: 17/49;	val.top1 : 0.195	val.top5 : 0.586	val.loss : 1229.293
+Epoch: 0/2 Validation Iteration: 18/49;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1215.724
+Epoch: 0/2 Validation Iteration: 19/49;	val.top1 : 0.098	val.top5 : 0.293	val.loss : 1249.737
+Epoch: 0/2 Validation Iteration: 20/49;	val.top1 : 0.000	val.top5 : 0.195	val.loss : 1243.438
+Epoch: 0/2 Validation Iteration: 21/49;	val.top1 : 0.293	val.top5 : 0.879	val.loss : 1224.219
+Epoch: 0/2 Validation Iteration: 22/49;	val.top1 : 0.098	val.top5 : 0.098	val.loss : 1246.955
+Epoch: 0/2 Validation Iteration: 23/49;	val.top1 : 0.000	val.top5 : 0.195	val.loss : 1227.321
+Epoch: 0/2 Validation Iteration: 24/49;	val.top1 : 0.000	val.top5 : 0.195	val.loss : 1233.216
+Epoch: 0/2 Validation Iteration: 25/49;	val.top1 : 0.098	val.top5 : 0.586	val.loss : 1247.469
+Epoch: 0/2 Validation Iteration: 26/49;	val.top1 : 0.098	val.top5 : 0.781	val.loss : 1227.932
+Epoch: 0/2 Validation Iteration: 27/49;	val.top1 : 0.098	val.top5 : 0.391	val.loss : 1273.782
+Epoch: 0/2 Validation Iteration: 28/49;	val.top1 : 0.000	val.top5 : 0.684	val.loss : 1245.316
+Epoch: 0/2 Validation Iteration: 29/49;	val.top1 : 0.000	val.top5 : 0.293	val.loss : 1248.372
+Epoch: 0/2 Validation Iteration: 30/49;	val.top1 : 0.000	val.top5 : 0.195	val.loss : 1270.034
+Epoch: 0/2 Validation Iteration: 31/49;	val.top1 : 0.098	val.top5 : 0.195	val.loss : 1241.214
+Epoch: 0/2 Validation Iteration: 32/49;	val.top1 : 0.000	val.top5 : 0.488	val.loss : 1244.467
+Epoch: 0/2 Validation Iteration: 33/49;	val.top1 : 0.098	val.top5 : 0.586	val.loss : 1249.713
+Epoch: 0/2 Validation Iteration: 34/49;	val.top1 : 0.098	val.top5 : 0.293	val.loss : 1259.819
+Epoch: 0/2 Validation Iteration: 35/49;	val.top1 : 0.195	val.top5 : 1.074	val.loss : 1233.934
+Epoch: 0/2 Validation Iteration: 36/49;	val.top1 : 0.098	val.top5 : 0.684	val.loss : 1228.869
+Epoch: 0/2 Validation Iteration: 37/49;	val.top1 : 0.098	val.top5 : 0.293	val.loss : 1233.859
+Epoch: 0/2 Validation Iteration: 38/49;	val.top1 : 0.195	val.top5 : 0.977	val.loss : 1246.375
+Epoch: 0/2 Validation Iteration: 39/49;	val.top1 : 0.000	val.top5 : 0.391	val.loss : 1239.829
+Epoch: 0/2 Validation Iteration: 40/49;	val.top1 : 0.098	val.top5 : 0.586	val.loss : 1249.431
+Epoch: 0/2 Validation Iteration: 41/49;	val.top1 : 0.195	val.top5 : 0.781	val.loss : 1252.891
+Epoch: 0/2 Validation Iteration: 42/49;	val.top1 : 0.195	val.top5 : 0.684	val.loss : 1235.055
+Epoch: 0/2 Validation Iteration: 43/49;	val.top1 : 0.195	val.top5 : 0.586	val.loss : 1247.274
+Epoch: 0/2 Validation Iteration: 44/49;	val.top1 : 0.195	val.top5 : 0.391	val.loss : 1234.638
+Epoch: 0/2 Validation Iteration: 45/49;	val.top1 : 0.195	val.top5 : 0.488	val.loss : 1228.368
+Epoch: 0/2 Validation Iteration: 46/49;	val.top1 : 0.000	val.top5 : 0.391	val.loss : 1240.659
+Epoch: 0/2 Validation Iteration: 47/49;	val.top1 : 0.293	val.top5 : 0.781	val.loss : 1225.665
+Epoch: 0/2 Validation Iteration: 48/49;	val.top1 : 0.000	val.top5 : 0.781	val.loss : 1233.456
+Epoch: 0/2 Validation Iteration: 49/49;	val.top1 : 0.000	val.top5 : 0.236	val.loss : 1272.880
+Summary Epoch: 0/2;	val.top1 : 0.100	val.top5 : 0.481	val.loss : 1244.003
+Epoch: 1/2 Validation Iteration: 1/49;	val.top1 : 0.098	val.top5 : 0.488	val.loss : 1222.669
+Epoch: 1/2 Validation Iteration: 2/49;	val.top1 : 0.195	val.top5 : 0.391	val.loss : 1244.825
+Epoch: 1/2 Validation Iteration: 3/49;	val.top1 : 0.098	val.top5 : 0.684	val.loss : 1237.363
+Epoch: 1/2 Validation Iteration: 4/49;	val.top1 : 0.098	val.top5 : 0.684	val.loss : 1250.516
+Epoch: 1/2 Validation Iteration: 5/49;	val.top1 : 0.098	val.top5 : 0.488	val.loss : 1230.037
+Epoch: 1/2 Validation Iteration: 6/49;	val.top1 : 0.098	val.top5 : 0.391	val.loss : 1251.087
+Epoch: 1/2 Validation Iteration: 7/49;	val.top1 : 0.195	val.top5 : 0.781	val.loss : 1233.097
+Epoch: 1/2 Validation Iteration: 8/49;	val.top1 : 0.000	val.top5 : 0.781	val.loss : 1275.504
+Epoch: 1/2 Validation Iteration: 9/49;	val.top1 : 0.098	val.top5 : 0.098	val.loss : 1261.429
+Epoch: 1/2 Validation Iteration: 10/49;	val.top1 : 0.098	val.top5 : 0.586	val.loss : 1238.166
+Epoch: 1/2 Validation Iteration: 11/49;	val.top1 : 0.000	val.top5 : 0.488	val.loss : 1237.638
+Epoch: 1/2 Validation Iteration: 12/49;	val.top1 : 0.000	val.top5 : 0.391	val.loss : 1243.742
+Epoch: 1/2 Validation Iteration: 13/49;	val.top1 : 0.098	val.top5 : 0.293	val.loss : 1271.230
+Epoch: 1/2 Validation Iteration: 14/49;	val.top1 : 0.098	val.top5 : 0.586	val.loss : 1237.475
+Epoch: 1/2 Validation Iteration: 15/49;	val.top1 : 0.098	val.top5 : 0.391	val.loss : 1229.422
+Epoch: 1/2 Validation Iteration: 16/49;	val.top1 : 0.000	val.top5 : 0.293	val.loss : 1242.685
+Epoch: 1/2 Validation Iteration: 17/49;	val.top1 : 0.098	val.top5 : 0.391	val.loss : 1256.073
+Epoch: 1/2 Validation Iteration: 18/49;	val.top1 : 0.195	val.top5 : 0.879	val.loss : 1231.211
+Epoch: 1/2 Validation Iteration: 19/49;	val.top1 : 0.000	val.top5 : 0.684	val.loss : 1242.099
+Epoch: 1/2 Validation Iteration: 20/49;	val.top1 : 0.098	val.top5 : 0.586	val.loss : 1241.594
+Epoch: 1/2 Validation Iteration: 21/49;	val.top1 : 0.000	val.top5 : 0.293	val.loss : 1262.434
+Epoch: 1/2 Validation Iteration: 22/49;	val.top1 : 0.000	val.top5 : 0.293	val.loss : 1253.930
+Epoch: 1/2 Validation Iteration: 23/49;	val.top1 : 0.098	val.top5 : 0.391	val.loss : 1248.461
+Epoch: 1/2 Validation Iteration: 24/49;	val.top1 : 0.098	val.top5 : 0.195	val.loss : 1264.081
+Epoch: 1/2 Validation Iteration: 25/49;	val.top1 : 0.098	val.top5 : 0.684	val.loss : 1227.381
+Epoch: 1/2 Validation Iteration: 26/49;	val.top1 : 0.293	val.top5 : 0.977	val.loss : 1253.359
+Epoch: 1/2 Validation Iteration: 27/49;	val.top1 : 0.098	val.top5 : 0.293	val.loss : 1236.753
+Epoch: 1/2 Validation Iteration: 28/49;	val.top1 : 0.195	val.top5 : 0.684	val.loss : 1251.721
+Epoch: 1/2 Validation Iteration: 29/49;	val.top1 : 0.098	val.top5 : 0.293	val.loss : 1271.635
+Epoch: 1/2 Validation Iteration: 30/49;	val.top1 : 0.000	val.top5 : 0.586	val.loss : 1229.993
+Epoch: 1/2 Validation Iteration: 31/49;	val.top1 : 0.098	val.top5 : 0.195	val.loss : 1231.629
+Epoch: 1/2 Validation Iteration: 32/49;	val.top1 : 0.000	val.top5 : 0.293	val.loss : 1239.532
+Epoch: 1/2 Validation Iteration: 33/49;	val.top1 : 0.098	val.top5 : 0.391	val.loss : 1272.091
+Epoch: 1/2 Validation Iteration: 34/49;	val.top1 : 0.000	val.top5 : 0.586	val.loss : 1246.863
+Epoch: 1/2 Validation Iteration: 35/49;	val.top1 : 0.195	val.top5 : 0.488	val.loss : 1247.466
+Epoch: 1/2 Validation Iteration: 36/49;	val.top1 : 0.098	val.top5 : 0.293	val.loss : 1239.393
+Epoch: 1/2 Validation Iteration: 37/49;	val.top1 : 0.195	val.top5 : 0.488	val.loss : 1242.739
+Epoch: 1/2 Validation Iteration: 38/49;	val.top1 : 0.098	val.top5 : 0.488	val.loss : 1264.165
+Epoch: 1/2 Validation Iteration: 39/49;	val.top1 : 0.293	val.top5 : 0.488	val.loss : 1227.785
+Epoch: 1/2 Validation Iteration: 40/49;	val.top1 : 0.098	val.top5 : 0.293	val.loss : 1231.396
+Epoch: 1/2 Validation Iteration: 41/49;	val.top1 : 0.195	val.top5 : 0.488	val.loss : 1234.887
+Epoch: 1/2 Validation Iteration: 42/49;	val.top1 : 0.000	val.top5 : 0.391	val.loss : 1243.679
+Epoch: 1/2 Validation Iteration: 43/49;	val.top1 : 0.293	val.top5 : 0.488	val.loss : 1226.197
+Epoch: 1/2 Validation Iteration: 44/49;	val.top1 : 0.000	val.top5 : 0.195	val.loss : 1241.521
+Epoch: 1/2 Validation Iteration: 45/49;	val.top1 : 0.098	val.top5 : 0.293	val.loss : 1231.311
+Epoch: 1/2 Validation Iteration: 46/49;	val.top1 : 0.098	val.top5 : 0.879	val.loss : 1252.027
+Epoch: 1/2 Validation Iteration: 47/49;	val.top1 : 0.098	val.top5 : 0.293	val.loss : 1258.890
+Epoch: 1/2 Validation Iteration: 48/49;	val.top1 : 0.000	val.top5 : 0.879	val.loss : 1211.892
+Epoch: 1/2 Validation Iteration: 49/49;	val.top1 : 0.236	val.top5 : 0.708	val.loss : 1227.206
+Summary Epoch: 1/2;	val.top1 : 0.100	val.top5 : 0.483	val.loss : 1243.842
+None
+Experiment ended
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'bn': True, 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7fc2edb7c048>}
+read 1281167 files from 1000 directories
+read 50000 files from 1000 directories
+data : /data/imagenet
+data_backend : dali-gpu
+arch : resnet50
+model_config : fanin
+workers : 5
+epochs : 2
+start_epoch : 0
+batch_size : 128
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.0
+true_weight_decay : False
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 1
+dynamic_loss_scale : False
+prof : 100
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_8GPU_128BS_dali-gpu_inferencebench.json
+final_weights : model.pth.tar
+evaluate : True
+training_only : False
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 8
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Epoch: 0/2 Validation Iteration: 1/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1406.315
+Epoch: 0/2 Validation Iteration: 2/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1183.722
+Epoch: 0/2 Validation Iteration: 3/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1454.259
+Epoch: 0/2 Validation Iteration: 4/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1217.685
+Epoch: 0/2 Validation Iteration: 5/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1293.577
+Epoch: 0/2 Validation Iteration: 6/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1265.516
+Epoch: 0/2 Validation Iteration: 7/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1248.494
+Epoch: 0/2 Validation Iteration: 8/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1146.717
+Epoch: 0/2 Validation Iteration: 9/48;	val.top1 : 0.000	val.top5 : 3.906	val.loss : 1263.040
+Epoch: 0/2 Validation Iteration: 10/48;	val.top1 : 0.000	val.top5 : 2.539	val.loss : 1204.784
+Epoch: 0/2 Validation Iteration: 11/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1354.104
+Epoch: 0/2 Validation Iteration: 12/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1190.093
+Epoch: 0/2 Validation Iteration: 13/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1298.000
+Epoch: 0/2 Validation Iteration: 14/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1279.484
+Epoch: 0/2 Validation Iteration: 15/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1264.740
+Epoch: 0/2 Validation Iteration: 16/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1358.869
+Epoch: 0/2 Validation Iteration: 17/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1323.350
+Epoch: 0/2 Validation Iteration: 18/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1296.307
+Epoch: 0/2 Validation Iteration: 19/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1238.601
+Epoch: 0/2 Validation Iteration: 20/48;	val.top1 : 0.000	val.top5 : 4.883	val.loss : 1125.513
+Epoch: 0/2 Validation Iteration: 21/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1254.086
+Epoch: 0/2 Validation Iteration: 22/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1175.719
+Epoch: 0/2 Validation Iteration: 23/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1299.730
+Epoch: 0/2 Validation Iteration: 24/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1372.871
+Epoch: 0/2 Validation Iteration: 25/48;	val.top1 : 0.000	val.top5 : 4.785	val.loss : 1176.839
+Epoch: 0/2 Validation Iteration: 26/48;	val.top1 : 0.000	val.top5 : 0.098	val.loss : 1258.131
+Epoch: 0/2 Validation Iteration: 27/48;	val.top1 : 0.000	val.top5 : 0.293	val.loss : 1346.625
+Epoch: 0/2 Validation Iteration: 28/48;	val.top1 : 0.000	val.top5 : 0.293	val.loss : 1317.862
+Epoch: 0/2 Validation Iteration: 29/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1304.606
+Epoch: 0/2 Validation Iteration: 30/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1368.834
+Epoch: 0/2 Validation Iteration: 31/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1267.848
+Epoch: 0/2 Validation Iteration: 32/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1235.202
+Epoch: 0/2 Validation Iteration: 33/48;	val.top1 : 4.883	val.top5 : 4.883	val.loss : 1270.985
+Epoch: 0/2 Validation Iteration: 34/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1348.588
+Epoch: 0/2 Validation Iteration: 35/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1349.881
+Epoch: 0/2 Validation Iteration: 36/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1240.124
+Epoch: 0/2 Validation Iteration: 37/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1331.099
+Epoch: 0/2 Validation Iteration: 38/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1356.609
+Epoch: 0/2 Validation Iteration: 39/48;	val.top1 : 0.000	val.top5 : 0.781	val.loss : 1204.171
+Epoch: 0/2 Validation Iteration: 40/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1338.461
+Epoch: 0/2 Validation Iteration: 41/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1525.602
+Epoch: 0/2 Validation Iteration: 42/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1279.203
+Epoch: 0/2 Validation Iteration: 43/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1597.855
+Epoch: 0/2 Validation Iteration: 44/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1386.436
+Epoch: 0/2 Validation Iteration: 45/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1482.898
+Epoch: 0/2 Validation Iteration: 46/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1404.855
+Epoch: 0/2 Validation Iteration: 47/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1275.566
+Epoch: 0/2 Validation Iteration: 48/48;	val.top1 : 0.000	val.top5 : 0.586	val.loss : 1229.188
+Epoch: 0/2 Validation Iteration: 49/48;	val.top1 : 0.000	val.top5 : 1.074	val.loss : 1434.272
+Summary Epoch: 0/2;	val.top1 : 0.100	val.top5 : 0.492	val.loss : 1303.006
+Epoch: 1/2 Validation Iteration: 1/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1356.668
+Epoch: 1/2 Validation Iteration: 2/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1184.308
+Epoch: 1/2 Validation Iteration: 3/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1451.087
+Epoch: 1/2 Validation Iteration: 4/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1230.394
+Epoch: 1/2 Validation Iteration: 5/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1332.736
+Epoch: 1/2 Validation Iteration: 6/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1238.835
+Epoch: 1/2 Validation Iteration: 7/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1247.099
+Epoch: 1/2 Validation Iteration: 8/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1161.033
+Epoch: 1/2 Validation Iteration: 9/48;	val.top1 : 0.000	val.top5 : 6.445	val.loss : 1199.399
+Epoch: 1/2 Validation Iteration: 10/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1248.984
+Epoch: 1/2 Validation Iteration: 11/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1348.977
+Epoch: 1/2 Validation Iteration: 12/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1191.317
+Epoch: 1/2 Validation Iteration: 13/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1305.010
+Epoch: 1/2 Validation Iteration: 14/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1252.943
+Epoch: 1/2 Validation Iteration: 15/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1327.935
+Epoch: 1/2 Validation Iteration: 16/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1329.548
+Epoch: 1/2 Validation Iteration: 17/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1345.881
+Epoch: 1/2 Validation Iteration: 18/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1259.212
+Epoch: 1/2 Validation Iteration: 19/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1247.079
+Epoch: 1/2 Validation Iteration: 20/48;	val.top1 : 0.000	val.top5 : 4.883	val.loss : 1111.292
+Epoch: 1/2 Validation Iteration: 21/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1256.664
+Epoch: 1/2 Validation Iteration: 22/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1166.202
+Epoch: 1/2 Validation Iteration: 23/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1327.873
+Epoch: 1/2 Validation Iteration: 24/48;	val.top1 : 0.000	val.top5 : 2.148	val.loss : 1347.681
+Epoch: 1/2 Validation Iteration: 25/48;	val.top1 : 0.000	val.top5 : 2.637	val.loss : 1191.155
+Epoch: 1/2 Validation Iteration: 26/48;	val.top1 : 0.000	val.top5 : 0.098	val.loss : 1278.017
+Epoch: 1/2 Validation Iteration: 27/48;	val.top1 : 0.000	val.top5 : 0.586	val.loss : 1317.353
+Epoch: 1/2 Validation Iteration: 28/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1349.844
+Epoch: 1/2 Validation Iteration: 29/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1289.582
+Epoch: 1/2 Validation Iteration: 30/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1355.865
+Epoch: 1/2 Validation Iteration: 31/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1261.855
+Epoch: 1/2 Validation Iteration: 32/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1291.183
+Epoch: 1/2 Validation Iteration: 33/48;	val.top1 : 4.883	val.top5 : 4.883	val.loss : 1209.058
+Epoch: 1/2 Validation Iteration: 34/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1413.224
+Epoch: 1/2 Validation Iteration: 35/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1298.864
+Epoch: 1/2 Validation Iteration: 36/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1250.733
+Epoch: 1/2 Validation Iteration: 37/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1343.639
+Epoch: 1/2 Validation Iteration: 38/48;	val.top1 : 0.000	val.top5 : 0.293	val.loss : 1322.321
+Epoch: 1/2 Validation Iteration: 39/48;	val.top1 : 0.000	val.top5 : 0.488	val.loss : 1243.564
+Epoch: 1/2 Validation Iteration: 40/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1365.710
+Epoch: 1/2 Validation Iteration: 41/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1507.195
+Epoch: 1/2 Validation Iteration: 42/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1322.003
+Epoch: 1/2 Validation Iteration: 43/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1528.069
+Epoch: 1/2 Validation Iteration: 44/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1423.511
+Epoch: 1/2 Validation Iteration: 45/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1481.358
+Epoch: 1/2 Validation Iteration: 46/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1370.394
+Epoch: 1/2 Validation Iteration: 47/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1275.151
+Epoch: 1/2 Validation Iteration: 48/48;	val.top1 : 0.000	val.top5 : 1.367	val.loss : 1188.419
+Epoch: 1/2 Validation Iteration: 49/48;	val.top1 : 0.000	val.top5 : 0.293	val.loss : 1499.434
+Summary Epoch: 1/2;	val.top1 : 0.100	val.top5 : 0.492	val.loss : 1302.973
+None
+Experiment ended
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '8', 'main.py', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_128BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+Job ended sucessfully
+val.total_ips
+[[149.76294893616412, 8539.517281967266, 9674.918671496278, 9653.152066958997, 9630.273811285557, 9633.967668203179, 9662.186023805827, 9442.269362845322, 9611.115627412588, 9591.369479337643, 9582.296368516283, 9610.556467763554, 9591.669356225477, 9606.10701664922, 6204.55586309713, 6716.028359212522, 9669.45149590593, 2368.389232707732, 5377.137783475598, 7587.0348087681705, 9061.743319682593, 8682.27931479213, 3540.229342666312, 5100.166241748533, 9643.853475181764, 6318.637247142247, 9311.844661204543, 3519.6283637496003, 5252.388413106246, 9603.658353122162, 9573.880596416064, 7750.8996995262805, 3511.355619233709, 4344.055118842925, 6378.534835679078, 9681.1120988901, 9640.173672586236, 2896.32578282314, 6546.916822274625, 7590.7759369686855, 9470.731569419117, 9652.110774264736, 7675.244950293699, 7374.372522827248, 7918.24565000166, 9646.19269174621, 9637.469726446361, 9661.38183781352, 355.88851933589325], [714.3999163006345, 6994.183621923635, 8719.665779466908, 9479.53177157134, 2283.075502067807, 6557.472286643877, 5238.742467801919, 9319.05766360007, 9607.869108284529, 4736.279622373936, 9627.445930103539, 9544.096050558539, 9489.920712710626, 9570.381940250949, 3435.1494009437733, 9616.237114256097, 9579.30429856432, 9549.018958115172, 6746.1985329458885, 3274.1995653171575, 8810.966497557733, 9440.505232431624, 9605.741785854068, 9482.943369064835, 2252.243369990031, 9412.368529358266, 7656.991440862439, 6661.580297082376, 9601.489965863593, 6580.79236101322, 9515.950795845298, 7228.309094611629, 6860.981081439427, 9607.439270231698, 4827.8727140494975, 7629.922485082011, 9639.156810862369, 4457.006213913021, 9540.852254501673, 5452.334297284602, 6987.481487507036, 7635.619585024471, 4382.248540174659, 6281.689935178902, 5517.459837211214, 9414.865069378986, 9535.937761712974, 9548.275952834048, 4243.256569599519], []]
+val.compute_ips
+[[174.79624467248937, 9412.822347240455, 9732.335610649228, 9712.593895152937, 9697.703232216038, 9695.426513976645, 9715.977523006342, 9498.147451292598, 9686.85463743372, 9663.468651423995, 9666.078436491469, 9695.645382738234, 9652.522925759285, 9679.453925899215, 6245.135875997848, 9809.0863114814, 9736.68205807142, 2372.4067910454355, 5399.05179106579, 7642.644136561478, 9137.703357466698, 8756.643572330018, 3556.5670676771424, 5123.034023407494, 9707.193765651415, 9762.664957334897, 9377.023162187712, 3531.0552682183697, 5272.958779758068, 9680.217487631991, 9634.94020683312, 7791.323892970521, 3520.525595932389, 4359.691272633517, 6413.672794172548, 9752.047028157405, 9717.164548255874, 2908.1966375709367, 6568.604273372251, 7638.349065428872, 9534.011476417849, 9704.93451887336, 7707.737759050156, 7415.267272783776, 7949.918456723054, 9698.425875913397, 9675.289181840504, 9695.535947122244, 366.3782277518207], [3164.185491196572, 9074.053494012558, 8821.100347712145, 9570.27531407231, 2289.136563092442, 9773.217076295388, 5258.9804920337165, 9377.964990119764, 9690.045452186763, 4755.96276700588, 9716.636945672388, 9637.837374000304, 9580.949705765568, 9639.611126821888, 3443.4088451785096, 9719.341514690008, 9652.826638857923, 9636.73451547835, 9743.838979282558, 3283.767282724959, 8900.213847138959, 9528.596647772021, 9730.85826143696, 9595.740968875603, 2257.301359121249, 9520.40151352262, 9708.554207825675, 6692.899233310478, 9681.002991103327, 6617.272670686876, 9610.879051928232, 9744.192680115797, 6909.780101612348, 9681.570378451974, 4859.571784172271, 7684.7068624328585, 9716.329203956238, 4483.325239277778, 9611.008091657715, 5470.30638534176, 7017.026091445861, 7667.900257621986, 4396.698096558162, 6303.234554022581, 5533.931564265605, 9463.07345339814, 9570.531220892663, 9582.146720627541, 8646.430696451014], []]
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '8', 'main.py', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+Job ended sucessfully
+val.total_ips
+[[183.06067226698778, 7536.273167855752, 9223.694651504902, 6667.516290131535, 8865.58330821915, 8284.134067048955, 6497.543616322801, 6280.1835611470815, 6224.761690539304, 6634.721866325171, 6346.676423432196, 6377.8623321621935, 9344.340584770893, 6029.9707919749535, 9264.241687463735, 9217.755949736556, 7224.041686149581, 9044.035620505585, 7304.713993183349, 9347.431767581249, 9102.322531969634, 6357.969425261834, 6024.126559517281, 6232.18632565199, 6366.75342910466, 9392.58755401599, 9332.624879946112, 5983.223576448627, 9373.421392514736, 5559.7634409437305, 8993.735320416039, 6738.89493206138, 5737.646993757339, 9302.567042887435, 6403.078414827228, 6155.902897954562, 9366.818520053213, 9297.8747775637, 9315.924595746526, 9353.905467121698, 9337.372593352697, 9291.719589127631, 9361.02057914536, 6439.1637509051625, 9158.005684616779, 5674.343443738358, 6136.710806551399, 9300.512335453303, 9339.768572037456], [5921.65065166228, 9304.804079846443, 9327.679412058533, 9327.173000288829, 9114.240384350125, 9334.673514319433, 6704.579904527304, 5764.182474336108, 9055.094812519106, 7492.467868494413, 9369.02525620498, 6637.172305086631, 9297.069714483625, 7102.888137342293, 9203.435609745644, 6981.745394370021, 9314.894175923797, 9272.842338889885, 9308.514692177321, 9226.270466042984, 9092.860718330881, 6830.288378720508, 9320.008107058306, 6501.6943832198995, 9282.542195364962, 9252.247475269707, 8956.86137509202, 9293.026382010123, 9297.532608719182, 5553.516257250659, 9348.16418940243, 9238.475577543557, 6042.3988238687125, 9356.697215408278, 6592.256680946161, 9319.462083930044, 9259.468220055795, 9270.080390231267, 9274.223930487056, 9308.050703798017, 9290.393067734944, 9042.436183494428, 9099.584098170324, 6658.058864199368, 9309.503343426833, 9318.936344345457, 9118.962056760929, 9324.662010451517, 6306.594289808936], []]
+val.compute_ips
+[[183.31749816617082, 7596.643117778049, 9310.189469759538, 6702.393211102805, 8926.109736911563, 8325.209577843725, 6529.111845525662, 6304.603931343147, 6252.145027578065, 6729.339510689469, 6376.082303304899, 6404.6729804249635, 9405.64889835909, 6057.807432189416, 9328.732924704931, 9280.656751378065, 7264.841950003299, 9105.738240363638, 7340.3438212463125, 9407.585476066877, 9161.189739389363, 6387.708284006068, 6051.12470906478, 6260.009234859262, 6401.064859153145, 9487.614749100934, 9411.192932019774, 6008.106873774239, 9439.758270016506, 5582.817135674538, 9060.1758383627, 6768.215298646819, 5760.788376934137, 9381.734194551782, 6433.540490420767, 6189.114994488115, 9429.04408303769, 9364.102393260411, 9378.661245417086, 9420.151372786411, 9403.857244199999, 9364.184058309114, 9425.753892679459, 6466.308388800479, 9221.753834196112, 5696.855094512805, 9640.260223916108, 9363.02046582199, 9408.718949895725], [5948.757601863727, 9371.641994003849, 9395.957401751884, 9401.222487807867, 9176.006101716643, 9416.062227600782, 6747.6717542980405, 5787.99120272543, 9121.499071914914, 7546.7476625989475, 9427.657370640361, 6699.141966739559, 9359.409047424999, 7147.129304950943, 9259.448257722914, 7032.249200576993, 9380.05406621342, 9333.233291320788, 9369.474904013961, 9355.596619325608, 9150.981252596705, 6884.140863898137, 9379.480501669539, 6532.1802378370485, 9347.533485970976, 9316.571250078632, 9013.477919434214, 9356.81951984663, 9363.367471915133, 5577.061153363208, 9407.853363415328, 9298.740375892805, 6067.614930260747, 9421.866566048993, 6623.875584316641, 9384.46056093063, 9323.568937408962, 9371.028564945322, 9332.30042631229, 9365.062047551764, 9355.576240358456, 9105.081916682037, 9164.23912978539, 6690.02189421741, 9376.757027709129, 9379.00941183664, 9178.123836164434, 9445.799602371695, 6338.471488467436], []]=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'bn': True, 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7f750b25d048>}
+read 1281167 files from 1000 directories
+read 50000 files from 1000 directories
+data : /data/imagenet
+data_backend : dali-cpu
+arch : resnet50
+model_config : fanin
+workers : 5
+epochs : 2
+start_epoch : 0
+batch_size : 128
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.0
+true_weight_decay : False
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 1
+dynamic_loss_scale : False
+prof : 100
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_8GPU_128BS_dali-cpu_inferencebench.json
+final_weights : model.pth.tar
+evaluate : True
+training_only : False
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 8
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Epoch: 0/2 Validation Iteration: 1/48;	val.top1 : 0.586	val.top5 : 0.586	val.loss : 1156.269
+Epoch: 0/2 Validation Iteration: 2/48;	val.top1 : 4.297	val.top5 : 9.180	val.loss : 1083.321
+Epoch: 0/2 Validation Iteration: 3/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1097.273
+Epoch: 0/2 Validation Iteration: 4/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1152.319
+Epoch: 0/2 Validation Iteration: 5/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1228.804
+Epoch: 0/2 Validation Iteration: 6/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1141.758
+Epoch: 0/2 Validation Iteration: 7/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1164.961
+Epoch: 0/2 Validation Iteration: 8/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1114.015
+Epoch: 0/2 Validation Iteration: 9/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1204.282
+Epoch: 0/2 Validation Iteration: 10/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1085.869
+Epoch: 0/2 Validation Iteration: 11/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1228.859
+Epoch: 0/2 Validation Iteration: 12/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1237.535
+Epoch: 0/2 Validation Iteration: 13/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1097.388
+Epoch: 0/2 Validation Iteration: 14/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1118.434
+Epoch: 0/2 Validation Iteration: 15/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1198.250
+Epoch: 0/2 Validation Iteration: 16/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1197.948
+Epoch: 0/2 Validation Iteration: 17/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1116.893
+Epoch: 0/2 Validation Iteration: 18/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1209.242
+Epoch: 0/2 Validation Iteration: 19/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1197.019
+Epoch: 0/2 Validation Iteration: 20/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1102.022
+Epoch: 0/2 Validation Iteration: 21/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1111.077
+Epoch: 0/2 Validation Iteration: 22/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1108.864
+Epoch: 0/2 Validation Iteration: 23/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1159.872
+Epoch: 0/2 Validation Iteration: 24/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1109.055
+Epoch: 0/2 Validation Iteration: 25/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1149.351
+Epoch: 0/2 Validation Iteration: 26/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1207.009
+Epoch: 0/2 Validation Iteration: 27/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1207.056
+Epoch: 0/2 Validation Iteration: 28/48;	val.top1 : 0.000	val.top5 : 4.883	val.loss : 1091.862
+Epoch: 0/2 Validation Iteration: 29/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1116.118
+Epoch: 0/2 Validation Iteration: 30/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1105.096
+Epoch: 0/2 Validation Iteration: 31/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1114.073
+Epoch: 0/2 Validation Iteration: 32/48;	val.top1 : 0.000	val.top5 : 4.883	val.loss : 1085.611
+Epoch: 0/2 Validation Iteration: 33/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1205.873
+Epoch: 0/2 Validation Iteration: 34/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 997.305
+Epoch: 0/2 Validation Iteration: 35/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1178.718
+Epoch: 0/2 Validation Iteration: 36/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1138.930
+Epoch: 0/2 Validation Iteration: 37/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1151.350
+Epoch: 0/2 Validation Iteration: 38/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1149.065
+Epoch: 0/2 Validation Iteration: 39/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1131.587
+Epoch: 0/2 Validation Iteration: 40/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1095.244
+Epoch: 0/2 Validation Iteration: 41/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1074.422
+Epoch: 0/2 Validation Iteration: 42/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1159.096
+Epoch: 0/2 Validation Iteration: 43/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1107.822
+Epoch: 0/2 Validation Iteration: 44/48;	val.top1 : 0.000	val.top5 : 4.883	val.loss : 1085.358
+Epoch: 0/2 Validation Iteration: 45/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1118.270
+Epoch: 0/2 Validation Iteration: 46/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1071.652
+Epoch: 0/2 Validation Iteration: 47/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1149.814
+Epoch: 0/2 Validation Iteration: 48/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1123.299
+Epoch: 0/2 Validation Iteration: 49/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1160.014
+Summary Epoch: 0/2;	val.top1 : 0.100	val.top5 : 0.498	val.loss : 1138.680
+Epoch: 1/2 Validation Iteration: 1/48;	val.top1 : 2.734	val.top5 : 2.734	val.loss : 1100.291
+Epoch: 1/2 Validation Iteration: 2/48;	val.top1 : 2.148	val.top5 : 7.031	val.loss : 1147.167
+Epoch: 1/2 Validation Iteration: 3/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1079.933
+Epoch: 1/2 Validation Iteration: 4/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1149.109
+Epoch: 1/2 Validation Iteration: 5/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1241.798
+Epoch: 1/2 Validation Iteration: 6/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1135.559
+Epoch: 1/2 Validation Iteration: 7/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1141.939
+Epoch: 1/2 Validation Iteration: 8/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1161.333
+Epoch: 1/2 Validation Iteration: 9/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1171.410
+Epoch: 1/2 Validation Iteration: 10/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1082.358
+Epoch: 1/2 Validation Iteration: 11/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1246.761
+Epoch: 1/2 Validation Iteration: 12/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1214.106
+Epoch: 1/2 Validation Iteration: 13/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1105.323
+Epoch: 1/2 Validation Iteration: 14/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1158.721
+Epoch: 1/2 Validation Iteration: 15/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1179.560
+Epoch: 1/2 Validation Iteration: 16/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1163.406
+Epoch: 1/2 Validation Iteration: 17/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1148.089
+Epoch: 1/2 Validation Iteration: 18/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1193.349
+Epoch: 1/2 Validation Iteration: 19/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1168.449
+Epoch: 1/2 Validation Iteration: 20/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1140.752
+Epoch: 1/2 Validation Iteration: 21/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1083.075
+Epoch: 1/2 Validation Iteration: 22/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1120.938
+Epoch: 1/2 Validation Iteration: 23/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1147.136
+Epoch: 1/2 Validation Iteration: 24/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1119.216
+Epoch: 1/2 Validation Iteration: 25/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1148.275
+Epoch: 1/2 Validation Iteration: 26/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1210.036
+Epoch: 1/2 Validation Iteration: 27/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1221.524
+Epoch: 1/2 Validation Iteration: 28/48;	val.top1 : 0.000	val.top5 : 4.883	val.loss : 1086.014
+Epoch: 1/2 Validation Iteration: 29/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1098.425
+Epoch: 1/2 Validation Iteration: 30/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1117.170
+Epoch: 1/2 Validation Iteration: 31/48;	val.top1 : 0.000	val.top5 : 1.758	val.loss : 1108.121
+Epoch: 1/2 Validation Iteration: 32/48;	val.top1 : 0.000	val.top5 : 3.125	val.loss : 1095.641
+Epoch: 1/2 Validation Iteration: 33/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1164.093
+Epoch: 1/2 Validation Iteration: 34/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1024.972
+Epoch: 1/2 Validation Iteration: 35/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1209.249
+Epoch: 1/2 Validation Iteration: 36/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1117.692
+Epoch: 1/2 Validation Iteration: 37/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1161.357
+Epoch: 1/2 Validation Iteration: 38/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1132.412
+Epoch: 1/2 Validation Iteration: 39/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1142.434
+Epoch: 1/2 Validation Iteration: 40/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1066.871
+Epoch: 1/2 Validation Iteration: 41/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1097.424
+Epoch: 1/2 Validation Iteration: 42/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1142.627
+Epoch: 1/2 Validation Iteration: 43/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1138.114
+Epoch: 1/2 Validation Iteration: 44/48;	val.top1 : 0.000	val.top5 : 4.883	val.loss : 1063.368
+Epoch: 1/2 Validation Iteration: 45/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1118.422
+Epoch: 1/2 Validation Iteration: 46/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1102.952
+Epoch: 1/2 Validation Iteration: 47/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1122.104
+Epoch: 1/2 Validation Iteration: 48/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1121.555
+Epoch: 1/2 Validation Iteration: 49/48;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1184.266
+Summary Epoch: 1/2;	val.top1 : 0.100	val.top5 : 0.498	val.loss : 1138.671
+None
+Experiment ended
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'bn': True, 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7f52fbf6f048>}
+data : /data/imagenet
+data_backend : pytorch
+arch : resnet50
+model_config : fanin
+workers : 5
+epochs : 2
+start_epoch : 0
+batch_size : 256
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.0
+true_weight_decay : False
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 1
+dynamic_loss_scale : False
+prof : 100
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_8GPU_256BS_pytorch_inferencebench.json
+final_weights : model.pth.tar
+evaluate : True
+training_only : False
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 8
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Epoch: 0/2 Validation Iteration: 1/25;	val.top1 : 0.000	val.top5 : 0.439	val.loss : 1028.333
+Epoch: 0/2 Validation Iteration: 2/25;	val.top1 : 0.049	val.top5 : 0.635	val.loss : 1028.310
+Epoch: 0/2 Validation Iteration: 3/25;	val.top1 : 0.098	val.top5 : 0.684	val.loss : 1029.876
+Epoch: 0/2 Validation Iteration: 4/25;	val.top1 : 0.146	val.top5 : 0.439	val.loss : 1027.544
+Epoch: 0/2 Validation Iteration: 5/25;	val.top1 : 0.098	val.top5 : 0.391	val.loss : 1028.272
+Epoch: 0/2 Validation Iteration: 6/25;	val.top1 : 0.098	val.top5 : 0.732	val.loss : 1028.107
+Epoch: 0/2 Validation Iteration: 7/25;	val.top1 : 0.098	val.top5 : 0.635	val.loss : 1030.357
+Epoch: 0/2 Validation Iteration: 8/25;	val.top1 : 0.098	val.top5 : 0.342	val.loss : 1036.535
+Epoch: 0/2 Validation Iteration: 9/25;	val.top1 : 0.098	val.top5 : 0.195	val.loss : 1031.187
+Epoch: 0/2 Validation Iteration: 10/25;	val.top1 : 0.098	val.top5 : 0.928	val.loss : 1030.183
+Epoch: 0/2 Validation Iteration: 11/25;	val.top1 : 0.098	val.top5 : 0.391	val.loss : 1035.000
+Epoch: 0/2 Validation Iteration: 12/25;	val.top1 : 0.098	val.top5 : 0.488	val.loss : 1016.921
+Epoch: 0/2 Validation Iteration: 13/25;	val.top1 : 0.000	val.top5 : 0.244	val.loss : 1033.861
+Epoch: 0/2 Validation Iteration: 14/25;	val.top1 : 0.000	val.top5 : 0.439	val.loss : 1036.158
+Epoch: 0/2 Validation Iteration: 15/25;	val.top1 : 0.098	val.top5 : 0.439	val.loss : 1036.556
+Epoch: 0/2 Validation Iteration: 16/25;	val.top1 : 0.098	val.top5 : 0.488	val.loss : 1026.876
+Epoch: 0/2 Validation Iteration: 17/25;	val.top1 : 0.146	val.top5 : 0.488	val.loss : 1038.421
+Epoch: 0/2 Validation Iteration: 18/25;	val.top1 : 0.098	val.top5 : 0.293	val.loss : 1030.858
+Epoch: 0/2 Validation Iteration: 19/25;	val.top1 : 0.146	val.top5 : 0.488	val.loss : 1032.743
+Epoch: 0/2 Validation Iteration: 20/25;	val.top1 : 0.098	val.top5 : 0.586	val.loss : 1027.157
+Epoch: 0/2 Validation Iteration: 21/25;	val.top1 : 0.146	val.top5 : 0.635	val.loss : 1024.153
+Epoch: 0/2 Validation Iteration: 22/25;	val.top1 : 0.244	val.top5 : 0.537	val.loss : 1035.283
+Epoch: 0/2 Validation Iteration: 23/25;	val.top1 : 0.000	val.top5 : 0.439	val.loss : 1037.106
+Epoch: 0/2 Validation Iteration: 24/25;	val.top1 : 0.195	val.top5 : 0.391	val.loss : 1034.523
+Epoch: 0/2 Validation Iteration: 25/25;	val.top1 : 0.236	val.top5 : 0.472	val.loss : 1041.702
+Summary Epoch: 0/2;	val.top1 : 0.103	val.top5 : 0.490	val.loss : 1031.441
+Epoch: 1/2 Validation Iteration: 1/25;	val.top1 : 0.098	val.top5 : 0.586	val.loss : 1033.163
+Epoch: 1/2 Validation Iteration: 2/25;	val.top1 : 0.000	val.top5 : 0.439	val.loss : 1031.899
+Epoch: 1/2 Validation Iteration: 3/25;	val.top1 : 0.146	val.top5 : 0.439	val.loss : 1013.973
+Epoch: 1/2 Validation Iteration: 4/25;	val.top1 : 0.049	val.top5 : 0.635	val.loss : 1040.083
+Epoch: 1/2 Validation Iteration: 5/25;	val.top1 : 0.098	val.top5 : 0.439	val.loss : 1023.578
+Epoch: 1/2 Validation Iteration: 6/25;	val.top1 : 0.146	val.top5 : 0.928	val.loss : 1019.821
+Epoch: 1/2 Validation Iteration: 7/25;	val.top1 : 0.195	val.top5 : 0.391	val.loss : 1033.471
+Epoch: 1/2 Validation Iteration: 8/25;	val.top1 : 0.049	val.top5 : 0.391	val.loss : 1031.160
+Epoch: 1/2 Validation Iteration: 9/25;	val.top1 : 0.146	val.top5 : 0.537	val.loss : 1031.663
+Epoch: 1/2 Validation Iteration: 10/25;	val.top1 : 0.049	val.top5 : 0.488	val.loss : 1026.149
+Epoch: 1/2 Validation Iteration: 11/25;	val.top1 : 0.098	val.top5 : 0.635	val.loss : 1024.709
+Epoch: 1/2 Validation Iteration: 12/25;	val.top1 : 0.146	val.top5 : 0.439	val.loss : 1025.282
+Epoch: 1/2 Validation Iteration: 13/25;	val.top1 : 0.146	val.top5 : 0.439	val.loss : 1029.168
+Epoch: 1/2 Validation Iteration: 14/25;	val.top1 : 0.098	val.top5 : 0.684	val.loss : 1031.482
+Epoch: 1/2 Validation Iteration: 15/25;	val.top1 : 0.000	val.top5 : 0.439	val.loss : 1041.485
+Epoch: 1/2 Validation Iteration: 16/25;	val.top1 : 0.049	val.top5 : 0.342	val.loss : 1041.346
+Epoch: 1/2 Validation Iteration: 17/25;	val.top1 : 0.146	val.top5 : 0.684	val.loss : 1020.220
+Epoch: 1/2 Validation Iteration: 18/25;	val.top1 : 0.146	val.top5 : 0.391	val.loss : 1052.346
+Epoch: 1/2 Validation Iteration: 19/25;	val.top1 : 0.098	val.top5 : 0.391	val.loss : 1024.111
+Epoch: 1/2 Validation Iteration: 20/25;	val.top1 : 0.098	val.top5 : 0.391	val.loss : 1042.628
+Epoch: 1/2 Validation Iteration: 21/25;	val.top1 : 0.098	val.top5 : 0.488	val.loss : 1034.283
+Epoch: 1/2 Validation Iteration: 22/25;	val.top1 : 0.049	val.top5 : 0.244	val.loss : 1022.580
+Epoch: 1/2 Validation Iteration: 23/25;	val.top1 : 0.098	val.top5 : 0.244	val.loss : 1041.656
+Epoch: 1/2 Validation Iteration: 24/25;	val.top1 : 0.146	val.top5 : 0.586	val.loss : 1039.154
+Epoch: 1/2 Validation Iteration: 25/25;	val.top1 : 0.118	val.top5 : 0.708	val.loss : 1014.922
+Summary Epoch: 1/2;	val.top1 : 0.100	val.top5 : 0.495	val.loss : 1030.813
+None
+Experiment ended
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'bn': True, 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7f59ab355048>}
+read 1281167 files from 1000 directories
+read 50000 files from 1000 directories
+data : /data/imagenet
+data_backend : dali-gpu
+arch : resnet50
+model_config : fanin
+workers : 5
+epochs : 2
+start_epoch : 0
+batch_size : 256
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.0
+true_weight_decay : False
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 1
+dynamic_loss_scale : False
+prof : 100
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_8GPU_256BS_dali-gpu_inferencebench.json
+final_weights : model.pth.tar
+evaluate : True
+training_only : False
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 8
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Epoch: 0/2 Validation Iteration: 1/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1440.463
+Epoch: 0/2 Validation Iteration: 2/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1486.845
+Epoch: 0/2 Validation Iteration: 3/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1375.716
+Epoch: 0/2 Validation Iteration: 4/24;	val.top1 : 0.000	val.top5 : 2.441	val.loss : 1393.872
+Epoch: 0/2 Validation Iteration: 5/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1260.751
+Epoch: 0/2 Validation Iteration: 6/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1420.539
+Epoch: 0/2 Validation Iteration: 7/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1450.485
+Epoch: 0/2 Validation Iteration: 8/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1387.009
+Epoch: 0/2 Validation Iteration: 9/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1482.657
+Epoch: 0/2 Validation Iteration: 10/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1401.056
+Epoch: 0/2 Validation Iteration: 11/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1448.407
+Epoch: 0/2 Validation Iteration: 12/24;	val.top1 : 0.000	val.top5 : 0.879	val.loss : 1352.786
+Epoch: 0/2 Validation Iteration: 13/24;	val.top1 : 0.000	val.top5 : 1.025	val.loss : 1380.256
+Epoch: 0/2 Validation Iteration: 14/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1498.120
+Epoch: 0/2 Validation Iteration: 15/24;	val.top1 : 2.441	val.top5 : 4.883	val.loss : 1398.204
+Epoch: 0/2 Validation Iteration: 16/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1386.479
+Epoch: 0/2 Validation Iteration: 17/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1474.860
+Epoch: 0/2 Validation Iteration: 18/24;	val.top1 : 0.000	val.top5 : 2.441	val.loss : 1439.559
+Epoch: 0/2 Validation Iteration: 19/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1338.307
+Epoch: 0/2 Validation Iteration: 20/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1375.781
+Epoch: 0/2 Validation Iteration: 21/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1461.392
+Epoch: 0/2 Validation Iteration: 22/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1392.954
+Epoch: 0/2 Validation Iteration: 23/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1432.471
+Epoch: 0/2 Validation Iteration: 24/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1437.209
+Epoch: 0/2 Validation Iteration: 25/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1525.746
+Summary Epoch: 0/2;	val.top1 : 0.098	val.top5 : 0.467	val.loss : 1417.677
+Epoch: 1/2 Validation Iteration: 1/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1514.619
+Epoch: 1/2 Validation Iteration: 2/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1391.816
+Epoch: 1/2 Validation Iteration: 3/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1421.721
+Epoch: 1/2 Validation Iteration: 4/24;	val.top1 : 0.000	val.top5 : 2.441	val.loss : 1280.418
+Epoch: 1/2 Validation Iteration: 5/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1357.302
+Epoch: 1/2 Validation Iteration: 6/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1448.219
+Epoch: 1/2 Validation Iteration: 7/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1395.584
+Epoch: 1/2 Validation Iteration: 8/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1406.067
+Epoch: 1/2 Validation Iteration: 9/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1473.220
+Epoch: 1/2 Validation Iteration: 10/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1432.479
+Epoch: 1/2 Validation Iteration: 11/24;	val.top1 : 0.000	val.top5 : 0.879	val.loss : 1374.800
+Epoch: 1/2 Validation Iteration: 12/24;	val.top1 : 0.000	val.top5 : 1.025	val.loss : 1301.561
+Epoch: 1/2 Validation Iteration: 13/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1570.334
+Epoch: 1/2 Validation Iteration: 14/24;	val.top1 : 2.441	val.top5 : 2.441	val.loss : 1410.197
+Epoch: 1/2 Validation Iteration: 15/24;	val.top1 : 0.000	val.top5 : 2.441	val.loss : 1352.301
+Epoch: 1/2 Validation Iteration: 16/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1452.224
+Epoch: 1/2 Validation Iteration: 17/24;	val.top1 : 0.000	val.top5 : 2.441	val.loss : 1436.009
+Epoch: 1/2 Validation Iteration: 18/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1434.425
+Epoch: 1/2 Validation Iteration: 19/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1326.142
+Epoch: 1/2 Validation Iteration: 20/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1446.003
+Epoch: 1/2 Validation Iteration: 21/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1381.689
+Epoch: 1/2 Validation Iteration: 22/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1434.627
+Epoch: 1/2 Validation Iteration: 23/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1412.795
+Epoch: 1/2 Validation Iteration: 24/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1543.161
+Summary Epoch: 1/2;	val.top1 : 0.102	val.top5 : 0.486	val.loss : 1416.571
+None
+Experiment ended
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '8', 'main.py', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '128', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_128BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+Job ended sucessfully
+val.total_ips
+[[178.02234593292107, 7619.824283207696, 9127.372542019173, 7381.90122098779, 8935.283291205076, 7669.611848613745, 6451.902981868438, 6318.572177180292, 5866.103356201523, 6418.206170192099, 8940.789035324193, 6386.672935914194, 9311.38034080562, 5845.409577834364, 9243.366668531853, 6707.103174615569, 6807.575242110602, 9266.04050336881, 5922.957248196552, 9338.854706318507, 6825.924559847683, 6714.631905609848, 6213.990477113677, 6129.15315150754, 6228.47179546674, 6205.568866445605, 9338.103439579076, 6472.22317058469, 9338.773482464932, 5651.347117725233, 9067.329489628964, 9341.413981125632, 6099.081787960506, 9292.34278296427, 6142.450586147274, 9242.789807244939, 9306.275870885544, 9269.280132943424, 9311.784095048131, 5575.26574683817, 9282.381702222385, 9285.331649926278, 9345.11318878578, 8945.053204207019, 7463.330001598677, 6780.867067153988, 6773.605755795065, 9202.725690263249, 6115.521291288982], [6841.581996068649, 9359.44983885062, 6720.126574039304, 9254.899091741636, 9237.780111198339, 9252.885319361621, 6761.59838790932, 6038.92400318329, 9179.43810724743, 7211.2938553264075, 6564.156978539093, 6704.893901075913, 9293.60953126961, 9118.226392742728, 9200.103881637995, 7890.098624228207, 9218.764989461122, 6799.912124517709, 9345.21485672012, 9341.556204189052, 9332.827674923947, 6023.923779602656, 9307.78846995696, 9311.521650807692, 9293.790523507301, 9284.067157065132, 9286.897689826066, 9271.281035282944, 9217.439433772355, 5795.340343567123, 9086.185710779959, 9325.107409988688, 6202.011367312047, 9281.75984371083, 6125.394404242028, 9303.776118465374, 9277.689731819803, 9282.301457732248, 9246.47102032732, 9213.306939528498, 9250.952125150505, 7452.542465934073, 9243.466134652179, 8338.51178466867, 7135.11349153083, 8337.346347069191, 9337.210198615605, 9306.961521542693, 5817.326821128367], []]
+val.compute_ips
+[[178.0368244306022, 7695.488019494191, 9183.834822287701, 7435.434653371073, 8996.372718684739, 7711.058938433144, 6489.483475488603, 6350.430037541012, 5903.0697515881375, 9547.617958994948, 8999.973379154268, 6416.029733557211, 9374.280654349415, 5871.371951169499, 9305.066145550109, 6742.322478556269, 6839.413949325847, 9334.998132986157, 5949.433304890346, 9402.436762384712, 6857.749389264467, 6745.467460528113, 6249.50679593568, 6165.331618415462, 6256.689823150657, 6231.164614259683, 9399.967381098808, 6826.033044926606, 9403.75429631138, 5673.721284080566, 9146.070558372392, 9410.450600783517, 6127.273201428329, 9348.57114001197, 6170.2208022066425, 9323.083209422572, 9365.817658462336, 9346.2519960221, 9372.03054061426, 5598.295206415082, 9345.377530016407, 9349.914328444636, 9412.51292121042, 9400.049672910798, 7500.920893061726, 6813.91492298393, 9451.515876246916, 9267.540050319134, 6142.617498655622], [6871.364981849539, 9421.825228746986, 6753.8471999232615, 9327.395814692878, 9302.76853366025, 9318.309578514136, 6795.1032104140695, 6065.7040026889845, 9238.376218797388, 7250.309420916163, 6594.493588168821, 6735.396930392005, 9356.67683164607, 9450.559217720978, 9269.940335231222, 7941.319389539936, 9278.431308841256, 6833.50510726855, 9417.899838392432, 9408.49223327981, 9397.766609776378, 6049.684267461465, 9370.353885726629, 9376.634201506386, 9361.87756881414, 9354.84265666486, 9357.573801208324, 9340.62167475686, 9292.32267863247, 5823.123870108776, 9171.38185910344, 9393.758507485538, 6388.96254953529, 9339.037465155014, 6150.957087617793, 9363.877821720873, 9339.037465155014, 9345.519873796442, 9309.11996393366, 9269.180110497238, 9312.470557625009, 7488.235440981097, 9312.329218820805, 8389.066777089372, 7180.3464246785115, 8389.214251811167, 9431.818732020116, 9396.985275391744, 5851.382334549032], []]
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '8', 'main.py', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'pytorch', '--raport-file', '/data/workspace/./raport_8GPU_256BS_pytorch_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+Job ended sucessfully
+val.total_ips
+[[235.41891022961877, 8975.31674228002, 9919.929268864465, 9881.995639924487, 9742.148201998572, 8530.282327682517, 9920.490637249128, 9767.005226922574, 9486.986044415778, 9735.401990162522, 9829.503831704797, 9770.071270880984, 9815.396683307643, 9840.911227201907, 9880.279309226342, 6642.181336797501, 6794.108926451431, 6882.315193207047, 6926.551060923472, 7619.837801779809, 7341.717763075238, 7851.256934568095, 9931.857678517541, 9929.584482449702, 385.5777218134145], [807.0369831506493, 7200.147685457603, 9879.699756053518, 9802.448453449428, 1580.7587243271971, 4786.964307030093, 9851.29431625304, 9873.079495561104, 9819.155377028717, 3809.46946059453, 5089.083088356398, 6115.512583528286, 9468.466231268221, 9787.716142676134, 2990.561934695935, 7855.478750722454, 7554.393447063438, 9892.112496861908, 9869.51754121905, 4563.822053151133, 7359.058471977109, 8146.712688198558, 9913.689758007184, 9919.322146007991, 3444.1995731511283], []]
+val.compute_ips
+[[298.86287176354097, 9718.033018937298, 9967.734686820442, 9925.293505527125, 10014.835350889158, 10007.974508015179, 9962.42847582962, 9801.475358058951, 9542.367871635844, 9808.212690256796, 9877.563951101662, 9812.840172862663, 9876.678090279735, 9934.913207058353, 9909.73259900002, 10056.94050320209, 6821.165460976125, 6904.226312455994, 8555.515752129184, 9675.332773158463, 7359.758344478725, 10033.505144692655, 9958.374595401723, 9947.925965558374, 402.390491339616], [8694.010592806486, 7339.710350095742, 9912.43135906354, 9836.505039100119, 2845.6759283798538, 10051.785922243753, 9885.53247865215, 9915.41771698943, 9862.084293334374, 3814.8257033277614, 10078.32122752306, 6128.501596347699, 9508.461479368474, 9857.116159941246, 3741.571965263661, 10028.444799353692, 7571.146038735653, 9919.52833034244, 9892.112496861908, 5230.222631388272, 10039.943373820677, 8161.054838145764, 9937.08538323431, 9937.67168875762, 8696.662661590637], []]
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '8', 'main.py', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-gpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-gpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+Job ended sucessfully
+val.total_ips
+[[484.6090104676907, 8195.947213499849, 9383.630183839714, 5800.24753673293, 5782.302782257956, 6373.9201480482225, 6237.992928284321, 7129.026056415177, 5784.491110401793, 9591.701487004206, 5754.6366324601495, 5847.192163749855, 6263.236267257754, 6421.670418525651, 5698.472606656451, 6030.102015501481, 6137.101017166153, 9594.519122167418, 9608.331227090555, 6269.494401933851, 6453.711056365594, 9563.04094994339, 5275.948060690448, 9322.698710657694, 6362.579888020704], [6510.327619763656, 9539.284150675196, 6244.07360357754, 9592.269166259075, 6261.830022459657, 6277.049130158052, 6972.1514340095855, 9576.730477089812, 5997.703254564294, 6348.163262108715, 9597.316967492892, 8210.997076901018, 7948.689929331074, 5692.875694218009, 9607.245855655345, 6415.253476884747, 9649.573564235869, 8729.954329490702, 9524.000988995758, 6397.28451599594, 9558.47583100397, 6732.5462636826915, 9561.699693555765, 6339.505302272719], []]
+val.compute_ips
+[[484.66282089338085, 8239.935108338226, 9427.636676529726, 5816.223929711854, 9780.283063358273, 6393.399187086873, 6257.546696660383, 7149.496861355302, 5799.8324126001135, 9632.844090278042, 5770.385666225991, 5863.3325224262235, 6282.769641484442, 6448.338276846761, 5714.261209583268, 6048.913188632463, 6152.27871825357, 9635.242814454545, 9652.089083055791, 6287.069172925727, 6473.686481272138, 9607.396288541722, 9782.566390991315, 9368.126090048117, 6379.951345630368], [6525.699289840495, 9583.108824336596, 6261.341637145564, 9635.588675012339, 6280.29375913903, 6295.921246880417, 6993.494609920417, 9614.558042599869, 6014.450609711696, 6366.69680210021, 9640.866126744124, 8240.282907662082, 7978.190852038262, 5706.987220636198, 9650.842002491936, 6432.716635551252, 9690.712291955519, 8761.12701385064, 9562.295761054333, 6414.122969903421, 9600.792425710648, 6752.201432515202, 9604.463696751565, 6356.383916672278], []]=> creating model '('resnet50', 'fanin')'
+Version: {'net': <class 'image_classification.resnet.ResNet'>, 'block': <class 'image_classification.resnet.Bottleneck'>, 'layers': [3, 4, 6, 3], 'num_classes': 1000}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in', 'nonlinearity': 'relu', 'bn': True, 'last_bn_0_init': False, 'activation': <function <lambda> at 0x7f00e53eb048>}
+read 1281167 files from 1000 directories
+read 50000 files from 1000 directories
+data : /data/imagenet
+data_backend : dali-cpu
+arch : resnet50
+model_config : fanin
+workers : 5
+epochs : 2
+start_epoch : 0
+batch_size : 256
+optimizer_batch_size : -1
+lr : 0.1
+lr_schedule : step
+warmup : 0
+label_smoothing : 0.1
+mixup : 0.0
+true_weight_decay : False
+momentum : 0.9
+weight_decay : 0.0001
+bn_weight_decay : False
+nesterov : False
+print_freq : 1
+resume : 
+pretrained_weights : 
+fp16 : False
+static_loss_scale : 1
+dynamic_loss_scale : False
+prof : 100
+local_rank : 0
+seed : None
+gather_checkpoints : False
+raport_file : /data/workspace/./raport_8GPU_256BS_dali-cpu_inferencebench.json
+final_weights : model.pth.tar
+evaluate : True
+training_only : False
+save_checkpoints : False
+workspace : /data/workspace
+distributed : True
+gpu : 0
+world_size : 8
+ ! Weight decay NOT applied to BN parameters 
+98
+63
+Epoch: 0/2 Validation Iteration: 1/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1177.170
+Epoch: 0/2 Validation Iteration: 2/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1282.328
+Epoch: 0/2 Validation Iteration: 3/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1253.791
+Epoch: 0/2 Validation Iteration: 4/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1234.890
+Epoch: 0/2 Validation Iteration: 5/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1255.082
+Epoch: 0/2 Validation Iteration: 6/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1242.716
+Epoch: 0/2 Validation Iteration: 7/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1288.570
+Epoch: 0/2 Validation Iteration: 8/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1407.119
+Epoch: 0/2 Validation Iteration: 9/24;	val.top1 : 0.000	val.top5 : 2.979	val.loss : 1291.461
+Epoch: 0/2 Validation Iteration: 10/24;	val.top1 : 0.000	val.top5 : 1.953	val.loss : 1279.582
+Epoch: 0/2 Validation Iteration: 11/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1281.266
+Epoch: 0/2 Validation Iteration: 12/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1216.751
+Epoch: 0/2 Validation Iteration: 13/24;	val.top1 : 2.441	val.top5 : 4.102	val.loss : 1157.771
+Epoch: 0/2 Validation Iteration: 14/24;	val.top1 : 0.049	val.top5 : 0.781	val.loss : 1346.226
+Epoch: 0/2 Validation Iteration: 15/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1243.432
+Epoch: 0/2 Validation Iteration: 16/24;	val.top1 : 0.000	val.top5 : 2.393	val.loss : 1242.763
+Epoch: 0/2 Validation Iteration: 17/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1302.889
+Epoch: 0/2 Validation Iteration: 18/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1292.163
+Epoch: 0/2 Validation Iteration: 19/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1307.779
+Epoch: 0/2 Validation Iteration: 20/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1328.644
+Epoch: 0/2 Validation Iteration: 21/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1280.671
+Epoch: 0/2 Validation Iteration: 22/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1363.801
+Epoch: 0/2 Validation Iteration: 23/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1267.392
+Epoch: 0/2 Validation Iteration: 24/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1218.298
+Epoch: 0/2 Validation Iteration: 25/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1280.040
+Summary Epoch: 0/2;	val.top1 : 0.100	val.top5 : 0.488	val.loss : 1273.704
+Epoch: 1/2 Validation Iteration: 1/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1228.598
+Epoch: 1/2 Validation Iteration: 2/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1282.685
+Epoch: 1/2 Validation Iteration: 3/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1215.416
+Epoch: 1/2 Validation Iteration: 4/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1223.380
+Epoch: 1/2 Validation Iteration: 5/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1295.915
+Epoch: 1/2 Validation Iteration: 6/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1197.388
+Epoch: 1/2 Validation Iteration: 7/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1472.156
+Epoch: 1/2 Validation Iteration: 8/24;	val.top1 : 0.000	val.top5 : 2.490	val.loss : 1272.173
+Epoch: 1/2 Validation Iteration: 9/24;	val.top1 : 0.000	val.top5 : 2.441	val.loss : 1283.575
+Epoch: 1/2 Validation Iteration: 10/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1288.686
+Epoch: 1/2 Validation Iteration: 11/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1224.377
+Epoch: 1/2 Validation Iteration: 12/24;	val.top1 : 1.367	val.top5 : 1.367	val.loss : 1233.589
+Epoch: 1/2 Validation Iteration: 13/24;	val.top1 : 1.123	val.top5 : 3.516	val.loss : 1267.317
+Epoch: 1/2 Validation Iteration: 14/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1233.756
+Epoch: 1/2 Validation Iteration: 15/24;	val.top1 : 0.000	val.top5 : 2.393	val.loss : 1207.834
+Epoch: 1/2 Validation Iteration: 16/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1309.472
+Epoch: 1/2 Validation Iteration: 17/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1307.488
+Epoch: 1/2 Validation Iteration: 18/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1295.880
+Epoch: 1/2 Validation Iteration: 19/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1358.044
+Epoch: 1/2 Validation Iteration: 20/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1264.816
+Epoch: 1/2 Validation Iteration: 21/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1378.872
+Epoch: 1/2 Validation Iteration: 22/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1250.289
+Epoch: 1/2 Validation Iteration: 23/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1244.315
+Epoch: 1/2 Validation Iteration: 24/24;	val.top1 : 0.000	val.top5 : 0.000	val.loss : 1305.123
+Summary Epoch: 1/2;	val.top1 : 0.104	val.top5 : 0.509	val.loss : 1276.714
+None
+Experiment ended
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=0', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=1', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=2', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=3', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=4', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=5', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=6', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+['/opt/conda/bin/python', '-u', 'main.py', '--local_rank=7', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+
+['/opt/conda/bin/python', 'multiproc.py', '--nproc_per_node', '8', 'main.py', '-p', '1', '-j', '5', '--evaluate', '--workspace', '/data/workspace', '--epochs', '2', '--prof', '100', '-b', '256', '--data-backend', 'dali-cpu', '--raport-file', '/data/workspace/./raport_8GPU_256BS_dali-cpu_inferencebench.json', '--no-checkpoints', '/data/imagenet', '--arch', 'resnet50', '-c', 'fanin', '--label-smoothing', '0.1', '--mixup', '0.0']
+Job ended sucessfully
+val.total_ips
+[[345.8465343638592, 8209.466850799688, 6266.1009324087545, 5414.802627365449, 5752.282074239156, 5906.324967236493, 5967.544779157479, 6813.920328086019, 6535.589631843401, 9624.80303962334, 6035.51678680411, 5834.415838759698, 9604.63552087375, 6201.91285487991, 5890.096808146635, 5781.497178217522, 5449.49101239499, 8714.039948952988, 8770.636005623868, 5912.695591601017, 6156.776513761468, 9080.787478355001, 5512.0499797226885, 9626.733824946767, 5892.1330795375425], [9592.386994902261, 8125.40517797516, 6056.508993173508, 6498.418573968302, 6417.4869198816605, 9633.427453795084, 7143.539323861765, 8737.99111342589, 6242.657802364234, 5997.163084282775, 6069.368386616764, 9502.381799536935, 8632.718344113426, 5251.364106928124, 9269.500189923685, 6083.587709501163, 5788.482645875591, 9571.299023474932, 9557.008257585028, 8285.428522925444, 6332.186988915271, 9569.95544979133, 9354.72040390048, 6286.351408987722], []]
+val.compute_ips
+[[345.86822996538996, 8254.710786942274, 6286.356009516693, 5430.274861239301, 9993.955404979331, 6723.935036430072, 5984.482440739936, 6838.227008575313, 6558.183202983042, 9670.452985929891, 6051.9432536171025, 5850.808420324188, 9651.362483890865, 8067.294892396118, 5907.458234502432, 5799.507404049154, 5464.025632136603, 8746.755165359735, 8803.444532240426, 5930.579649188699, 6173.125207598967, 9114.511167748604, 8541.291934433402, 9670.322345031624, 5907.511049674362], [9625.611933608545, 8153.014542658909, 6074.995715645602, 6517.356552193498, 6436.500399380772, 9676.455384892673, 7167.608663944234, 8771.665967514975, 6261.7296005656735, 6012.379430926403, 6086.333485433784, 9545.591483356207, 8667.648730517823, 5265.02756468249, 9310.482113224562, 6099.523531984753, 5804.225557030835, 9614.773275427855, 9602.048070968507, 8317.776930823456, 6350.8619878423315, 9613.126989367285, 9394.405738614802, 6301.898134433202], []]
+ val.total_ips |       8 p |       8 d-g |       8 d-c |
+--------------------------------------------------------
+           128 |    7510.1 |    8486.2 |    8415.3 |
+           256 |    7340.6 |    7856.7 |    7629.8 |
+ val.compute_ips |       8 p |       8 d-g |       8 d-c |
+----------------------------------------------------------
+             128 |    7890.3 |    8545.9 |    8481.1 |
+             256 |    8406.3 |    7885.4 |    7658.0 |

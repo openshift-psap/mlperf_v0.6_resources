@@ -1,0 +1,12 @@
+--- pytorch/third_party/ideep/mkl-dnn/src/cpu/jit_generator.hpp
++++ pytorch/third_party/ideep/mkl-dnn/src/cpu/jit_generator.hpp
+@@ -697,7 +697,7 @@ public:
+ public:
+     jit_generator(
+         void *code_ptr = nullptr,
+-        size_t code_size = 256 * 1024
++        size_t code_size = 1024 * 1024
+         ) : Xbyak::CodeGenerator(code_size, code_ptr)
+     {
+     }
+

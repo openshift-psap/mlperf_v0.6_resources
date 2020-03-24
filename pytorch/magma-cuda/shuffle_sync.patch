@@ -1,0 +1,464 @@
+--- sparse-iter/blas/zmdot_shfl.cu.orig	2019-01-11 16:51:21.640012656 -0800
++++ sparse-iter/blas/zmdot_shfl.cu	2019-01-11 17:02:56.724003468 -0800
+@@ -22,7 +22,7 @@
+ // CUDA 6.5 adds Double precision version; here's an implementation for CUDA 6.0 and earlier.
+ // from https://devblogs.nvidia.com/parallelforall/faster-parallel-reductions-kepler/
+ __device__ inline
+-real_Double_t __shfl_down(real_Double_t var, unsigned int srcLane, int width=32) {
++real_Double_t __shfl_down_sync(int x, real_Double_t var, unsigned int srcLane, int width=32) {
+   int2 a = *reinterpret_cast<int2*>(&var);
+   a.x = __shfl_down(a.x, srcLane, width);
+   a.y = __shfl_down(a.y, srcLane, width);
+@@ -30,17 +30,25 @@
+ }
+ #endif
+ 
++#if (CUDA_VERSION <= 9000)
++// CUDA 9.0 adds __shfl_down_sync; emulate it in earlier versions.
++template<typename T>
++__device__ inline
++T __shfl_down_sync(int x, T var, unsigned int srcLane, int width=32) {
++    return __shfl_down(var, srcLane, width);
++}
++#endif
+ 
+ template<typename T>
+ __inline__ __device__
+ T warpReduceSum(T val)
+ {
+ #if __CUDA_ARCH__ >= 300
+-    val += __shfl_down(val, 16);
+-    val += __shfl_down(val, 8);
+-    val += __shfl_down(val, 4);
+-    val += __shfl_down(val, 2);
+-    val += __shfl_down(val, 1);
++    val += __shfl_down_sync(0xFFFFFFFF, val, 16);
++    val += __shfl_down_sync(0xFFFFFFFF, val, 8);
++    val += __shfl_down_sync(0xFFFFFFFF, val, 4);
++    val += __shfl_down_sync(0xFFFFFFFF, val, 2);
++    val += __shfl_down_sync(0xFFFFFFFF, val, 1);
+ #endif
+     return val;
+ }
+@@ -53,26 +61,26 @@
+ {
+ #if __CUDA_ARCH__ >= 300
+     int4 a = *reinterpret_cast<int4*>(&val);
+-    a.x += __shfl_down(a.x, 16);
+-    a.y += __shfl_down(a.y, 16);
+-    a.z += __shfl_down(a.z, 16);
+-    a.w += __shfl_down(a.w, 16);
+-    a.x += __shfl_down(a.x, 8);
+-    a.y += __shfl_down(a.y, 8);
+-    a.z += __shfl_down(a.z, 8);
+-    a.w += __shfl_down(a.w, 8);
+-    a.x += __shfl_down(a.x, 4);
+-    a.y += __shfl_down(a.y, 4);
+-    a.z += __shfl_down(a.z, 4);
+-    a.w += __shfl_down(a.w, 4);
+-    a.x += __shfl_down(a.x, 2);
+-    a.y += __shfl_down(a.y, 2);
+-    a.z += __shfl_down(a.z, 2);
+-    a.w += __shfl_down(a.w, 2);
+-    a.x += __shfl_down(a.x, 1);
+-    a.y += __shfl_down(a.y, 1);
+-    a.z += __shfl_down(a.z, 1);
+-    a.w += __shfl_down(a.w, 1);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 16);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 16);
++    a.z += __shfl_down_sync(0xFFFFFFFF, a.z, 16);
++    a.w += __shfl_down_sync(0xFFFFFFFF, a.w, 16);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 8);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 8);
++    a.z += __shfl_down_sync(0xFFFFFFFF, a.z, 8);
++    a.w += __shfl_down_sync(0xFFFFFFFF, a.w, 8);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 4);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 4);
++    a.z += __shfl_down_sync(0xFFFFFFFF, a.z, 4);
++    a.w += __shfl_down_sync(0xFFFFFFFF, a.w, 4);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 2);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 2);
++    a.z += __shfl_down_sync(0xFFFFFFFF, a.z, 2);
++    a.w += __shfl_down_sync(0xFFFFFFFF, a.w, 2);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 1);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 1);
++    a.z += __shfl_down_sync(0xFFFFFFFF, a.z, 1);
++    a.w += __shfl_down_sync(0xFFFFFFFF, a.w, 1);
+ #endif
+     return val;
+ }
+@@ -86,16 +94,16 @@
+ {
+ #if __CUDA_ARCH__ >= 300
+     float2 a = *reinterpret_cast<float2*>(&val);
+-    a.x += __shfl_down(a.x, 16);
+-    a.y += __shfl_down(a.y, 16);
+-    a.x += __shfl_down(a.x, 8);
+-    a.y += __shfl_down(a.y, 8);
+-    a.x += __shfl_down(a.x, 4);
+-    a.y += __shfl_down(a.y, 4);
+-    a.x += __shfl_down(a.x, 2);
+-    a.y += __shfl_down(a.y, 2);
+-    a.x += __shfl_down(a.x, 1);
+-    a.y += __shfl_down(a.y, 1);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 16);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 16);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 8);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 8);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 4);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 4);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 2);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 2);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 1);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 1);
+ #endif
+     return val;
+ }
+--- sparse-iter/blas/dmdot_shfl.cu.orig	2019-01-11 16:51:21.645012656 -0800
++++ sparse-iter/blas/dmdot_shfl.cu	2019-01-11 17:03:04.126003798 -0800
+@@ -22,7 +22,7 @@
+ // CUDA 6.5 adds Double precision version; here's an implementation for CUDA 6.0 and earlier.
+ // from https://devblogs.nvidia.com/parallelforall/faster-parallel-reductions-kepler/
+ __device__ inline
+-real_Double_t __shfl_down(real_Double_t var, unsigned int srcLane, int width=32) {
++real_Double_t __shfl_down_sync(int x, real_Double_t var, unsigned int srcLane, int width=32) {
+   int2 a = *reinterpret_cast<int2*>(&var);
+   a.x = __shfl_down(a.x, srcLane, width);
+   a.y = __shfl_down(a.y, srcLane, width);
+@@ -30,17 +30,25 @@
+ }
+ #endif
+ 
++#if (CUDA_VERSION <= 9000)
++// CUDA 9.0 adds __shfl_down_sync; emulate it in earlier versions.
++template<typename T>
++__device__ inline
++T __shfl_down_sync(int x, T var, unsigned int srcLane, int width=32) {
++    return __shfl_down(var, srcLane, width);
++}
++#endif
+ 
+ template<typename T>
+ __inline__ __device__
+ T warpReduceSum(T val)
+ {
+ #if __CUDA_ARCH__ >= 300
+-    val += __shfl_down(val, 16);
+-    val += __shfl_down(val, 8);
+-    val += __shfl_down(val, 4);
+-    val += __shfl_down(val, 2);
+-    val += __shfl_down(val, 1);
++    val += __shfl_down_sync(0xFFFFFFFF, val, 16);
++    val += __shfl_down_sync(0xFFFFFFFF, val, 8);
++    val += __shfl_down_sync(0xFFFFFFFF, val, 4);
++    val += __shfl_down_sync(0xFFFFFFFF, val, 2);
++    val += __shfl_down_sync(0xFFFFFFFF, val, 1);
+ #endif
+     return val;
+ }
+@@ -53,26 +61,26 @@
+ {
+ #if __CUDA_ARCH__ >= 300
+     int4 a = *reinterpret_cast<int4*>(&val);
+-    a.x += __shfl_down(a.x, 16);
+-    a.y += __shfl_down(a.y, 16);
+-    a.z += __shfl_down(a.z, 16);
+-    a.w += __shfl_down(a.w, 16);
+-    a.x += __shfl_down(a.x, 8);
+-    a.y += __shfl_down(a.y, 8);
+-    a.z += __shfl_down(a.z, 8);
+-    a.w += __shfl_down(a.w, 8);
+-    a.x += __shfl_down(a.x, 4);
+-    a.y += __shfl_down(a.y, 4);
+-    a.z += __shfl_down(a.z, 4);
+-    a.w += __shfl_down(a.w, 4);
+-    a.x += __shfl_down(a.x, 2);
+-    a.y += __shfl_down(a.y, 2);
+-    a.z += __shfl_down(a.z, 2);
+-    a.w += __shfl_down(a.w, 2);
+-    a.x += __shfl_down(a.x, 1);
+-    a.y += __shfl_down(a.y, 1);
+-    a.z += __shfl_down(a.z, 1);
+-    a.w += __shfl_down(a.w, 1);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 16);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 16);
++    a.z += __shfl_down_sync(0xFFFFFFFF, a.z, 16);
++    a.w += __shfl_down_sync(0xFFFFFFFF, a.w, 16);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 8);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 8);
++    a.z += __shfl_down_sync(0xFFFFFFFF, a.z, 8);
++    a.w += __shfl_down_sync(0xFFFFFFFF, a.w, 8);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 4);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 4);
++    a.z += __shfl_down_sync(0xFFFFFFFF, a.z, 4);
++    a.w += __shfl_down_sync(0xFFFFFFFF, a.w, 4);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 2);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 2);
++    a.z += __shfl_down_sync(0xFFFFFFFF, a.z, 2);
++    a.w += __shfl_down_sync(0xFFFFFFFF, a.w, 2);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 1);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 1);
++    a.z += __shfl_down_sync(0xFFFFFFFF, a.z, 1);
++    a.w += __shfl_down_sync(0xFFFFFFFF, a.w, 1);
+ #endif
+     return val;
+ }
+@@ -86,16 +94,16 @@
+ {
+ #if __CUDA_ARCH__ >= 300
+     float2 a = *reinterpret_cast<float2*>(&val);
+-    a.x += __shfl_down(a.x, 16);
+-    a.y += __shfl_down(a.y, 16);
+-    a.x += __shfl_down(a.x, 8);
+-    a.y += __shfl_down(a.y, 8);
+-    a.x += __shfl_down(a.x, 4);
+-    a.y += __shfl_down(a.y, 4);
+-    a.x += __shfl_down(a.x, 2);
+-    a.y += __shfl_down(a.y, 2);
+-    a.x += __shfl_down(a.x, 1);
+-    a.y += __shfl_down(a.y, 1);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 16);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 16);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 8);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 8);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 4);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 4);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 2);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 2);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 1);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 1);
+ #endif
+     return val;
+ }
+--- sparse-iter/blas/smdot_shfl.cu.orig	2019-01-11 16:51:21.649012656 -0800
++++ sparse-iter/blas/smdot_shfl.cu	2019-01-11 17:03:15.785004318 -0800
+@@ -22,7 +22,7 @@
+ // CUDA 6.5 adds Double precision version; here's an implementation for CUDA 6.0 and earlier.
+ // from https://devblogs.nvidia.com/parallelforall/faster-parallel-reductions-kepler/
+ __device__ inline
+-real_Double_t __shfl_down(real_Double_t var, unsigned int srcLane, int width=32) {
++real_Double_t __shfl_down_sync(int x, real_Double_t var, unsigned int srcLane, int width=32) {
+   int2 a = *reinterpret_cast<int2*>(&var);
+   a.x = __shfl_down(a.x, srcLane, width);
+   a.y = __shfl_down(a.y, srcLane, width);
+@@ -30,17 +30,25 @@
+ }
+ #endif
+ 
++#if (CUDA_VERSION <= 9000)
++// CUDA 9.0 adds __shfl_down_sync; emulate it in earlier versions.
++template<typename T>
++__device__ inline
++T __shfl_down_sync(int x, T var, unsigned int srcLane, int width=32) {
++    return __shfl_down(var, srcLane, width);
++}
++#endif
+ 
+ template<typename T>
+ __inline__ __device__
+ T warpReduceSum(T val)
+ {
+ #if __CUDA_ARCH__ >= 300
+-    val += __shfl_down(val, 16);
+-    val += __shfl_down(val, 8);
+-    val += __shfl_down(val, 4);
+-    val += __shfl_down(val, 2);
+-    val += __shfl_down(val, 1);
++    val += __shfl_down_sync(0xFFFFFFFF, val, 16);
++    val += __shfl_down_sync(0xFFFFFFFF, val, 8);
++    val += __shfl_down_sync(0xFFFFFFFF, val, 4);
++    val += __shfl_down_sync(0xFFFFFFFF, val, 2);
++    val += __shfl_down_sync(0xFFFFFFFF, val, 1);
+ #endif
+     return val;
+ }
+@@ -53,26 +61,26 @@
+ {
+ #if __CUDA_ARCH__ >= 300
+     int4 a = *reinterpret_cast<int4*>(&val);
+-    a.x += __shfl_down(a.x, 16);
+-    a.y += __shfl_down(a.y, 16);
+-    a.z += __shfl_down(a.z, 16);
+-    a.w += __shfl_down(a.w, 16);
+-    a.x += __shfl_down(a.x, 8);
+-    a.y += __shfl_down(a.y, 8);
+-    a.z += __shfl_down(a.z, 8);
+-    a.w += __shfl_down(a.w, 8);
+-    a.x += __shfl_down(a.x, 4);
+-    a.y += __shfl_down(a.y, 4);
+-    a.z += __shfl_down(a.z, 4);
+-    a.w += __shfl_down(a.w, 4);
+-    a.x += __shfl_down(a.x, 2);
+-    a.y += __shfl_down(a.y, 2);
+-    a.z += __shfl_down(a.z, 2);
+-    a.w += __shfl_down(a.w, 2);
+-    a.x += __shfl_down(a.x, 1);
+-    a.y += __shfl_down(a.y, 1);
+-    a.z += __shfl_down(a.z, 1);
+-    a.w += __shfl_down(a.w, 1);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 16);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 16);
++    a.z += __shfl_down_sync(0xFFFFFFFF, a.z, 16);
++    a.w += __shfl_down_sync(0xFFFFFFFF, a.w, 16);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 8);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 8);
++    a.z += __shfl_down_sync(0xFFFFFFFF, a.z, 8);
++    a.w += __shfl_down_sync(0xFFFFFFFF, a.w, 8);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 4);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 4);
++    a.z += __shfl_down_sync(0xFFFFFFFF, a.z, 4);
++    a.w += __shfl_down_sync(0xFFFFFFFF, a.w, 4);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 2);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 2);
++    a.z += __shfl_down_sync(0xFFFFFFFF, a.z, 2);
++    a.w += __shfl_down_sync(0xFFFFFFFF, a.w, 2);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 1);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 1);
++    a.z += __shfl_down_sync(0xFFFFFFFF, a.z, 1);
++    a.w += __shfl_down_sync(0xFFFFFFFF, a.w, 1);
+ #endif
+     return val;
+ }
+@@ -86,16 +94,16 @@
+ {
+ #if __CUDA_ARCH__ >= 300
+     float2 a = *reinterpret_cast<float2*>(&val);
+-    a.x += __shfl_down(a.x, 16);
+-    a.y += __shfl_down(a.y, 16);
+-    a.x += __shfl_down(a.x, 8);
+-    a.y += __shfl_down(a.y, 8);
+-    a.x += __shfl_down(a.x, 4);
+-    a.y += __shfl_down(a.y, 4);
+-    a.x += __shfl_down(a.x, 2);
+-    a.y += __shfl_down(a.y, 2);
+-    a.x += __shfl_down(a.x, 1);
+-    a.y += __shfl_down(a.y, 1);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 16);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 16);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 8);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 8);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 4);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 4);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 2);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 2);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 1);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 1);
+ #endif
+     return val;
+ }
+--- sparse-iter/blas/cmdot_shfl.cu.orig	2019-01-11 16:51:21.654012656 -0800
++++ sparse-iter/blas/cmdot_shfl.cu	2019-01-11 17:02:38.289002645 -0800
+@@ -22,7 +22,7 @@
+ // CUDA 6.5 adds Double precision version; here's an implementation for CUDA 6.0 and earlier.
+ // from https://devblogs.nvidia.com/parallelforall/faster-parallel-reductions-kepler/
+ __device__ inline
+-real_Double_t __shfl_down(real_Double_t var, unsigned int srcLane, int width=32) {
++real_Double_t __shfl_down_sync(int x, real_Double_t var, unsigned int srcLane, int width=32) {
+   int2 a = *reinterpret_cast<int2*>(&var);
+   a.x = __shfl_down(a.x, srcLane, width);
+   a.y = __shfl_down(a.y, srcLane, width);
+@@ -30,17 +30,25 @@
+ }
+ #endif
+ 
++#if (CUDA_VERSION <= 9000)
++// CUDA 9.0 adds __shfl_down_sync; emulate it in earlier versions.
++template<typename T>
++__device__ inline
++T __shfl_down_sync(int x, T var, unsigned int srcLane, int width=32) {
++    return __shfl_down(var, srcLane, width);
++}
++#endif
+ 
+ template<typename T>
+ __inline__ __device__
+ T warpReduceSum(T val)
+ {
+ #if __CUDA_ARCH__ >= 300
+-    val += __shfl_down(val, 16);
+-    val += __shfl_down(val, 8);
+-    val += __shfl_down(val, 4);
+-    val += __shfl_down(val, 2);
+-    val += __shfl_down(val, 1);
++    val += __shfl_down_sync(0xFFFFFFFF, val, 16);
++    val += __shfl_down_sync(0xFFFFFFFF, val, 8);
++    val += __shfl_down_sync(0xFFFFFFFF, val, 4);
++    val += __shfl_down_sync(0xFFFFFFFF, val, 2);
++    val += __shfl_down_sync(0xFFFFFFFF, val, 1);
+ #endif
+     return val;
+ }
+@@ -53,26 +61,26 @@
+ {
+ #if __CUDA_ARCH__ >= 300
+     int4 a = *reinterpret_cast<int4*>(&val);
+-    a.x += __shfl_down(a.x, 16);
+-    a.y += __shfl_down(a.y, 16);
+-    a.z += __shfl_down(a.z, 16);
+-    a.w += __shfl_down(a.w, 16);
+-    a.x += __shfl_down(a.x, 8);
+-    a.y += __shfl_down(a.y, 8);
+-    a.z += __shfl_down(a.z, 8);
+-    a.w += __shfl_down(a.w, 8);
+-    a.x += __shfl_down(a.x, 4);
+-    a.y += __shfl_down(a.y, 4);
+-    a.z += __shfl_down(a.z, 4);
+-    a.w += __shfl_down(a.w, 4);
+-    a.x += __shfl_down(a.x, 2);
+-    a.y += __shfl_down(a.y, 2);
+-    a.z += __shfl_down(a.z, 2);
+-    a.w += __shfl_down(a.w, 2);
+-    a.x += __shfl_down(a.x, 1);
+-    a.y += __shfl_down(a.y, 1);
+-    a.z += __shfl_down(a.z, 1);
+-    a.w += __shfl_down(a.w, 1);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 16);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 16);
++    a.z += __shfl_down_sync(0xFFFFFFFF, a.z, 16);
++    a.w += __shfl_down_sync(0xFFFFFFFF, a.w, 16);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 8);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 8);
++    a.z += __shfl_down_sync(0xFFFFFFFF, a.z, 8);
++    a.w += __shfl_down_sync(0xFFFFFFFF, a.w, 8);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 4);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 4);
++    a.z += __shfl_down_sync(0xFFFFFFFF, a.z, 4);
++    a.w += __shfl_down_sync(0xFFFFFFFF, a.w, 4);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 2);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 2);
++    a.z += __shfl_down_sync(0xFFFFFFFF, a.z, 2);
++    a.w += __shfl_down_sync(0xFFFFFFFF, a.w, 2);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 1);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 1);
++    a.z += __shfl_down_sync(0xFFFFFFFF, a.z, 1);
++    a.w += __shfl_down_sync(0xFFFFFFFF, a.w, 1);
+ #endif
+     return val;
+ }
+@@ -86,16 +94,16 @@
+ {
+ #if __CUDA_ARCH__ >= 300
+     float2 a = *reinterpret_cast<float2*>(&val);
+-    a.x += __shfl_down(a.x, 16);
+-    a.y += __shfl_down(a.y, 16);
+-    a.x += __shfl_down(a.x, 8);
+-    a.y += __shfl_down(a.y, 8);
+-    a.x += __shfl_down(a.x, 4);
+-    a.y += __shfl_down(a.y, 4);
+-    a.x += __shfl_down(a.x, 2);
+-    a.y += __shfl_down(a.y, 2);
+-    a.x += __shfl_down(a.x, 1);
+-    a.y += __shfl_down(a.y, 1);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 16);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 16);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 8);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 8);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 4);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 4);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 2);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 2);
++    a.x += __shfl_down_sync(0xFFFFFFFF, a.x, 1);
++    a.y += __shfl_down_sync(0xFFFFFFFF, a.y, 1);
+ #endif
+     return val;
+ }

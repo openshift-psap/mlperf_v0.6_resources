@@ -1,0 +1,162 @@
+FROM nvcr.io/nvidia/cuda:10.1-cudnn7-devel-ubi8
+
+# Install Basic OS Tools
+
+RUN dnf install -y \
+    binutils \
+    bzip2 \
+    findutils \
+    gcc \
+    gcc-c++ \
+    gcc-gfortran \
+    git \
+    gzip \
+    make \
+    patch \
+    pciutils \
+    unzip \
+    vim-enhanced \
+    wget \
+    xz \
+    zip
+
+ENV \
+CC="/usr/bin/gcc" \
+CXX="/usr/bin/g++" \
+LD_LIBRARY_PATH="/usr/local/lib${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"
+
+# Install Python3.6.8
+
+RUN dnf install -y \
+    bzip2-devel \
+    expat-devel \
+    gdbm-devel \
+    libffi-devel \
+    openssl-devel \
+    readline-devel \
+    sqlite-devel \
+    tk-devel \
+    xz-devel \
+    zlib-devel 
+
+RUN dnf install -y python36-devel python3-pip
+
+
+# Install CMake v3.13.3
+RUN dnf install -y cmake
+
+RUN date; df -h
+
+ENV \
+CUDA_VERSION="10.1" \
+CUDA_HOME="/usr/local/cuda" \
+CUDA_PATH="/usr/local/cuda" \
+PATH="/usr/local/cuda/bin:/usr/local/bin:/usr/bin:${PATH:+:${PATH}}" \
+LD_LIBRARY_PATH="/usr/local/lib64:/usr/local/cuda/lib64:${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"
+
+RUN which gcc
+
+
+# Install NVIDIA NCCL
+
+RUN set -vx \
+\
+&& cd /tmp \
+&& git clone --depth 1 "https://github.com/NVIDIA/nccl.git" --branch=v2.4.6-1 \
+&& cd /tmp/nccl \
+\
+&& if grep install Makefile ; then \
+    echo "Makefile already has install target"; \
+else \
+    echo "install: src.install" >> Makefile; \
+fi \
+\
+&& make -j`getconf _NPROCESSORS_ONLN` src.build \
+&& make -j`getconf _NPROCESSORS_ONLN` install \
+\
+&& cd /tmp \
+&& /bin/rm -rf /tmp/nccl* \
+\
+&& ldconfig 
+
+
+RUN date; df -h
+
+# Install Numpy
+RUN pip3 install numpy==1.17.2
+
+# Build PyTorch from NGC code
+RUN pip3 install tqdm pyyaml
+
+WORKDIR /opt/pytorch
+COPY pytorch .
+
+WORKDIR /opt/pytorch/pytorch
+
+ENV PYTORCH_BUILD_VERSION=1.1.0a0+828a6a3 PYTORCH_VERSION=1.1.0a0+828a6a3 PYTORCH_BUILD_NUMBER=0
+
+RUN python3 setup.py install \
+&& cp -a /opt/pytorch/pytorch/third_party/ideep/mkl-dnn/external/mklml_lnx*/lib/* /usr/lib64 \
+&& python3 setup.py clean \
+&& rm -rf /opt/pytorch/pytorch/build
+
+RUN pip3 install pillow==6.2.1
+WORKDIR /opt/pytorch/vision
+RUN python3 setup.py install \
+&& python3 setup.py clean
+
+#Install NVIDIA apex
+WORKDIR /opt/pytorch/apex 
+RUN rm -rf build \
+&& python3 setup.py install --cuda_ext --cpp_ext --bnp
+
+# Install NVIDIA  DALI
+RUN pip3 install --extra-index-url https://developer.download.nvidia.com/compute/redist/cuda/10.0  nvidia-dali==0.12.0
+
+# Install COCO API
+WORKDIR /opt
+ENV COCOAPI_VERSION=2.0+nv0.3.1
+
+RUN pip3 install pybind11 
+
+ENV C_INCLUDE_PATH=/usr/local/include/python3.6m/ 
+ENV CPLUS_INCLUDE_PATH=/usr/local/include/python3.6m/
+
+ENV COCOAPI_VERSION=2.0+nv0.3.1
+
+##RUN export COCOAPI_TAG=$(echo ${COCOAPI_VERSION} | sed 's/^.*+n//') \
+#&& pip3 install --verbose --no-cache-dir git+https://github.com/nvidia/cocoapi.git@${COCOAPI_TAG}#subdirectory=PythonAPI
+
+RUN pip3 install --no-cache-dir git+https://github.com/dagrayvid/cocoapi.git@fix_vector_assertion#subdirectory=PythonAPI
+
+# install numactl
+RUN yum -y install numactl \
+        infiniband-diags \
+        pciutils
+
+ENV NVIDIA_PYTORCH_VERSION="RHEL"
+ENV OPENMPI_VERSION=3.1.2
+
+ENV CUDA_DRIVER_VERSION=418.67
+ENV NCCL_VERSION=2.3.7
+ENV CUDNN_VERSION=7.4
+ENV CUBLAS_VERSION=10.0.130
+ENV TRT_VERSION=none
+ENV DALI_VERSION=none
+
+# Install Python dependencies
+WORKDIR /workspace/object_detection
+
+COPY maskrcnn/requirements.txt .
+RUN pip3 install --no-cache-dir https://github.com/mlperf/training/archive/6289993e1e9f0f5c4534336df83ff199bd0cdb75.zip#subdirectory=compliance \
+ && pip3 install --no-cache-dir -r requirements.txt
+
+# Copy detectron code and build
+COPY maskrcnn .
+RUN rm -rf pytorch \
+&& pip3 install --verbose -e .
+
+ENV OMP_NUM_THREADS=1
+ENV OPENCV_FOR_THREADS_NUM=1
+
+RUN dnf install -y libSM libXext-devel

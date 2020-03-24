@@ -1,0 +1,61 @@
+{
+    "model": "",
+    "ngpus": [
+        1,
+        4,
+        8
+    ],
+    "bs": [
+        32,
+        64,
+        128
+    ],
+    "metric_keys": [
+        "train.compute_ips",
+        "train.total_ips"
+    ],
+    "metrics": {
+        "1": {
+            "32": {
+                "train.compute_ips": 317.3264657991045,
+                "train.total_ips": 315.8459461537517
+            },
+            "64": {
+                "train.compute_ips": 348.44420410756936,
+                "train.total_ips": 347.09464713505804
+            },
+            "128": {
+                "train.compute_ips": 367.5590161914803,
+                "train.total_ips": 366.3257831167213
+            }
+        },
+        "4": {
+            "32": {
+                "train.compute_ips": 1182.0028120581603,
+                "train.total_ips": 1175.6792203154853
+            },
+            "64": {
+                "train.compute_ips": 1332.0605306907223,
+                "train.total_ips": 1325.285337340658
+            },
+            "128": {
+                "train.compute_ips": 1419.2205069516533,
+                "train.total_ips": 1414.8576548657993
+            }
+        },
+        "8": {
+            "32": {
+                "train.compute_ips": 2372.142136941936,
+                "train.total_ips": 2359.5301401985616
+            },
+            "64": {
+                "train.compute_ips": 2665.710570706372,
+                "train.total_ips": 2657.5371695489544
+            },
+            "128": {
+                "train.compute_ips": 2863.9271185816983,
+                "train.total_ips": 2856.6918535164573
+            }
+        }
+    }
+}

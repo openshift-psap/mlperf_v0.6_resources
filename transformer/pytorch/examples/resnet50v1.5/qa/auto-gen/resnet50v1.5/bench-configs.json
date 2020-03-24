@@ -1,0 +1,33 @@
+{
+    "keys": [ "platform", "model", "mode", "precision" ],
+    "dirs": [ "platform", "mode", "precision" ],
+    "mode" : [
+        { "name": "TRAIN", "params": "--mode training"},
+        { "name": "INFERENCE", "params": "--mode inference"}
+    ],
+    "platform" : [
+        {
+            "name": "DGX1-16G",
+            "params": "python ./qa/testscript.py /data/imagenet --data-backends pytorch dali-gpu dali-cpu --bs 128 224 256 --ngpus 1 8 --workspace $1 -j 5"
+        },
+        {
+            "name": "DGX1-32G",
+            "params": "python ./qa/testscript.py /data/imagenet --data-backends pytorch dali-gpu dali-cpu --bs 256 512 --ngpus 1 8 --workspace $1 -j 5"
+        },
+        {
+            "name": "DGX2",
+            "params": "python ./qa/testscript.py /data/imagenet --data-backends pytorch dali-gpu dali-cpu --bs 256 512 --ngpus 1 16 --workspace $1 -j 3"
+        }
+    ],
+    "precision" : [
+        {"name": "AMP", "params": "--amp --static-loss-scale 128"},
+        {"name": "FP16", "params": "--fp16 --static-loss-scale 128"},
+        {"name": "FP32", "params": ""}
+    ],
+    "model" : [
+        {
+         "name": "RN50",
+         "params": "--arch resnet50 -c fanin --label-smoothing 0.1 --mixup 0.0"
+        }
+    ]
+}

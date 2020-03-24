@@ -1,0 +1,49 @@
+nohup: ignoring input
+STEP 1: FROM nvcr.io/nvidia/pytorch:19.05-py3
+STEP 2: RUN apt-get update && apt-get install -y --no-install-recommends         infiniband-diags         pciutils &&     rm -rf /var/lib/apt/lists/*
+--> Using cache 9b6b0b39d1593ac9562573c1fcd9f3bba28764fbbda366df0aac3fa218b2d638
+STEP 3: WORKDIR /workspace/rnn_translator
+--> 66290234711263fbc372567065318d49afd99c7b67f1497ee5c0f52061d8ee16
+STEP 4: COPY requirements.txt .
+--> 96f9802206fb36b0f293068787f2c790612a80c7c07338c519522be0698708e9
+STEP 5: RUN pip install --no-cache-dir https://github.com/mlperf/training/archive/6289993e1e9f0f5c4534336df83ff199bd0cdb75.zip#subdirectory=compliance  && pip install --no-cache-dir -r requirements.txt
+Collecting https://github.com/mlperf/training/archive/6289993e1e9f0f5c4534336df83ff199bd0cdb75.zip#subdirectory=compliance
+  Downloading https://github.com/mlperf/training/archive/6289993e1e9f0f5c4534336df83ff199bd0cdb75.zip
+Building wheels for collected packages: mlperf-compliance
+  Building wheel for mlperf-compliance (setup.py): started
+  Building wheel for mlperf-compliance (setup.py): finished with status 'done'
+  Stored in directory: /tmp/pip-ephem-wheel-cache-nh7yikjd/wheels/9e/73/0a/3c481ccbda248a195828b8ea5173e83b8394051d8c40e08660
+Successfully built mlperf-compliance
+Installing collected packages: mlperf-compliance
+  Found existing installation: mlperf-compliance 0.0.10
+    Uninstalling mlperf-compliance-0.0.10:
+      Successfully uninstalled mlperf-compliance-0.0.10
+Successfully installed mlperf-compliance-0.6.0
+Requirement already satisfied: mlperf-compliance==0.6.0 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 1)) (0.6.0)
+Requirement already satisfied: sacrebleu==1.2.10 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 2)) (1.2.10)
+Requirement already satisfied: typing in /opt/conda/lib/python3.6/site-packages (from sacrebleu==1.2.10->-r requirements.txt (line 2)) (3.6.6)
+--> 2d2743b5f0e45bc8784e22731ba7f355d1cc1c7189c2562b8092cfc353ac5e3a
+STEP 6: COPY seq2seq/csrc seq2seq/csrc
+--> 0c7555c739ef23469ee927d37d52153524869c20f88a23934b0f522c60e415ff
+STEP 7: COPY setup.py .
+--> 1f400d305f3a98bf6bc541b8f5919ec1ff28ed121c9b0f728691718625469640
+STEP 8: RUN pip install .
+Processing /workspace/rnn_translator
+Requirement already satisfied: mlperf-compliance==0.6.0 in /opt/conda/lib/python3.6/site-packages (from gnmt==0.6.0) (0.6.0)
+Requirement already satisfied: sacrebleu==1.2.10 in /opt/conda/lib/python3.6/site-packages (from gnmt==0.6.0) (1.2.10)
+Requirement already satisfied: typing in /opt/conda/lib/python3.6/site-packages (from sacrebleu==1.2.10->gnmt==0.6.0) (3.6.6)
+Building wheels for collected packages: gnmt
+  Building wheel for gnmt (setup.py): started
+  Building wheel for gnmt (setup.py): finished with status 'done'
+  Stored in directory: /tmp/pip-ephem-wheel-cache-libu3kv8/wheels/84/b6/f1/20addc378b275e39e227da5ee58c19f8e2433a88fd6e5fbf7b
+Successfully built gnmt
+Installing collected packages: gnmt
+Successfully installed gnmt-0.6.0
+--> bb24c03b1b2fd2e13f3c3754b7392ca68d0ac6a76cd3fbe823998af3d6acc816
+STEP 9: COPY . .
+--> 85cf4b79f78597d3a1e47b16be469089190261e2299d696a3c3636d7c4a29cb6
+STEP 10: ENV LANG C.UTF-8
+--> 0410e053f9aca5bfc75421ebe43209b0b7cefee221496e7a41a0fc364b503559
+STEP 11: ENV LC_ALL C.UTF-8
+STEP 12: COMMIT ngc_gnmt
+--> 062eef1c96e5806004e3be7bd710762e774b960e53d0b6b2be57740cbe08ee6f

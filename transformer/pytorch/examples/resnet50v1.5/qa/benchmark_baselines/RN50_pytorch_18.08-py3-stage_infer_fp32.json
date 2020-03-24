@@ -1,0 +1,56 @@
+{
+    "model": "",
+    "ngpus": [
+        1
+    ],
+    "bs": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128
+    ],
+    "metric_keys": [
+        "val.compute_ips",
+        "val.total_ips"
+    ],
+    "metrics": {
+        "1": {
+            "1": {
+                "val.compute_ips": 99.60846810055251,
+                "val.total_ips": 95.02654512075742
+            },
+            "2": {
+                "val.compute_ips": 216.53762517529748,
+                "val.total_ips": 205.48190305077725
+            },
+            "4": {
+                "val.compute_ips": 362.1191880578678,
+                "val.total_ips": 323.1042570123865
+            },
+            "8": {
+                "val.compute_ips": 744.855013824897,
+                "val.total_ips": 630.7469519717688
+            },
+            "16": {
+                "val.compute_ips": 890.2813428785895,
+                "val.total_ips": 475.36893779483637
+            },
+            "32": {
+                "val.compute_ips": 1071.2484081649357,
+                "val.total_ips": 977.3758543406201
+            },
+            "64": {
+                "val.compute_ips": 1153.8594664743914,
+                "val.total_ips": 1019.8285728203103
+            },
+            "128": {
+                "val.compute_ips": 1184.233751573241,
+                "val.total_ips": 854.0469631761247
+            }
+        }
+    }
+}
