@@ -71,7 +71,7 @@ Follow the instructions in the [original documentation](https://github.com/mlper
 
 ### Run the benchmark
 From the `gnmt` directory, the benchmark can be started with
-```CONT=mlperf_v06_gnmt_ubi8 DATADIR=<gnmt_data> LOGDIR=/data/mlperf/logs DGXSYSTEM=DGX1 NEXP=1 PULL=0 ./podman_run.sub```
+```CONT=mlperf_v06_gnmt_ubi8 DATADIR=<gnmt_data> PREPROC_DATADIR=<host directory for preproc data> LOGDIR=/data/mlperf/logs DGXSYSTEM=DGX1 NEXP=1 PULL=0 ./podman_run.sub```
 
 On a system other than an NVIDIA DGX1 or DGX2, you will likely need to create a custom `config_*.sh` file to specify the number of GPUs, and to configure other parameters to optimize performance.
 
