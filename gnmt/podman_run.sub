@@ -57,11 +57,11 @@ mkdir -p $(dirname "${LOGFILE_BASE}")
 ## Docker params
 CONTVOLS="-v $DATADIR:/data -v $LOGDIR:/results -v $PREPROC_DATADIR:/preproc_data"
 #DOCKEREXEC="nvidia-docker run --init --rm --net=host --uts=host --ipc=host --ulimit stack=67108864 --ulimit memlock=-1 --name=cont_${SLURM_JOB_ID} --security-opt seccomp=unconfined $IBDEVICES"
-NVIDIA_DEVICES=$(\ls /dev/nvidia* | xargs -I{} echo '--device {}:{}')
-DOCKEREXEC="env NV_GPU=${NV_GPU} podman run --rm --net=host --uts=host --ipc=host --ulimit stack=67108864 --ulimit memlock=-1 --security-opt seccomp=unconfined --name=cont_${SLURM_JOB_ID} $NVIDIA_DEVICES"
+DOCKEREXEC="env NV_GPU=${NV_GPU} podman run --rm --net=host --uts=host --ipc=host --ulimit stack=67108864 --ulimit memlock=-1 -e NVIDIA_VISIBLE_DEVICES=ALL --cap-drop=ALL --security-opt label=type:nvidia_container_t --security-opt seccomp=unconfined --name=cont_${SLURM_JOB_ID} $NVIDIA_DEVICES"
 
 ## Get version of the OS
-export MLPERF_HOST_OS="$(cat /etc/issue | head -1 | cut -f1-3 -d" ") / $(cat /etc/dgx-release | grep -E "DGX_PRETTY_NAME|DGX_OTA_VERSION" |cut -f2 -d= |cut -f2 -d '"' |paste -sd' ')"
+export MLPERF_HOST_OS="$(cat /etc/redhat-release)"
+#export MLPERF_HOST_OS="$(cat /etc/issue | head -1 | cut -f1-3 -d" ") / $(cat /etc/dgx-release | grep -E "DGX_PRETTY_NAME|DGX_OTA_VERSION" |cut -f2 -d= |cut -f2 -d '"' |paste -sd' ')"
 
 ## Prep run and launch
 MASTER_IP=`getent hosts \`hostname\` | cut -d ' ' -f1`

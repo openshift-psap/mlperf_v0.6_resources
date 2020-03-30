@@ -57,8 +57,7 @@ mkdir -p $(dirname "${LOGFILE_BASE}")
 CONTVOLS="-v $DATADIR:/data:Z -v $LOGDIR:/results:Z"
 NV_GPU="${NVIDIA_VISIBLE_DEVICES:-$(seq 0 $((${SLURM_NTASKS_PER_NODE:-${DGXNGPU}}-1)) | tr '\n' ',' | sed 's/,$//')}"
 #DOCKEREXEC="env NV_GPU=${NV_GPU} nvidia-docker run --init --rm --net=host --uts=host --ipc=host --ulimit stack=67108864 --ulimit memlock=-1 --name=cont_${SLURM_JOB_ID} --security-opt seccomp=unconfined $IBDEVICES"
-NVIDIA_DEVICES=$(\ls /dev/nvidia* | xargs -I{} echo '--device {}:{}')
-DOCKEREXEC="env NV_GPU=${NV_GPU} podman run --rm --net=host --uts=host --ipc=host --ulimit stack=67108864 --ulimit memlock=-1 --security-opt seccomp=unconfined --name=cont_${SLURM_JOB_ID} $NVIDIA_DEVICES"
+DOCKEREXEC="env NV_GPU=${NV_GPU} podman run --rm --net=host --uts=host --ipc=host --ulimit stack=67108864 --ulimit memlock=-1 -e NVIDIA_VISIBLE_DEVICES=ALL --cap-drop=ALL --security-opt label=type:nvidia_container_t --security-opt seccomp=unconfined --name=cont_${SLURM_JOB_ID}"
 
 ## Get version of the OS
 export MLPERF_HOST_OS=$(cat /etc/redhat-release)
